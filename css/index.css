@@ -1,3 +1,15 @@
+/*----------------------------------------
+¡Hola! Aquí encontrarás la 
+estructura de este archivo .css :-)
+
+——> Reset
+——> Variables
+——> Header
+——> Main
+——> Footer
+----------------------------------------*/
+
+
 /*-- RESET START--*/
 * {
     margin: 0;
@@ -40,10 +52,48 @@ form, input, textarea, label, button, fieldset, legend, select{
 
     /* textarea, input, label {width: 100%;}     */
 
-:root { font-size: 100%;}
+:root {
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-black);
+
+    /*---[VARIABLES]---*/
+    /*-Colores principales-*/
+    --color-black: #1C1C1C;
+    --color-yellow: #FFB94F;
+    --color-red: #DF4949;
+    --color-blue: #43A7FF;
+    --color-green: #95D950;
+    --color-white: #FFFFFF;
+
+    /*-Tamaños Fonts-*/
+    --font-h1-size: 3.375rem;
+    --font-h2-size: 3rem;
+    --font-h3-size: 2rem;
+    --font-h4-size: 1.5rem;
+    --font-h5-size: 1.25rem;
+    --font-h6-size: 1rem;
+
+    /*-Pesos Fonts-*/
+    --font-bolder: 900;
+    --font-bold: 700;
+    --font-medium: 500;
+
+}
 
 html{ scroll-behavior: smooth;}
 
 body {
     font-size: 100%;}
 /*-- RESET END--*/
+
+
+/*-- [HEADER] --*/
+.Header {}
+.Header-logo {}
+.Header-nav {}
+.Header-ul {}
+.Header-li {}
+
+.Header-dropdown {display: none;}
+.Header-dropdown.isActive {display: flex;}
