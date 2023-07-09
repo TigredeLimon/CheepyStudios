@@ -1,0 +1,49 @@
+/*-- RESET START--*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;}
+
+li { list-style: none;}
+
+/*-Heredan propiedades del body-*/
+h1, h2, h3, h4, h5, h6, strong{
+    font-size: inherit;
+    font-weight: inherit;}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;}
+
+/*-En caso de que haya enlaces en párrafos-*/    
+p a {display: inline;}
+
+img, video, iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;}  
+
+svg {
+    display: block;
+    fill: currentColor;}    
+
+/*-Para formularios-*/
+form, input, textarea, label, button, fieldset, legend, select{
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;}
+
+    /* textarea, input, label {width: 100%;}     */
+
+:root { font-size: 100%;}
+
+html{ scroll-behavior: smooth;}
+
+body {
+    font-size: 100%;}
+/*-- RESET END--*/
