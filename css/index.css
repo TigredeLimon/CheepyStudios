@@ -10,7 +10,7 @@ estructura de este archivo .css :-)
 ----------------------------------------*/
 
 
-/*-- RESET START--*/
+/*-------------- RESET START --------------*/
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +80,8 @@ form, input, textarea, label, button, fieldset, legend, select{
     --font-semibold: 600;
     --font-medium: 500;
 
+    /*-Variantes fonts-*/
+    --font-smallcaps: all-small-caps;
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
 }
@@ -88,11 +90,12 @@ html{ scroll-behavior: smooth;}
 
 body {
     font-size: 100%;
-    position: relative;}
-/*-- RESET END--*/
+    position: relative;
+    height: 140vh;}
+/*-------------- RESET END --------------*/
 
 
-/*-- [HEADER] --*/
+/*-------------- [HEADER] --------------*/
 .Header {
     width: 75rem;
     min-height: 6.25rem;
@@ -125,7 +128,7 @@ body {
     color: var(--color-yellow);
     font-size: var(--font-h4-size);
     font-weight: var(--font-semibold);
-    font-variant: all-small-caps;
+    font-variant: var(--font-smallcaps);
 
     border-bottom: 5px solid transparent;
 
@@ -193,3 +196,114 @@ body {
     justify-content: space-around;
     align-items: flex-start;
 }
+
+
+
+/*-------------- [MAIN] --------------*/
+
+.Main {}
+.Wrapper-main{
+    width: 100%;
+    background-color: lightgray;
+    animation: diapositivas 20s ease-in-out infinite both;}
+/* @keyframes diapositivas {
+    0%{background:url();
+        background-size: cover;
+        background-repeat: no-repeat;}
+
+    25%{background: url();
+        background-size: cover;
+        background-repeat: no-repeat;}
+
+    75%{background: url();
+        background-size: cover;
+        background-repeat: no-repeat;}
+
+    100%{background:url();
+        background-size: cover;
+        background-repeat: no-repeat;}        
+} */
+
+/*--  HERO  --*/
+.Hero {
+    /* background-color: lightblue; */
+    width: 71.875rem;
+    min-height: 85vh;
+
+    margin: auto;
+    padding: 12.5rem 0 5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.Hero-h2 {
+    color: var(--color-black);
+
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+}
+.Hero-h3 {
+    max-width: 35.625rem;
+    color: var(--color-black);
+    
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-bold);
+}
+
+.Hero-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.8125rem;
+}
+.Hero-a {
+    background-color: var(--color-black);
+    color: var(--color-red);
+    
+    padding: 1rem 2rem;
+    border-radius: 3.125rem;
+
+    font-size: var(--font-h5-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+
+    transition: var(--transition-gen);
+}
+.Hero-a:hover{
+    background-color: white;
+    transform: scale(1.05);}
+.Hero-a:active{transform: scale(0.95);}    
+
+.Hero-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.8125rem;
+}
+.Hero-li {}
+.Hero-rrss {}
+.Hero-svg {
+    width: 1.5rem;
+    transition: var(--transition-gen);}
+.Hero-svg:hover {
+    color: var(--color-white);
+    transform: scale(1.05);}
+.Hero-svg:active{transform: scale(0.95);} 
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- [RESPONSIVE] --*/
