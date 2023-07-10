@@ -33,16 +33,22 @@ se estructura de la siguiente manera:
             <ul class="Header-ul">
                 <li class="Header-li"><a href="" title="Home" class="Header-link">Home</a></li>
                 <li class="Header-li"><a href="" title="About" class="Header-link">About</a></li>
-                <li class="Header-li"><a href="" title="Juegos" class="Header-link">Juegos</a></li>
+                <!-- Menú desplegable -->
+                <li class="Header-li Header-menu">
+                    <button title="Juegos" class="Header-button">Juegos
+                        <svg class="Header-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>
+                    </button>
+                    <div class="Header-dropdown">
+                        <a class="Dropdown-link" href="" title="">El club de Robótica</a>
+                        <a class="Dropdown-link" href="" title="">Tabemonogatari</a>
+                        <a class="Dropdown-link" href="" title="">The Maid Mansion</a>
+                        <a class="Dropdown-link" href="" title="">Zombapocalypse</a>
+                    </div></li>
                 <li class="Header-li"><a href="" title="Mapas" class="Header-link">Mapas</a></li>
-                <li class="Header-li"><a href="" title="Contacto" class="Header-link">Contacto</a></li>
+                <li class="Header-li"><a href="#Contacto" title="Contacto" class="Header-link">Contacto</a></li>
             </ul>
-            <div class="Header-dropdown">
-                <a class="Dropdown-link" href="" title="">Item</a>
-                <a class="Dropdown-link" href="" title="">Item</a>
-                <a class="Dropdown-link" href="" title="">Item</a>
-                <a class="Dropdown-link" href="" title="">Item</a>
-            </div>
         </nav>
     </header>
     <!--[HEADER] - END -->

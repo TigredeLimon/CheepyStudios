@@ -77,23 +77,119 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Pesos Fonts-*/
     --font-bolder: 900;
     --font-bold: 700;
+    --font-semibold: 600;
     --font-medium: 500;
 
+    /*-Transitions-*/
+    --transition-gen: all .2s ease-in-out;
 }
 
 html{ scroll-behavior: smooth;}
 
 body {
-    font-size: 100%;}
+    font-size: 100%;
+    position: relative;}
 /*-- RESET END--*/
 
 
 /*-- [HEADER] --*/
-.Header {}
+.Header {
+    width: 75rem;
+    min-height: 6.25rem;
+    background-color: var(--color-black);
+    margin: auto;
+
+    border-radius: 0 0 3.125rem 3.125rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    position: fixed;
+    top:0;
+    left: calc((100% - 75rem) / 2);
+}
 .Header-logo {}
 .Header-nav {}
-.Header-ul {}
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4.6875rem;
+}
 .Header-li {}
+.Header-link, .Header-button {
+    color: var(--color-yellow);
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-semibold);
+    font-variant: all-small-caps;
 
-.Header-dropdown {display: none;}
-.Header-dropdown.isActive {display: flex;}
+    border-bottom: 5px solid transparent;
+
+    transition: var(--transition-gen);}
+
+.Header-button {
+    cursor: pointer;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.Header-svg {width: 1rem;}
+/*-Preparación para Js
+    ——>El svg girará cuando salga el dropdown menu-*/
+.Header-svg.isActive{transform: rotate(180deg);}
+
+    
+.Header-link:active, .Header-button:active { color: var(--color-white)}
+.Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-yellow)}
+
+ 
+.Header-menu{ position: relative;}
+.Header-dropdown {
+    display: none;
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+    width: 12.5rem;
+
+    border-radius: .625rem;
+    border: 3px solid var(--color-yellow);
+
+    position: absolute;
+    left: calc((100% - 12.5rem) / 2);
+    top: 120%;
+}
+.Dropdown-link {
+    width: 100%;
+    padding: 1rem .5rem;
+
+    font-size: var(--font-h6-size);
+    font-weight: var(--font-medium);
+
+    transition: var(--transition-gen);
+}
+
+/*-Ajustes para el hover de los enlaces
+   del dropdown menu, de manera que no
+   se estropee el border radius      -*/
+.Dropdown-link:hover{
+    background-color: var(--color-yellow);
+    color: var(--color-black);}
+.Dropdown-link:active {background-color: var(--color-white);}
+.Dropdown-link:first-child:hover{border-radius: .3rem .3rem 0 0;}
+.Dropdown-link:last-child:hover{border-radius: 0 0 .3rem .3rem;}
+.Dropdown-link::before{content: '✦';}
+
+/*-Preparación para Js-
+    ——>Al hacer click el menú aparece*/
+.Header-dropdown.isActive {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
