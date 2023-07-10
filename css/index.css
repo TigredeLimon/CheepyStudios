@@ -60,11 +60,14 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*---[VARIABLES]---*/
     /*-Colores principales-*/
     --color-black: #1C1C1C;
+    --color-black-opacity: #1c1c1c45;
     --color-yellow: #FFB94F;
     --color-red: #DF4949;
     --color-blue: #43A7FF;
     --color-green: #95D950;
     --color-white: #FFFFFF;
+
+    
 
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
@@ -81,7 +84,9 @@ form, input, textarea, label, button, fieldset, legend, select{
     --font-medium: 500;
 
     /*-Variantes fonts-*/
+    
     --font-smallcaps: all-small-caps;
+    --font-uppercase: uppercase;
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
 }
@@ -153,7 +158,7 @@ body {
 .Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-yellow)}
 
  
-.Header-menu{ position: relative;}
+.Header-menu{ position: relative; }
 .Header-dropdown {
     display: none;
     background-color: var(--color-black);
@@ -166,6 +171,7 @@ body {
     position: absolute;
     left: calc((100% - 12.5rem) / 2);
     top: 120%;
+    
 }
 .Dropdown-link {
     width: 100%;
@@ -224,6 +230,8 @@ body {
         background-repeat: no-repeat;}        
 } */
 
+
+
 /*--  HERO  --*/
 .Hero {
     /* background-color: lightblue; */
@@ -240,14 +248,11 @@ body {
     gap: 1rem;
 }
 .Hero-h2 {
-    color: var(--color-black);
-
-    font-size: var(--font-h2-size);
+font-size: var(--font-h2-size);
     font-weight: var(--font-bold);
 }
 .Hero-h3 {
     max-width: 35.625rem;
-    color: var(--color-black);
     
     font-size: var(--font-h3-size);
     font-weight: var(--font-bold);
@@ -297,8 +302,63 @@ body {
 
 
 
+/*--  ABOUT  --*/
+.About {
+    width: 71.875rem;
+    /* background-color: gray; */
+    
+    padding: 6rem 0;
+    margin: auto;
 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 18.4375rem;
+}
+.About-article {
+    max-width: 21.875rem;
 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.875rem;
+}
+.About-h2 {
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bolder);
+    font-variant: var(--font-smallcaps);
+}
+.About-h3 {
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-bold);
+}
+.About-a {
+    background-color: white;
+    color: var(--color-yellow);
+    padding: 1rem 2rem;
+
+    border-radius: 3.125rem;
+    border: 2px solid var(--color-yellow);
+
+    font-size: var(--font-h5-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+
+    transition: var(--transition-gen);
+}
+.About-a:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 2px 10px 0 var(--color-black-opacity);}
+.About-a:active {transform: scale(0.95);}
+
+.About-img {
+    width: 100%;
+    max-width: 31.25rem;
+    min-height: 31.25rem;
+    background-color: var(--color-black-opacity);
+}
 
 
 
