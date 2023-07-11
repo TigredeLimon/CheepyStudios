@@ -200,7 +200,7 @@ body {
 .Dropdown-link:active {background-color: var(--color-white);}
 .Dropdown-link:first-child:hover{border-radius: .3rem .3rem 0 0;}
 .Dropdown-link:last-child:hover{border-radius: 0 0 .3rem .3rem;}
-.Dropdown-link::before{content: '✦';}
+.Dropdown-link::before{content: '✦ ';}
 
 /*-Preparación para Js-
     ——>Al hacer click el menú aparece*/
@@ -222,10 +222,10 @@ body {
     /* animation: diapositivas 20s linear infinite alternate*/;} 
 
 /*
-FIX: Arreglar el pase de diapos este
-ToDO: Encontrar una mejor solución, y 
-      sino pues a usar Js, que es lo 
-      más cómodo al final del día :-)
+ToDO: Hacer esto en Js en vez de
+      css, más eficiente
+   >> Añadir puntos para clicar y ver
+      cada imagen cuando se quiera
 */    
 /* @keyframes diapositivas {
     0%{background:url();
@@ -290,7 +290,7 @@ font-size: var(--font-h2-size);
     transition: var(--transition-gen);
 }
 .Hero-a:hover{
-    background-color: white;
+    color: var(--color-white);
     transform: scale(1.05);}
 .Hero-a:active{transform: scale(0.95);}    
 
@@ -510,12 +510,77 @@ font-size: var(--font-h2-size);
 }
 .Contacto-svg:active{transform: scale(0.95);} 
 .Contacto-img{
-    background-color: darkslategray;
+    background-color: lightgray;
     width: 37.5rem;
     min-height: 25rem; /*-Delete later-*/
 }
-
 /*--  CONTACT  --*/
+
+
+/*--  FOOTER  --*/
+
+.Footer {
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    padding: 5rem 10.9375rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.Footer-img {
+    background-color: white;
+    max-width: 6.25rem; /*-Delete later-*/
+}
+.Footer-ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.Footer-li {}
+.Footer-h4 {
+    margin: 0 0 1rem;
+
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+}
+.Footer-svg {
+    width: 1.3rem;
+    display: inline;}
+
+.Footer-link {font-weight: var(--font-medium);}
+    
+/*--Esta especifididad distingue a los
+    enlaces normales de los iconos--*/
+.Footer-li .Footer-link {
+    border-bottom: 5px solid transparent;
+    transition: var(--transition-gen);}
+.Footer-li .Footer-link:hover {
+    color: var(--color-yellow);
+    border-color: var(--color-yellow);}
+.Footer-li .Footer-link:active { transform: scale(0.95);}
+.Footer-li .Footer-link::before {content: '✦ '}
+
+.Footer-wrapper {}    
+.Footer-rrss {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}    
+.Footer-icono { transition: var(--transition-gen);}
+.Footer-icono:hover{color: var(--color-yellow);}   
+.Footer-icono:active{transform: scale(0.95);}   
+
+/*--  FOOTER  --*/
 
 
 
