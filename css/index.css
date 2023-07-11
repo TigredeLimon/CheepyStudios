@@ -299,12 +299,17 @@ font-size: var(--font-h2-size);
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 2.8125rem;
+    gap: 1.875rem;
 }
 .Hero-li {}
 .Hero-rrss {}
 .Hero-svg {
-    width: 1.5rem;
+    background-color: var(--color-black);
+    color: var(--color-red);
+    width: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+
     transition: var(--transition-gen);}
 .Hero-svg:hover {
     color: var(--color-white);
@@ -380,12 +385,12 @@ font-size: var(--font-h2-size);
 
 
 /*--  CONTACT  --*/
-.Contacto-wrapper {
+.Newsletter {
     width: 100%;
     background-color: var(--color-black);
     color: var(--color-white);
 
-    padding: 5rem 11rem;
+    padding: 3rem 11rem;
 
     display: flex;
     flex-flow: row nowrap;
@@ -393,20 +398,20 @@ font-size: var(--font-h2-size);
     align-items: center;
     gap: 1rem;
 }
-.Contacto-h2 {
+.Newsletter-h2 {
     max-width: 20rem;
 
     font-size: var(--font-h2-size);
     font-weight: var(--font-bold);
     font-variant: var(--font-smallcaps);
 }
-.Contacto-svg{
+.Newsletter-svg{
     width: 3.125rem;
     display: inline;
 }
 
 /*--Inicio del form.--*/
-.Newsletter {
+.Newsletter-form {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -424,12 +429,9 @@ font-size: var(--font-h2-size);
     background-color: var(--color-white);
     color: var(--color-black);
 
+    border-radius: .5rem;
     padding: .5rem;
 }
-
-/*
-  ToDO: Hover + active del botón del form
-*/
 .Newsletter-enviar {display: none;}
 .Newsletter-label {
     cursor: pointer;
@@ -441,32 +443,76 @@ font-size: var(--font-h2-size);
     border-radius: 1rem;
 
     font-size: var(--font-h5-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-bold);
     font-variant: var(--font-smallcaps);
+
+    transition: var(--transition-gen);
 }
+.Newsletter-label:hover { transform: scale(1.05);}
+.Newsletter-label:active { transform: scale(0.9);}
 /*--Fin del form.--*/
 
 
-.Contacto {
-    background-color: gray;
-    width: 100%;
 
+.Contacto {
+    /* background-color: gray; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.Contacto-wrapper {
+    max-width: 40.625rem;
     padding-left: 10.9375rem;
 
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .9375rem;
 }
-.Contacto-h4 {}
-.Contacto-ul {}
+.Contacto-h4 {
+    margin: 4rem 0 0;
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-bold);
+}
+.Contacto-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.875rem;
+}
 .Contacto-li {}
-.Contacto-rrss {}
-.Contacto-a {}
-.Contacto-img {
-    background-color: darkslategrey;
+.Contacto-a {
+    color: var(--color-yellow);
+
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-bold);
+
+    transition: var(--transition-gen);
+}
+.Contacto-a:hover{ color: var(--color-black);}
+.Contacto-a:active{ transform: scale(0.95);}
+.Contacto-svg {
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+    width: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+    transition: var(--transition-gen);
+}
+.Contacto-svg:hover {
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+.Contacto-svg:active{transform: scale(0.95);} 
+.Contacto-img{
+    background-color: darkslategray;
     width: 37.5rem;
-    min-height: 25rem; /*-Delete laterr-*/
+    min-height: 25rem; /*-Delete later-*/
 }
 
 /*--  CONTACT  --*/
