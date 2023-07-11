@@ -45,10 +45,10 @@ se estructura de la siguiente manera:
                           </svg>
                     </button>
                     <div class="Header-dropdown">
-                        <a class="Dropdown-link" href="" title="">El club de Robótica</a>
-                        <a class="Dropdown-link" href="" title="">Tabemonogatari</a>
-                        <a class="Dropdown-link" href="" title="">The Maid Mansion</a>
-                        <a class="Dropdown-link" href="" title="">Zombapocalypse</a>
+                        <a class="Dropdown-link" href="" title="El club de Robótica">El club de Robótica</a>
+                        <a class="Dropdown-link" href="" title="Tabemonogatari">Tabemonogatari</a>
+                        <a class="Dropdown-link" href="" title="The Maid Mansion">The Maid Mansion</a>
+                        <a class="Dropdown-link" href="" title="Zombapocalypse">Zombapocalypse</a>
                     </div></li>
                 <li class="Header-li"><a href="" title="Mapas" class="Header-link">Mapas</a></li>
                 <li class="Header-li"><a href="#Contacto" title="Contacto" class="Header-link">Contacto</a></li>
@@ -124,12 +124,54 @@ se estructura de la siguiente manera:
             ——> RRSS + mail
             ——> Imagen
         -->
-        <section class="Main-section Contacto">
-            <h2 class="Contacto-h2">Contacta con nosotros</h2>
+        
+        <!--
+            FIX: El nombre de las clases (de "contacto" a "newsletter" 👍)
+
+        -->
+            <div class="Contacto-wrapper" id="Contacto">
+            <h2 class="Contacto-h2">Contacta con nosotros
+                <svg class="Contacto-svg" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M45 0H5C2.2425 0 0 2.2425 0 5V35C0 37.7575 2.2425 40 5 40H45C47.7575 40 50 37.7575 50 35V5C50 2.2425 47.7575 0 45 0ZM45 5V6.2775L25 21.835L5 6.28V5H45ZM5 35V12.61L23.465 26.9725C23.9028 27.3164 24.4433 27.5033 25 27.5033C25.5567 27.5033 26.0972 27.3164 26.535 26.9725L45 12.61L45.005 35H5Z" fill="white"/>
+                    </svg>   
+            </h2>
             
+            <!-- Form para el newsletter -->
+            <form action="newsletter.php" method="get" class="Contacto-form Newsletter">
+                <h5 class="Newsletter-h5">Apúntate a nuestro newsletter para estar al tanto de todas las novedades</h5>
+                <input class="Newsletter-mail" type="email" placeholder="Tu correo" required>
+                <input type="submit" class="Newsletter-enviar" id="Enviar" value="Enviar">
+                <label class="Newsletter-label" for="Enviar">Enviar</label>
+            </form>    
 
 
-        </section>
+            </div>
+
+
+            <!--
+                FIX: toda esta sección porque no tiene ni pies ni cabeza
+                ToDO: Plantear mejor la estructura
+            -->
+            <!-- <section class="Main-section Contacto">
+            <h4 class="Contacto-h4">¿Tienes dudas o alguna consulta? Mándanos un mensaje a través de nuestras redes o mediante nuestro correo</h4>
+            <ul class="Contacto-ul">
+                <li class="Contacto-li"><a href="#" title="Steam" class="Contacto-rrss" target="_blank" rel="noreferrer nofollow">
+                    Item
+                </a></li>
+                <li class="Contacto-li"><a href="#" title="Twitter" class="Contacto-rrss" target="_blank" rel="noreferrer nofollow">
+                    Item
+                </a></li>
+                <li class="Contacto-li"><a href="#" title="Instagram" class="Contacto-rrss" target="_blank" rel="noreferrer nofollow">
+                    Item
+                </a></li>
+                <li class="Contacto-li"><a href="#" title="Discord" class="Contacto-rrss" target="_blank" rel="noreferrer nofollow">
+                    Item
+                </a></li>
+            </ul>
+            <a href="mailto:hola@cheepystudios.com" class="Contacto-a" target="_blank" rel="noreferrer nofollow">hola@cheepystudios.com</a>
+
+            <img src="" alt="" class="Contacto-img">
+        </section> -->
 
 
 

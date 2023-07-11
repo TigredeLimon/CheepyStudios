@@ -67,7 +67,10 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-green: #95D950;
     --color-white: #FFFFFF;
 
-    
+    /*-Medidas-*/
+    --width-1150: 71.875rem;
+    --width-750: 35.625rem;
+    --width-350: 21.875rem;
 
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
@@ -95,9 +98,11 @@ html{ scroll-behavior: smooth;}
 
 body {
     font-size: 100%;
-    position: relative;
-    height: 140vh;}
+    position: relative;}
 /*-------------- RESET END --------------*/
+
+
+
 
 
 /*-------------- [HEADER] --------------*/
@@ -118,6 +123,9 @@ body {
     position: fixed;
     top:0;
     left: calc((100% - 75rem) / 2);
+    z-index: 5; /*-Pongo el 5 para darle margen de sobra
+                   al header, de manera que no se superpongan
+                   otros elementos-*/
 }
 .Header-logo {}
 .Header-nav {}
@@ -150,7 +158,7 @@ body {
 }
 .Header-svg {width: 1rem;}
 /*-Preparación para Js
-    ——>El svg girará cuando salga el dropdown menu-*/
+   ——>El svg girará cuando salga el dropdown menu-*/
 .Header-svg.isActive{transform: rotate(180deg);}
 
     
@@ -211,23 +219,26 @@ body {
 .Wrapper-main{
     width: 100%;
     background-color: lightgray;
-    animation: diapositivas 20s ease-in-out infinite both;}
+    /* animation: diapositivas 20s linear infinite alternate*/;} 
+
+/*
+FIX: Arreglar el pase de diapos este
+ToDO: Encontrar una mejor solución, y 
+      sino pues a usar Js, que es lo 
+      más cómodo al final del día :-)
+*/    
 /* @keyframes diapositivas {
     0%{background:url();
         background-size: cover;
         background-repeat: no-repeat;}
 
-    25%{background: url();
+    50%{background: url();
         background-size: cover;
         background-repeat: no-repeat;}
 
-    75%{background: url();
+    100%{background: url();
         background-size: cover;
-        background-repeat: no-repeat;}
-
-    100%{background:url();
-        background-size: cover;
-        background-repeat: no-repeat;}        
+        background-repeat: no-repeat;}    
 } */
 
 
@@ -235,7 +246,7 @@ body {
 /*--  HERO  --*/
 .Hero {
     /* background-color: lightblue; */
-    width: 71.875rem;
+    width: var(--width-1150);
     min-height: 85vh;
 
     margin: auto;
@@ -252,7 +263,7 @@ font-size: var(--font-h2-size);
     font-weight: var(--font-bold);
 }
 .Hero-h3 {
-    max-width: 35.625rem;
+    max-width: var(--width-750);
     
     font-size: var(--font-h3-size);
     font-weight: var(--font-bold);
@@ -270,7 +281,7 @@ font-size: var(--font-h2-size);
     color: var(--color-red);
     
     padding: 1rem 2rem;
-    border-radius: 3.125rem;
+    border-radius: 1rem;
 
     font-size: var(--font-h5-size);
     font-weight: var(--font-bold);
@@ -299,12 +310,12 @@ font-size: var(--font-h2-size);
     color: var(--color-white);
     transform: scale(1.05);}
 .Hero-svg:active{transform: scale(0.95);} 
-
+/*--  HERO  --*/
 
 
 /*--  ABOUT  --*/
 .About {
-    width: 71.875rem;
+    width: var(--width-1150);
     /* background-color: gray; */
     
     padding: 6rem 0;
@@ -314,10 +325,10 @@ font-size: var(--font-h2-size);
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: start;
-    gap: 18.4375rem;
+    gap: 1rem
 }
 .About-article {
-    max-width: 21.875rem;
+    max-width: var(--width-750);
 
     display: flex;
     flex-flow: column nowrap;
@@ -339,7 +350,7 @@ font-size: var(--font-h2-size);
     color: var(--color-yellow);
     padding: 1rem 2rem;
 
-    border-radius: 3.125rem;
+    border-radius: 1rem;;
     border: 2px solid var(--color-yellow);
 
     font-size: var(--font-h5-size);
@@ -356,12 +367,109 @@ font-size: var(--font-h2-size);
 .About-img {
     width: 100%;
     max-width: 31.25rem;
-    min-height: 31.25rem;
+    min-height: 31.25rem; /*-Remove later-*/
     background-color: var(--color-black-opacity);
+    animation: aboutImg 1.2s ease-in-out infinite alternate;
+}
+@keyframes aboutImg {
+    from{transform: translateY(1rem);}
+    to{transform: translateY(0);}
+}
+/*--  ABOUT  --*/
+
+
+
+/*--  CONTACT  --*/
+.Contacto-wrapper {
+    width: 100%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    padding: 5rem 11rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.Contacto-h2 {
+    max-width: 20rem;
+
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+}
+.Contacto-svg{
+    width: 3.125rem;
+    display: inline;
 }
 
+/*--Inicio del form.--*/
+.Newsletter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.Newsletter-h5 {
+    max-width: 21.875rem;
+
+    font-size: var(--font-h5-size);
+    font-weight: var(--font-medium);
+}
+.Newsletter-mail {
+    min-width: 10.625rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    padding: .5rem;
+}
+
+/*
+  ToDO: Hover + active del botón del form
+*/
+.Newsletter-enviar {display: none;}
+.Newsletter-label {
+    cursor: pointer;
+
+    background-color: white;
+    color: var(--color-yellow);
+    padding: .5rem 1rem;
+
+    border-radius: 1rem;
+
+    font-size: var(--font-h5-size);
+    font-weight: var(--font-medium);
+    font-variant: var(--font-smallcaps);
+}
+/*--Fin del form.--*/
 
 
+.Contacto {
+    background-color: gray;
+    width: 100%;
+
+    padding-left: 10.9375rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.Contacto-h4 {}
+.Contacto-ul {}
+.Contacto-li {}
+.Contacto-rrss {}
+.Contacto-a {}
+.Contacto-img {
+    background-color: darkslategrey;
+    width: 37.5rem;
+    min-height: 25rem; /*-Delete laterr-*/
+}
+
+/*--  CONTACT  --*/
 
 
 
