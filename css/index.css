@@ -103,12 +103,10 @@ body {
 
 
 
-
-
 /*-------------- [HEADER] --------------*/
 .Header {
     width: 75rem;
-    min-height: 6.25rem;
+    min-height: 4.375rem;
     background-color: var(--color-black);
     margin: auto;
 
@@ -168,7 +166,6 @@ body {
  
 .Header-menu{ position: relative; }
 .Header-dropdown {
-    display: none;
     background-color: var(--color-black);
     color: var(--color-yellow);
     width: 12.5rem;
@@ -176,20 +173,31 @@ body {
     border-radius: .625rem;
     border: 3px solid var(--color-yellow);
 
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    opacity: 0;
+    pointer-events: none;
+
     position: absolute;
     left: calc((100% - 12.5rem) / 2);
     top: 120%;
+
+    transition: var(--transition-gen);
     
 }
 .Dropdown-link {
     width: 100%;
     padding: 1rem .5rem;
-
+    
     font-size: var(--font-h6-size);
     font-weight: var(--font-medium);
-
+    
     transition: var(--transition-gen);
 }
+.Dropdown-link::before{content: '✦ ';}
 
 /*-Ajustes para el hover de los enlaces
    del dropdown menu, de manera que no
@@ -200,15 +208,12 @@ body {
 .Dropdown-link:active {background-color: var(--color-white);}
 .Dropdown-link:first-child:hover{border-radius: .3rem .3rem 0 0;}
 .Dropdown-link:last-child:hover{border-radius: 0 0 .3rem .3rem;}
-.Dropdown-link::before{content: '✦ ';}
 
 /*-Preparación para Js-
     ——>Al hacer click el menú aparece*/
 .Header-dropdown.isActive {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    opacity: 1;
+    pointer-events: initial;
 }
 
 
@@ -218,45 +223,45 @@ body {
 .Main {}
 .Wrapper-main{
     width: 100%;
-    background-color: lightgray;
-    /* animation: diapositivas 20s linear infinite alternate*/;} 
-
-/*
-ToDO: Hacer esto en Js en vez de
-      css, más eficiente
-   >> Añadir puntos para clicar y ver
-      cada imagen cuando se quiera
-*/    
-/* @keyframes diapositivas {
-    0%{background:url();
-        background-size: cover;
-        background-repeat: no-repeat;}
-
-    50%{background: url();
-        background-size: cover;
-        background-repeat: no-repeat;}
-
-    100%{background: url();
-        background-size: cover;
-        background-repeat: no-repeat;}    
-} */
-
-
+    max-height: 50rem;
+    /* background-color: lightgray; */
+    
+    position: relative;
+    overflow:hidden;
+} 
 
 /*--  HERO  --*/
+/*--Pase de diapositivas del hero--*/
+.Hero-gallery {
+    width: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    opacity: 0;
+    
+    transition: opacity 4s ease-in-out;}
+
+.Hero-gallery.isActive{ opacity: 1;}
+.Hero-static {position: static;}
+
+
 .Hero {
     /* background-color: lightblue; */
     width: var(--width-1150);
-    min-height: 85vh;
-
-    margin: auto;
-    padding: 12.5rem 0 5rem;
-
+    
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 1rem;
+
+    position: absolute;
+    top: calc( 50% - (25rem / 2));
+    left: calc( 50% - (var(--width-1150) / 2));
 }
 .Hero-h2 {
 font-size: var(--font-h2-size);
@@ -314,7 +319,12 @@ font-size: var(--font-h2-size);
 .Hero-svg:hover {
     color: var(--color-white);
     transform: scale(1.05);}
-.Hero-svg:active{transform: scale(0.95);} 
+.Hero-svg:active{transform: scale(0.95);}
+
+
+
+
+
 /*--  HERO  --*/
 
 
@@ -394,7 +404,7 @@ font-size: var(--font-h2-size);
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 1rem;
 }
@@ -458,9 +468,11 @@ font-size: var(--font-h2-size);
     /* background-color: gray; */
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 1rem;
+
+    position: relative;
 }
 .Contacto-wrapper {
     max-width: 40.625rem;
@@ -513,6 +525,10 @@ font-size: var(--font-h2-size);
     background-color: lightgray;
     width: 37.5rem;
     min-height: 25rem; /*-Delete later-*/
+    
+    position: relative;
+    top: 0;
+    right: -5%;
 }
 /*--  CONTACT  --*/
 
@@ -581,6 +597,16 @@ font-size: var(--font-h2-size);
 .Footer-icono:active{transform: scale(0.95);}   
 
 /*--  FOOTER  --*/
+
+
+
+/*-------------- [OTROS ELEMENTOS] --------------
+    En este apartado aparecen:
+    ——> Scrollbar
+    ——> Tooltips
+*/
+/*-------------- [OTROS ELEMENTOS] --------------*/
+
 
 
 
