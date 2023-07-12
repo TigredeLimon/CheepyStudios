@@ -18,7 +18,7 @@
     <!--[FUENTES]-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -60,6 +60,12 @@ se estructura de la siguiente manera:
                 <li class="Header-li"><a href="#Newsletter" title="Contacto" class="Header-link">Contacto</a></li>
             </ul>
         </nav>
+
+        <div class="Header-responsive">
+            <svg class="Header-hamburger" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+        </div>
     </header>
     <!--[HEADER] - END -->
 
@@ -83,20 +89,20 @@ se estructura de la siguiente manera:
              <!--
             ToDO: Cambiar el alt de las imágenes, es provisional
             -->
-            <img src="https://images.unsplash.com/photo-1546012112-142c81b59a42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 1" loading="lazy" class="Hero-gallery Hero-static isActive">
-            <img src="https://images.unsplash.com/photo-1631197344782-e66f0c665ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 2" loading="lazy" class="Hero-gallery ">
-            <img src="https://images.unsplash.com/photo-1556905200-279565513a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 3" loading="lazy" class="Hero-gallery ">
+            <img src="https://images.unsplash.com/photo-1546012112-142c81b59a42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 1" loading="lazy" class="Hero-img Hero-static isActive">
+            <img src="https://images.unsplash.com/photo-1631197344782-e66f0c665ba9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 2" loading="lazy" class="Hero-img">
+            <img src="https://images.unsplash.com/photo-1556905200-279565513a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Img 3" loading="lazy" class="Hero-img">
 
 
 
 
             <!-- Inicio del Hero-->
             <section class="Main-section Hero">
-            <h2 class="Hero-h2"><img src="#" alt="Logotipo Roboclub" class="Hero-img"></h2>
-            <h3 class="Hero-h3">Lorem ipsum dolor sit amet consectetur. Mattis malesuada ipsum hendrerit purus sed. Facilisis ut amet viverra blandit dui. Tellus est.</h3>
+            <h2 class="Hero-h2"><img src="#" alt="Logotipo Roboclub" class="Hero-logo"></h2>
+            <h3 class="Hero-h3">¡El primer episodio ya está disponible! Añádenos a la wishlist en Steam, o visita nuestras redes para saber más</h3>
 
             <div class="Hero-buttons">
-                <a href="roboclub.html" title="Saber más" class="Hero-a">Saber más</a>
+                <a href="roboclub.html" title="Info" class="Hero-a">Info</a>
                 <a href="#" target="_blank" rel="nofollow noreferrer" title="Añadir a la wishlist" class="Hero-a">Añadir a la wishlist</a>
             </div>
 
@@ -130,8 +136,8 @@ se estructura de la siguiente manera:
         -->
         <div class="About">
             <article class="About-article">
-            <h2 class="About-h2">Quiénes somos</h2>
-            <h3 class="About-h3">Lorem ipsum dolor sit amet consectetur. Tincidunt ultrices eleifend mauris eleifend nunc vulputate habitant imperdiet. Non.</h3>
+            <h2 class="About-h2">Sobre nosotros</h2>
+            <h3 class="About-h3">Somos un estudio de juegos indie basados en DnD y rol </h3>
             <a href="about.html" title="Conócenos mejor" class="About-a">Conócenos mejor</a>
             </article>
 
@@ -260,9 +266,14 @@ se estructura de la siguiente manera:
 
             <h4 class="Footer-h4">
                 <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                    <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.76 2.76 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124c.146.277.329.556.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442c.22-.28.403-.56.55-.836L15 11.105V5.383l-3.002 1.801a2.76 2.76 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1H2Zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
                   </svg>
                 Newsletter</h4>
+            <form action="newsletter.php" method="get" class="Footer-form">
+                <input class="Footer-mail" type="email" placeholder="email" required>
+                <input class="Footer-enviar" type="submit" name="Enviar" id="Enviar-footer">
+                <label class="Footer-label" for="Enviar-footer">Enviar</label>
+            </form>
 
 
 
