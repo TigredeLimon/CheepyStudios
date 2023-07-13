@@ -320,6 +320,113 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
+.Main {
+    margin-top: 4.375rem;
+    min-height: 80vh;}
+
+.Map {
+    max-width: var(--width-1150);
+    padding-bottom: 2rem;
+    margin: auto;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Map-h2 {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: bold;
+    font-variant: var(--font-smallcaps);
+    text-decoration: underline;}
+.Map-h5 {
+    max-width: var(--width-750);
+    color: var(--color-grey);
+    font-size: var(--font-h5-size);}
+
+.Map-wrapper {
+    width: var(--width-750);
+    padding: 1.5rem 0;}
+.Map-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+.Map-li {}
+.Map-button {
+    background-color: var(--color-white);
+    padding: .5rem 1rem;
+
+    border-radius: 1rem;
+    cursor: pointer;
+
+    font-size: var(--font-h4-size);
+    font-weight: bold;
+    font-variant: var(--font-smallcaps);
+
+    transition: var(--transition-gen);
+}
+.Map-button:hover{transform: var(--transform-scale-up);}
+.Map-button:active{transform: var(--transform-scale-down);}
+
+/*-Estilo de las tabs individualmente-*/
+.Button-red {color: var(--color-red); border: 2px solid var(--color-red)}
+.Button-red.isActive{color: white; background-color: var(--color-red);}
+
+.Button-blue {color: var(--color-blue); border: 2px solid var(--color-blue)}
+.Button-blue.isActive{color: white; background-color: var(--color-blue);}
+
+.Button-green {color: var(--color-green); border: 2px solid var(--color-green)}
+.Button-green.isActive{color: white; background-color: var(--color-green);}
+
+
+/*-Contenedora para los mapas-*/
+.Map-container {
+    background-color: gray;
+    max-width: var(--width-1150);
+    width: 100%;
+    min-height: 37.5rem;
+
+    position: relative;
+}
+
+/*BUG: Quería implementar un sistema de drag&drop para
+        mover los mapas de manera interactiva, pero es
+        una miaja complicado... opté por incluir una
+        scrollbar, de manera que funcione en móvil tb*/
+/*--Scrollbar de los mapas--*/
+
+
+.Map-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    opacity: 0; pointer-events: none;}
+.Map-content.isActive {opacity: 1; pointer-events: initial;}
+
+.Map-img{
+    background-color: var(--color-black-opacity);
+}
+
+.Gps {
+    position: absolute;
+}
+.Gps-pointer {}
 
 /*-------------- [MAIN] --------------*/
 
@@ -472,9 +579,40 @@ BUG: El header no se adapta bien, como no tengo
     ——> Scrollbar
     ——> Tooltips
 */
-::-webkit-scrollbar {width: .5rem;}
+::-webkit-scrollbar {width: .7rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
 ::-webkit-scrollbar-thumb {background: var(--color-yellow);}
 
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {border-left: 2px solid white;}
+
 
 /*-------------- [OTROS ELEMENTOS] --------------*/
+
+
+/*-- [RESPONSIVE] --*/
+@media (max-width:1220px) {
+    .Footer {padding: 3rem; gap:2.5rem;}
+    .Footer-rrss {margin-bottom: 4rem;}
+}
+@media (max-width:990px) {
+    .Header {
+        padding:0 1rem 0;
+        justify-content: space-between;}
+    .Header-nav {display: none;}
+    .Responsive {display:inline}       
+    
+    .Footer{ grid-template-columns: repeat(2, 1fr);}
+    .Footer-rrss {margin-bottom:2rem;}
+}
+
+
+@media (max-width:870px) {
+    .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (max-width:595px) {
+
+    .Footer{ grid-template-columns: 1fr;}
+    .Footer-img {margin: auto;}
+    .Footer-ul, .Footer-wrapper{ align-items: center;}
+}

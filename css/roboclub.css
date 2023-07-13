@@ -320,7 +320,7 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
-.Main {min-height: 50vh;}
+.Main {min-height: 80vh;}
 /*-------------- [MAIN] --------------*/
 
 
@@ -472,7 +472,7 @@ BUG: El header no se adapta bien, como no tengo
     ——> Scrollbar
     ——> Tooltips
 */
-::-webkit-scrollbar {width: .5rem;}
+::-webkit-scrollbar {width: .7rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
 ::-webkit-scrollbar-thumb {background: var(--color-red);}
 

@@ -321,7 +321,9 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-------------- [MAIN] --------------*/
 
-.Main {min-height: 30vh;}
+.Main {
+    min-height: 30vh;
+    margin-top: 4.375rem;}
 .Wrapper-main{
     width: 100%;
     max-height: 45rem;

@@ -320,7 +320,7 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
-
+.Main {min-height: 80vh;}
 /*-------------- [MAIN] --------------*/
 
 
@@ -472,9 +472,40 @@ BUG: El header no se adapta bien, como no tengo
     ——> Scrollbar
     ——> Tooltips
 */
-::-webkit-scrollbar {width: .5rem;}
+::-webkit-scrollbar {width: .7rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
 ::-webkit-scrollbar-thumb {background: var(--color-yellow);}
 
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {border-left: 2px solid white;}
 
 /*-------------- [OTROS ELEMENTOS] --------------*/
+
+
+
+/*-- [RESPONSIVE] --*/
+@media (max-width:1220px) {
+    .Footer {padding: 3rem; gap:2.5rem;}
+    .Footer-rrss {margin-bottom: 4rem;}
+}
+@media (max-width:990px) {
+    .Header {
+        padding:0 1rem 0;
+        justify-content: space-between;}
+    .Header-nav {display: none;}
+    .Responsive {display:inline}       
+    
+    .Footer{ grid-template-columns: repeat(2, 1fr);}
+    .Footer-rrss {margin-bottom:2rem;}
+}
+
+
+@media (max-width:870px) {
+    .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (max-width:595px) {
+
+    .Footer{ grid-template-columns: 1fr;}
+    .Footer-img {margin: auto;}
+    .Footer-ul, .Footer-wrapper{ align-items: center;}
+}

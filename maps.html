@@ -27,7 +27,7 @@
 se estructura de la siguiente manera:
 
 ——> Header/Encabezado (con barra de navegación)
-——> Contenido principal (Hero, enlace a About/Sobre nosotros, Contacto)
+——> Contenido principal (Tabs/pestañas con varios mapas interactuables)
 ——> Footer/Pie de página
 --------------------------------------->
 
@@ -65,13 +65,13 @@ se estructura de la siguiente manera:
         <!--Menú para dispositivos móviles-->
         <div class="Header-responsive Responsive">
             <svg class="Responsive-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5z"/>
               </svg>
 
               <div class="Responsive-menu">
                 <ul class="Responsive-ul">
-                    <li class="Responsive-li"><a href="" title="Home" class="Responsive-a">Home</a></li>
-                    <li class="Responsive-li"><a href="" title="About" class="Responsive-a">About</a></li>
+                    <li class="Responsive-li"><a href="index.html" title="Home" class="Responsive-a">Home</a></li>
+                    <li class="Responsive-li"><a href="about.html" title="About" class="Responsive-a">About</a></li>
                     <li class="Responsive-li"><h5 title="Juegos" class="Responsive-h5">Juegos</h5>
                     </li>
                     <li class="Responsive-li Responsive-juegos">
@@ -80,7 +80,7 @@ se estructura de la siguiente manera:
                         <a class="Responsive-link" href="comingsoon.html" title="The Maid Mansion">The Maid Mansion</a>
                         <a class="Responsive-link" href="comingsoon.html" title="Zombapocalypse">Zombapocalypse</a>
                     </li>
-                    <li class="Responsive-li"><a href="" title="Mapas" class="Responsive-a">Mapas</a></li>
+                    <li class="Responsive-li"><a href="maps.html" title="Mapas" class="Responsive-a">Mapas</a></li>
                     <li class="Responsive-li"><a href="#Newsletter" title="Contacto" class="Responsive-a">Contacto</a></li>
                 </ul>
               </div>
@@ -91,7 +91,52 @@ se estructura de la siguiente manera:
 
     <!--[MAIN] - START -->
     
-    
+    <main class="Main">
+        
+
+        <section class="Main-section Map">
+            <h2 class="Map-h2">Mapas</h2>
+            <h5 class="Map-h5">Aquí encontrarás información sobre los lugares en que se desarrollan nuestros juegos, ¡haz click en los iconos!</h5>
+
+        <div class="Map-wrapper">
+            <ul class="Map-ul">
+                <li class="Map-li"><button class="Map-button Button-red isActive">Cruxside</button></li>
+                <li class="Map-li"><button class="Map-button Button-blue ">Alrededores</button></li>
+                <li class="Map-li"><button class="Map-button Button-green">Otro</button></li>
+            </ul>
+            </div>
+
+            <div class="Map-container">
+                
+                <!--Mapa Cruxside-->
+                <div class="Map-content isActive">
+                <div class="Map-gps Gps">
+                    <img src="#" alt="Casa-1" class="Gps-pointer">
+                    <img src="#" alt="Casa-2" class="Gps-pointer">
+                    <img src="#" alt="Casa-3" class="Gps-pointer">
+                </div>
+                <img src="https://cdn.discordapp.com/attachments/1048992381946572810/1086829166760038400/image.png" alt="Mapa de Cruxside" class="Map-img">
+                </div>
+
+                <!--Mapa Mansion Maid-->
+                <div class="Map-content">
+                <h5 class="Map-wip">Coming soon!</h5>
+                <img src="#" alt="Mapa Mansión Maid" class="Map-img">
+                </div>
+
+                <!--Mapa Zombies-->
+                <div class="Map-content">
+                    <h5 class="Map-wip">Coming soon!</h5>
+                <img stu src="#" alt="Mapa postapocalíptico" class="Map-img">
+                </div>
+            </div>
+    </section>
+
+
+
+    </main>
+
+
     <!--[MAIN] - END -->
 
 
@@ -108,12 +153,12 @@ se estructura de la siguiente manera:
 
         <ul class="Footer-ul">
             <li class="Footer-li">
-                <h4 class="Footer-h4">
+                <h5 class="Footer-h5">
                     <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z"/>
                         <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z"/>
                       </svg>
-                    Nuestros juegos</h4></li>
+                    Nuestros juegos</h5></li>
             <li class="Footer-li"><a href="roboclub.html" title="El club de Robótica" class="Footer-link">El club de Robótica</a></li>
             <li class="Footer-li"><a href="comingsoon.html" title="Tabemonogatari" class="Footer-link">Tabemonogatari</a></li>
             <li class="Footer-li"><a href="comingsoon.html" title="The Maid Mansion" class="Footer-link">The Maid Mansion</a></li>
@@ -123,11 +168,11 @@ se estructura de la siguiente manera:
         <ul class="Footer-ul">
             <li class="Footer-li">
                 
-                <h4 class="Footer-h4">
+                <h5 class="Footer-h5">
                     <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
                       </svg>
-                    Otros</h4></li>
+                    Otros</h5></li>
                     <li class="Footer-li"><a href="about.html" title="Sobre nosotros" class="Footer-link">Sobre nosotros</a></li>
                         <li class="Footer-li"><a href="#" title="FaQ" class="Footer-link">FaQ</a></li>
                         <li class="Footer-li"><a href="maps.html" title="Mapas" class="Footer-link">Mapas</a></li>
@@ -135,11 +180,11 @@ se estructura de la siguiente manera:
         </ul>
 
         <div class="Footer-wrapper">
-            <h4 class="Footer-h4">
+            <h5 class="Footer-h5">
                 <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
                   </svg>
-                Nuestras redes</h4>
+                Nuestras redes</h5>
             <ul class="Footer-rrss">
             <li class="Footer-icono"><a href="#" target="_blank" rel="nofollow noreferrer" title="Steam" class="Footer-link">
                 <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -160,11 +205,11 @@ se estructura de la siguiente manera:
               </svg></a></li>
             </ul>
 
-            <h4 class="Footer-h4">
+            <h5 class="Footer-h5">
                 <svg class="Footer-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.76 2.76 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124c.146.277.329.556.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442c.22-.28.403-.56.55-.836L15 11.105V5.383l-3.002 1.801a2.76 2.76 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1H2Zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
                   </svg>
-                Newsletter</h4>
+                Newsletter</h5>
             <form action="newsletter.php" method="get" class="Footer-form">
                 <input class="Footer-mail" type="email" placeholder="email" required>
                 <input class="Footer-enviar" type="submit" name="Enviar" id="Enviar-footer">

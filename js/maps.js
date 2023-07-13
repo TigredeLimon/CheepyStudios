@@ -95,3 +95,30 @@ setInterval(()=>{
 }, 8000)
 
 
+/* -- PSEUDOCÓDIGO -- 
+Cuando hago CLICK en mapButton hace una FUNCTION
+
+    —>A TODAS las mapButton se les REMOVE la clase isActive
+    —>A la mapButton posicion index se le ADD la clase
+      isActive
+
+    —>A TODAS las mapContent se les REMOVE la clase isActive
+    —>A la mapContent posicion index se le ADD la clase
+      isActive
+*/
+
+const mapButton  = document.querySelectorAll(`.Map-button`)
+const mapContent = document.querySelectorAll(`.Map-content`)
+
+mapButton.forEach((eachTab, index)=>{
+    mapButton[index].addEventListener(`click`, ()=>{
+        
+        mapButton.forEach((eachTab, index)=>{
+            mapButton[index].classList.remove(`isActive`)
+            mapContent[index].classList.remove(`isActive`)
+        })
+
+    mapButton[index].classList.add(`isActive`)
+    mapContent[index].classList.add(`isActive`)
+    })
+})
