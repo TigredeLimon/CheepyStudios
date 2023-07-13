@@ -108,6 +108,7 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
+    background-color: var(--color-white);
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/

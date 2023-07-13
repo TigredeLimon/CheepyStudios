@@ -108,6 +108,7 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
+    background-color: var(--color-white);
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/
@@ -324,6 +325,7 @@ BUG: El header no se adapta bien, como no tengo
     margin-top: 4.375rem;
     min-height: 80vh;}
 
+/*--Sección mapas--*/
 .Map {
     max-width: var(--width-1150);
     padding-bottom: 2rem;

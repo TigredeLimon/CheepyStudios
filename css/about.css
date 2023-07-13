@@ -108,6 +108,7 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
+    background-color: var(--color-white);
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/
@@ -320,7 +321,97 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
-.Main {min-height: 80vh;}
+.Main {
+    margin-top: 4.375rem;
+    min-height: 80vh;}
+
+.About{
+    max-width: var(--width-1150);
+    
+    padding: 0 0 2rem;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.About-title {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+    text-decoration: underline;
+}
+.About-subtitle {
+    color: var(--color-grey);
+    font-size: var(--font-h4-size);
+}
+
+.About-wrapper {
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    
+    display: grid;
+    grid-template-columns: auto auto; /* El template es auto / auto porque
+                                         con (2, 1fr) no funciona bien*/
+    
+    align-items: self-start;
+    gap: 2rem;                                                                              
+}
+
+/*-Colores del wrapper para cada dev-*/
+.Bruno {background-color: #ffb94fb4;}
+.Brais {background-color: var(--color-yellow);}
+.Gabi {background-color: var(--color-red);}
+.Tobi {background-color: var(--color-green);}
+
+
+.About-img {
+    max-width: var(--width-350);
+    width: 100%;
+
+    border-radius: 1rem;
+}
+.About-desc {
+    /* background-color: orange;    */
+    max-width: var(--width-350);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+}
+.About-desc.Reverse {grid-row: 2/1;}
+.About-nombre {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-bold);
+}
+.About-nombre::before, .About-nombre::after{content: ' ✦ ';}
+.About-datos {
+    background-color: var(--color-white-opacity);
+    padding: .8rem;
+
+    border-radius: 1rem;
+
+    font-weight: var(--font-medium);
+    text-align: justify; /*-No se puede per se, pero es que sino queda mu' feo-*/
+}
+.About-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.About-li {}
+.About-rrss {}
+
+
 /*-------------- [MAIN] --------------*/
 
 
@@ -492,7 +583,9 @@ BUG: El header no se adapta bien, como no tengo
         padding:0 1rem 0;
         justify-content: space-between;}
     .Header-nav {display: none;}
-    .Responsive {display:inline}       
+    .Responsive {display:inline}    
+    
+    .About .About-title, .About .About-subtitle {padding: 0 2rem;}
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
@@ -501,6 +594,14 @@ BUG: El header no se adapta bien, como no tengo
 
 @media (max-width:870px) {
     .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
+    
+    .About-wrapper{
+        width: 90%;
+        grid-template-columns: initial;
+        justify-content: center;
+    }
+    .About-desc.Reverse {grid-row: initial;}
+    
 }
 
 @media (max-width:595px) {
