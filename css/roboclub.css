@@ -122,7 +122,7 @@ BUG: El header no se adapta bien, como no tengo
 .Header {
     width: 100%;
     min-height: 4.375rem;
-    background-color: var(--color-black);
+    background-color: var(--color-red);
 
     display: flex;
     flex-flow: row nowrap;
@@ -148,7 +148,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Header-li {}
 .Header-link, .Header-button {
-    color: var(--color-yellow);
+    color: var(--color-white);
     font-size: var(--font-h4-size);
     font-weight: var(--font-semibold);
     font-variant: var(--font-smallcaps);
@@ -172,18 +172,18 @@ BUG: El header no se adapta bien, como no tengo
 .Header-svg.isActive{transform: rotate(180deg);}
 
     
-.Header-link:active, .Header-button:active { color: var(--color-white)}
-.Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-yellow)}
+.Header-link:active, .Header-button:active { color: var(--color-black-opacity)}
+.Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-white)}
 
  
 .Header-menu{ position: relative; }
 .Header-dropdown {
     background-color: var(--color-black);
-    color: var(--color-yellow);
+    color: var(--color-red);
     width: 12.5rem;
 
     border-radius: .625rem;
-    border: 3px solid var(--color-yellow);
+    border: 3px solid var(--color-red);
 
     display: flex;
     flex-flow: column nowrap;
@@ -215,7 +215,7 @@ BUG: El header no se adapta bien, como no tengo
    del dropdown menu, de manera que no
    se estropee el border radius      -*/
 .Dropdown-link:hover{
-    background-color: var(--color-yellow);
+    background-color: var(--color-red);
     color: var(--color-black);}
 .Dropdown-link:active {background-color: var(--color-white);}
 .Dropdown-link:first-child:hover{border-radius: .3rem .3rem 0 0;}
@@ -230,7 +230,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Menú responsive-*/
 .Responsive {display: none;}
 
-.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen);}
+.Responsive-svg {width: 2rem; color: var(--color-black); transition: var(--transition-gen);}
 .Responsive-svg:hover {color: var(--color-white);}
 .Responsive-svg:active {transform: var(--transform-scale-down);}
 
@@ -309,10 +309,10 @@ BUG: El header no se adapta bien, como no tengo
 }
 
 .Responsive-li, .Responsive-link, .Responsive-a{ transition: var(--transition-gen);}
-.Responsive-a:hover{color: var(--color-yellow);}
-.Responsive-li:hover{border-bottom: 4px solid var(--color-yellow);}
+.Responsive-a:hover{color: var(--color-red);}
+.Responsive-li:hover{border-bottom: 4px solid var(--color-red);}
 .Responsive-link:hover{
-    background-color: var(--color-yellow);
+    background-color: var(--color-red);
     color: var(--color-black);
     transform: var(--transform-scale-up);}
 .Responsive-a:active, .Responsive-link:active {transform: var(--transform-scale-down);}
@@ -320,329 +320,17 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
-
-.Main {min-height: 30vh;}
-.Wrapper-main{
-    width: 100%;
-    max-height: 45rem;
-    /* background-color: lightgray; */
-    
-    position: relative;
-    overflow:hidden;
-} 
-
-/*--  HERO  --*/
-/*--Pase de diapositivas del hero--*/
-.Hero-img {
-    width: 100%;
-    object-fit: cover;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    opacity: 0;
-    
-    pointer-events: none;
-    user-select: none;
-
-    transition: opacity 4s ease-in-out;}
-.Hero-img.isActive{ opacity: 1;}
-.Hero-static {position: static;}
+.Main {min-height: 50vh;}
+/*-------------- [MAIN] --------------*/
 
 
-.Hero {
-    background-color: var(--color-black-opacity);
-    color: var(--color-white);
-    max-width: var(--width-750);
-
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 1rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-
-    text-shadow: 4px 4px 6px var(--color-black);
-
-    position: absolute;
-    top: calc( 50% - (23rem / 2));
-    left: calc( 50% - (var(--width-1150) / 2));
-}
-.Hero-logo { background-color: lightgray;}
-.Hero-h3 {font-size: var(--font-h3-size);}
-.Hero-highlight {font-weight: var(--font-bold);}
-
-
-.Hero-buttons {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2.8125rem;
-}
-.Hero-a {
-    background-color: var(--color-black);
-    color: var(--color-red);
-    
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-
-    font-size: var(--font-h5-size);
-    font-weight: var(--font-bold);
-    font-variant: var(--font-smallcaps);
-
-    transition: var(--transition-gen);
-}
-.Hero-a:hover{
-    color: var(--color-white);
-    transform: var(--transform-scale-up)}
-.Hero-a:active{transform: var(--transform-scale-down);}    
-
-.Hero-ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.875rem;
-}
-.Hero-svg {
-    background-color: var(--color-black);
-    color: var(--color-red);
-    width: 2.5rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-
-    transition: var(--transition-gen);}
-.Hero-svg:hover {
-    color: var(--color-white);
-    transform: var(--transform-scale-up);}
-.Hero-svg:active{transform: var(--transform-scale-down);}
-
-.Hero-a, .Hero-svg {box-shadow: 4px 4px 6px var(--color-black-opacity);}
-/*--  HERO  --*/
-
-
-/*--  ABOUT  --*/
-.About {
-    max-width: var(--width-1150);
-    min-height: 30vh;
-
-    padding: 6rem 0;
-    margin: auto;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: start;
-    gap: 1rem
-}
-.About-article {
-    max-width: var(--width-750);
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 1.875rem;
-}
-.About-h2 {
-    font-family: var(--font-family-ezcar);
-    line-height: 1;
-    font-size: var(--font-h2-size);
-    font-weight: var(--font-bolder);
-    font-variant: var(--font-smallcaps);
-    text-decoration: underline;
-}
-.About-h3 {
-    color: var(--color-grey);
-
-    font-size: var(--font-h3-size);
-    font-weight: var(--font-medium);
-}
-.About-a {
-    background-color: white;
-    color: var(--color-yellow);
-    padding: 1rem 2rem;
-
-    border-radius: 1rem;;
-    border: 2px solid var(--color-yellow);
-
-    font-size: var(--font-h5-size);
-    font-weight: var(--font-bold);
-    font-variant: var(--font-smallcaps);
-
-    transition: var(--transition-gen);
-}
-.About-a:hover{
-    transform: var(--transform-scale-up);
-    box-shadow: 4px 2px 10px 0 var(--color-black-opacity);}
-.About-a:active {transform: var(--transform-scale-down);}
-.About-highlight {font-weight: var(--font-bolder); color: var(--color-black);}
-
-.About-img {
-    width: 31.25rem;
-    max-width: 100%;
-    background-color: var(--color-black-opacity);
-    animation: aboutImg 1.2s ease-in-out infinite alternate;
-}
-@keyframes aboutImg {
-    from{transform: translateY(1rem);}
-    to{transform: translateY(0);}
-}
-/*--  ABOUT  --*/
-
-
-
-/*--  CONTACT  --*/
-.Newsletter {
-    width: 100%;
-    background-color: var(--color-black);
-    color: var(--color-white);
-
-    padding: 3rem 11rem;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-}
-.Newsletter-h2 {
-    max-width: 20rem;
-    
-    font-family: var(--font-family-ezcar);
-    line-height: 1;
-    font-size: var(--font-h2-size);
-    font-weight: var(--font-bold);
-    font-variant: var(--font-smallcaps);
-}
-.Newsletter-svg{
-    width: 3.125rem;
-    display: inline;
-}
-
-/*--Inicio del form.--*/
-.Newsletter-form {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-}
-.Newsletter-h5 {
-    max-width: 21.875rem;
-
-    font-size: var(--font-h5-size);
-    font-weight: var(--font-medium);
-}
-.Newsletter-mail {
-    min-width: 10.625rem;
-    background-color: var(--color-white);
-    color: var(--color-black);
-
-    border-radius: .5rem;
-    padding: .5rem;
-}
-.Newsletter-enviar {display: none;}
-.Newsletter-label {
-    cursor: pointer;
-
-    background-color: white;
-    color: var(--color-yellow);
-    padding: .5rem 1rem;
-
-    border-radius: 1rem;
-
-    font-size: var(--font-h5-size);
-    font-weight: var(--font-bold);
-    font-variant: var(--font-smallcaps);
-
-    transition: var(--transition-gen);
-}
-.Newsletter-label:hover { transform: var(--transform-scale-up);}
-.Newsletter-label:active { transform: var(--transform-scale-down);}
-/*--Fin del form.--*/
-
-
-
-.Contacto {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 1rem;
-
-    position: relative;
-}
-.Contacto-wrapper {
-    max-width: var(--width-1150);
-    margin: 3rem 11rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: .9375rem;
-}
-.Contacto-h4 {
-    max-width: var(--width-750);
-
-    
-    font-size: var(--font-h4-size);
-    font-weight: var(--font-bold);
-}
-.Contacto-ul {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.875rem;
-}
-.Contacto-li {}
-.Contacto-a {
-    color: var(--color-yellow);
-
-    font-size: var(--font-h4-size);
-    font-weight: var(--font-bold);
-
-    transition: var(--transition-gen);
-}
-.Contacto-a:hover{ color: var(--color-black);}
-.Contacto-a:active{ transform: scale(0.95);}
-.Contacto-svg {
-    background-color: var(--color-black);
-    color: var(--color-yellow);
-    width: 2.5rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-
-    transition: var(--transition-gen);
-}
-.Contacto-svg:hover {
-    color: var(--color-white);
-    transform: var(--transform-scale-up);
-}
-.Contacto-svg:active{transform: var(--transform-scale-down);} 
-.Contacto-img{
-    width: 37.5rem;
-    max-width: 100%;
-    background-color: lightgray;
-
-
-}
-/*--  CONTACT  --*/
 
 
 /*--  FOOTER  --*/
 .Footer {
     width: 100%;
     min-height: 30vh;
-    background-color: var(--color-black);
+    background-color: var(--color-red);
     color: var(--color-white);
 
     padding: 5rem 11rem;
@@ -691,8 +379,8 @@ BUG: El header no se adapta bien, como no tengo
     border-bottom: 5px solid transparent;
     transition: var(--transition-gen);}
 .Footer-li .Footer-link:hover {
-    color: var(--color-yellow);
-    border-color: var(--color-yellow);}
+    color: var(--color-black);
+    border-color: var(--color-black);}
 .Footer-li .Footer-link:active { transform: scale(0.95);}
 .Footer-li .Footer-link::before {content: '✦ '}
 
@@ -714,7 +402,7 @@ BUG: El header no se adapta bien, como no tengo
     gap: 1rem;
 }    
 .Footer-icono { transition: var(--transition-gen);}
-.Footer-icono:hover{color: var(--color-yellow);}   
+.Footer-icono:hover{color: var(--color-black);}   
 .Footer-icono:active{transform: scale(0.95);}
 
 .Footer-form {
@@ -737,7 +425,7 @@ BUG: El header no se adapta bien, como no tengo
     cursor: pointer;
 
     background-color: white;
-    color: var(--color-yellow);
+    color: var(--color-red);
     padding: .5rem 1rem;
 
     border-radius: 1rem;
@@ -753,7 +441,7 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-Créditos del footer-*/
 .Credits {
-    background-color: var(--color-grey);
+    background-color: var(--color-black);
     width: 100%;
     padding: 1rem;
     
@@ -767,7 +455,7 @@ BUG: El header no se adapta bien, como no tengo
 .Credits-h6::before{content: '✦ ';}
 .Credits-h6::after{content: ' ✦';}
 .Credits-link {
-    color: var(--color-yellow);
+    color: var(--color-red);
     display: inline;
     
     font-weight: var(--font-medium);
@@ -784,9 +472,9 @@ BUG: El header no se adapta bien, como no tengo
     ——> Scrollbar
     ——> Tooltips
 */
-::-webkit-scrollbar {width: .7rem;}
+::-webkit-scrollbar {width: .5rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
-::-webkit-scrollbar-thumb {background: var(--color-yellow);}
+::-webkit-scrollbar-thumb {background: var(--color-red);}
 
 ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {border-left: 2px solid white;}
 
@@ -795,21 +483,8 @@ BUG: El header no se adapta bien, como no tengo
 
 
 
-
 /*-- [RESPONSIVE] --*/
 @media (max-width:1220px) {
-    .Hero{
-        max-width: 80%;
-        padding: 2rem;
-        margin: -2rem auto;
-        left: calc(50% - (80% / 2));}
-    .About{ padding: 6rem 2rem;}
-
-    .Newsletter {flex-direction: column;}
-    .Newsletter-h2 {text-align: center;}
-
-    .Contacto-wrapper { margin: 3rem}
-
     .Footer {padding: 3rem; gap:2.5rem;}
     .Footer-rrss {margin-bottom: 4rem;}
 }
@@ -818,34 +493,7 @@ BUG: El header no se adapta bien, como no tengo
         padding:0 1rem 0;
         justify-content: space-between;}
     .Header-nav {display: none;}
-    .Responsive {display:inline}
-    
-    .Wrapper-main{ height: 100vh;}
-    .Hero-img{ height: 100%;}
-    .Hero-h3 {font-size: var(--font-h4-size);}
-
-    .Hero-buttons {
-        flex-direction: column;
-        gap: .5rem;}
-    .Hero-buttons, .Hero-a {width: 80%; text-align: center;}
-    .Hero-a {padding: 0.5rem 1rem;}
-
-    .About {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;}
-    .About-article{ align-items: center;}
-    .About-h3 {font-size: var(--font-h4-size);}       
-
-
-    .Newsletter {padding: 3rem;}
-    .Newsletter-h5 {text-align: center;}
-    .Newsletter-form {flex-direction: column;}
-    .Newsletter-mail, .Newsletter-label{ width: 100%;}
-    .Newsletter-label {text-align: center;}
-
-    .Contacto {flex-direction: column; align-items: center;}
-    .Contacto-wrapper {align-items: center;}        
+    .Responsive {display:inline}       
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
@@ -857,8 +505,6 @@ BUG: El header no se adapta bien, como no tengo
 }
 
 @media (max-width:595px) {
-    .Wrapper-main{ height: 100vh;}
-    .Hero {top: calc(50% - (65% / 2));}
 
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}
