@@ -321,7 +321,13 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-------------- [MAIN] --------------*/
-.Main {min-height: 80vh;}
+.Main {
+    margin-top: 4.375rem;
+    min-height: 80vh;}
+
+
+
+    
 /*-------------- [MAIN] --------------*/
 
 

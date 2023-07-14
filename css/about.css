@@ -110,8 +110,8 @@ html{ scroll-behavior: smooth;}
 
 body {
     background: rgb(255,185,79);
-background: linear-gradient(180deg, rgba(255,185,79,0.1) 0%, rgba(255,255,255,0) 100%);
-    
+    background: linear-gradient(180deg, rgba(255, 185, 79, 0.233) 0%, rgba(255,255,255,0) 100%);
+    background-attachment: fixed;
     
     font-size: 100%;
     position: relative;}
