@@ -325,9 +325,121 @@ BUG: El header no se adapta bien, como no tengo
     margin-top: 4.375rem;
     min-height: 80vh;}
 
+/*-Introducción-*/    
+.Intro {
+    background-color: lightgrey;
+    max-width: var(--width-1150);
+    padding: 2rem 0;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+
+    position: relative;
+}
+.Intro-h2 {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+    text-decoration: underline;
+    line-height: 1;
+}
+.Intro-h3 {
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-medium);
+    font-variant: var(--font-smallcaps);
+}
+.Intro-p {}
+.Intro-h2, .Intro-h3, .Intro-p {max-width: var(--width-750);}
+
+.Intro-img {
+    background-color: orange;
+    width: calc(100% / 2.5);
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*-Lightbox-*/
+.Gallery {
+    background-color: var(--color-grey);
+    padding: 1rem 0;
+}
+.Gallery-h2 {}
+.Gallery-h4 {}
+.Gallery-ul {
+    width: 100%;
+    max-width: var(--width-1150);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.Gallery-li {
+    background-color: lightgoldenrodyellow;
+    height: 15.625rem;
+}
+.Gallery-img {}
+
+/*-Slider dentro de lightbox-*/
+.Lightbox {
+    background-color: var(--color-black-opacity);
+    width: 100%;
+    min-height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
 
 
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(.2rem);
+}
+.Lightbox.isActive {opacity: 1; pointer-events: initial;}
+.Lightbox-next {}
+.Lightbox-prev {}
+.Lightbox-close {}
+.Lightbox-img {
+    background-color: gold;
+    max-width: calc(15.625rem * 3) ;
+    width: 100%;
+    height: 31.25rem;
     
+    position: absolute;
+    top: calc(50% - (31.25rem / 2));
+    left: calc(50% - ((15.625rem * 3) / 2));
+
+}
+.Lightbox-p {}
+
+/*-Personajes-*/
+.Personajes {
+    background-color: grey;
+}
+.Personajes-article {}
+.Personajes-h2 {}
+.Personajes-h4 {}
+
+.Personajes-wrapper {}
+.Personajes-next {}
+.Personajes-prev {}
+.Personajes-info {}
+.Personajes-info.isActive {}
+.Personajes-img {}
+.Personajes-p {}
+
+
 /*-------------- [MAIN] --------------*/
 
 
