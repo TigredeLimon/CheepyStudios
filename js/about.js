@@ -95,3 +95,61 @@ setInterval(()=>{
 }, 8000)
 
 
+/* -- PSEUDOCÓDIGO -- 
+Cuando hago SCROLL hasta cierto punto, aboutRight y aboutLeft hacen una FUNCTION
+    —> A aboutLeft se le ADD la clase Fade-left
+    —> A aboutRight se le ADD la clase Fade-right
+*/
+
+/*
+ToDO: Encontrar una manera mejor de hacer esto, está muy sucio, pero
+      no quiero copiar el código de otro sitio sin entenderlo bien
+
+——> Función que añade las clases fadeleft/right al wrapper del About
+——> See: Clase, día 44
+——> See: https://dev.to/ljcdev/introduction-to-scroll-animations-with-intersection-observer-d05
+*/
+
+const aboutRight   = document.querySelectorAll(`.About-right`)
+const aboutLeft    = document.querySelectorAll(`.About-left`)
+
+let options = {
+    root       : null,
+    rootMargin : '0px 0px',
+    threshold  : 0.1
+}
+
+let observerLeft = new IntersectionObserver( (changes)=>{
+    changes.forEach((eachWrapper)=>{
+        
+        const indexLeft = Array.from(aboutLeft).indexOf(eachWrapper.target)
+
+        let {isIntersecting} = eachWrapper
+       
+        if (isIntersecting){
+        aboutLeft[indexLeft].classList.add(`Fade-left`)
+        }
+    })
+})
+
+let observerRight = new IntersectionObserver( (changes)=>{
+    changes.forEach((eachWrapper)=>{
+        
+        const indexRight = Array.from(aboutRight).indexOf(eachWrapper.target)
+
+        let {isIntersecting} = eachWrapper
+       
+        if (isIntersecting){
+        aboutRight[indexRight].classList.add(`Fade-right`)
+        }       
+    })
+})
+
+
+aboutLeft.forEach(wrapper => {
+    observerLeft.observe(wrapper)
+  })
+aboutRight.forEach(wrapper => {
+  observerRight.observe(wrapper)
+})
+

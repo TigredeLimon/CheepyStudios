@@ -66,36 +66,6 @@ htmlMain.addEventListener(`click`, ()=>{
 
 
 /* -- PSEUDOCÓDIGO -- 
-Cuando transcurrren 8 segundos, HeroGallery hace una FUNCTION
-    —> A galleryActive ++
-    —> Si... galleryActive es MAYOR O IGUAL (>=) a 3
-        —>galleryActive es IGUAL = 0
-
-    —>A TODAS las galleryImg se les REMOVE la clase isActive
-    —>A la galleryImg posicion galleryActive se le ADD la clase
-      isActive
-*/
-/*
-    ——> Función que activa un intervalo de 8 segundos, en el
-    cual se añade y/o se quita la clase isActive
-*/
-const galleryImg = document.querySelectorAll(`.Hero-img`)
-
-let galleryActive = 0
-
-setInterval(()=>{
-    galleryActive++
-    if(galleryActive >= 3){
-        galleryActive = 0}
-
-    galleryImg.forEach((eachImg, index)=>{
-        galleryImg[index].classList.remove(`isActive`)
-        galleryImg[galleryActive].classList.add(`isActive`)
-    })
-}, 8000)
-
-
-/* -- PSEUDOCÓDIGO -- 
 Cuando hago CLICK en mapButton hace una FUNCTION
 
     —>A TODAS las mapButton se les REMOVE la clase isActive
