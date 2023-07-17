@@ -95,3 +95,35 @@ setInterval(()=>{
 }, 8000)
 
 
+/* -- PSEUDOCÓDIGO -- 
+Cuando hago SCROLL hasta cierto punto, animation hace una FUNCTION
+    —> A TODAS las animation se le añade la clase Fade-in
+*/
+/*
+——> Función que añade los elementos que tienen la clase Animation
+——> See: Clase, día 44
+——> See: https://dev.to/ljcdev/introduction-to-scroll-animations-with-intersection-observer-d05
+*/
+const animation = document.querySelectorAll(`.Animation`)
+
+let options = {
+    root       : null,
+    rootMargin : '0px 0px',
+    threshold  : [0, 1]
+}
+
+let observer = new IntersectionObserver( (changes)=>{
+    changes.forEach((eachAnimation)=>{
+        
+        const indexAnimation = Array.from(animation).indexOf(eachAnimation.target)
+
+        let {isIntersecting} = eachAnimation
+       
+        if (isIntersecting){
+        animation[indexAnimation].classList.add(`Fade-in`)
+        }
+    })
+}, options)
+animation.forEach(wrapper => {
+    observer.observe(wrapper)
+  })

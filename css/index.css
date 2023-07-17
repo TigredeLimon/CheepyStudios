@@ -68,10 +68,12 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-green: #95D950;
     --color-white: #FFFFFF;
     --color-white-opacity: #FFFFFF45;
+    --color-background-white:#ffffffc2;
 
     /*-Medidas estándar-*/
     --width-1150: 71.875rem;
-    --width-750: 35.625rem;
+    --width-750: 46.875rem;
+    --width-570: 35.625rem;
     --width-350: 21.875rem;
 
     /*-Font families-*/
@@ -81,7 +83,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
     --font-h2-size: 3rem;
-    --font-h3-size: 1.7rem;
+    --font-h3-size: 2.5rem;
     --font-h4-size: 1.5rem;
     --font-h5-size: 1.25rem;
     --font-h6-size: 1rem;
@@ -103,12 +105,16 @@ form, input, textarea, label, button, fieldset, legend, select{
     
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
+
+    /*-Otros-*/
+    --text-shadow-gen: .4rem .2rem .5rem rgba(0, 0, 0, 0.267);
+    --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
 }
 
 html{ scroll-behavior: smooth;}
 
 body {
-    background-color: var(--color-white);
+    background: url(../assets/fondo_cuadros.png);
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/
@@ -231,7 +237,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Menú responsive-*/
 .Responsive {display: none;}
 
-.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen);}
+.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen); cursor: pointer;}
 .Responsive-svg:hover {color: var(--color-white);}
 .Responsive-svg:active {transform: var(--transform-scale-down);}
 
@@ -324,7 +330,7 @@ BUG: El header no se adapta bien, como no tengo
 
 .Main {
     min-height: 30vh;
-    margin-top: 4.375rem;}
+    margin: 4.375rem 0;}
 .Wrapper-main{
     width: 100%;
     max-height: 45rem;
@@ -358,10 +364,9 @@ BUG: El header no se adapta bien, como no tengo
 .Hero {
     background-color: var(--color-black-opacity);
     color: var(--color-white);
-    max-width: var(--width-750);
+    max-width: var(--width-570);
 
     padding: 2rem;
-    margin: 2rem;
     border-radius: 1rem;
 
     display: flex;
@@ -370,10 +375,10 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 1rem;
 
-    text-shadow: 4px 4px 6px var(--color-black);
+    text-shadow: var(--text-shadow-gen);
 
     position: absolute;
-    top: calc( 50% - (23rem / 2));
+    top: calc( 50% - (25rem / 2));
     left: calc( 50% - (var(--width-1150) / 2));
 }
 .Hero-logo { background-color: lightgray;}
@@ -426,7 +431,7 @@ BUG: El header no se adapta bien, como no tengo
     transform: var(--transform-scale-up);}
 .Hero-svg:active{transform: var(--transform-scale-down);}
 
-.Hero-a, .Hero-svg {box-shadow: 4px 4px 6px var(--color-black-opacity);}
+.Hero-a, .Hero-svg {box-shadow: var(--box-shadow-gen)}
 /*--  HERO  --*/
 
 
@@ -451,7 +456,7 @@ BUG: El header no se adapta bien, como no tengo
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.875rem;
+    gap: 2rem;
 }
 .About-h2 {
     font-family: var(--font-family-ezcar);
@@ -483,7 +488,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .About-a:hover{
     transform: var(--transform-scale-up);
-    box-shadow: 4px 2px 10px 0 var(--color-black-opacity);}
+    box-shadow: var(--box-shadow-gen)}
 .About-a:active {transform: var(--transform-scale-down);}
 .About-highlight {font-weight: var(--font-bolder); color: var(--color-black);}
 
@@ -639,6 +644,20 @@ BUG: El header no se adapta bien, como no tengo
 
 }
 /*--  CONTACT  --*/
+
+
+/*--Animaciones--*/
+
+/*-vvv Clase para el js vvv-*/
+.Animation {opacity: 0;}
+
+.Fade-in{animation: fadein 1s ease-in-out 1 forwards;}
+@keyframes fadein {
+    from{ opacity: 0; transform: translateY(-50%);
+    }
+    to{opacity:1; transform: translateX(initial);}
+}
+
 
 
 /*--  FOOTER  --*/

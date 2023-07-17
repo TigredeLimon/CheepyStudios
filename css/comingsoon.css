@@ -81,7 +81,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
     --font-h2-size: 3rem;
-    --font-h3-size: 1.7rem;
+    --font-h3-size: 2.5rem;
     --font-h4-size: 1.5rem;
     --font-h5-size: 1.25rem;
     --font-h6-size: 1rem;
@@ -231,7 +231,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Menú responsive-*/
 .Responsive {display: none;}
 
-.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen);}
+.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen); cursor: pointer;}
 .Responsive-svg:hover {color: var(--color-white);}
 .Responsive-svg:active {transform: var(--transform-scale-down);}
 

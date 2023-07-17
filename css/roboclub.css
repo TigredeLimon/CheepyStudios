@@ -68,6 +68,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-green: #95D950;
     --color-white: #FFFFFF;
     --color-white-opacity: #FFFFFF45;
+    --color-background-white:#ffffffc2;
     
     /*-Colores específicos sección-*/
     --color-nina:#ff698f;
@@ -78,20 +79,17 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-toshe:#445DFB;
     --color-elmo:#CD1C2C;
 
-    --color-background-white:#ffffffc2;
 
     /*-Medidas estándar-*/
     --width-1150: 71.875rem;
-    --width-750: 35.625rem;
+    --width-750: 46.875rem;
+    --width-570: 35.625rem;
     --width-350: 21.875rem;
 
     /*-Font families-*/
     --font-family-roboto: 'Roboto', sans-serif;
     --font-family-ezcar: 'Eczar', serif;
 
-    /*
-    ToDO: 
-    */
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
     --font-h2-size: 3rem;
@@ -117,12 +115,15 @@ form, input, textarea, label, button, fieldset, legend, select{
     
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
+
+    /*-Otros-*/
+    --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
 }
 
 html{ scroll-behavior: smooth;}
 
 body {
-    background: url(/assets/fondo_cuadros.png);
+    background: url(../assets/fondo_cuadros.png);
     background-repeat: repeat;
     font-size: 100%;
     position: relative;}
@@ -246,7 +247,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Menú responsive-*/
 .Responsive {display: none;}
 
-.Responsive-svg {width: 2rem; color: var(--color-black); transition: var(--transition-gen);}
+.Responsive-svg {width: 2rem; color: var(--color-black); transition: var(--transition-gen); cursor: pointer;}
 .Responsive-svg:hover {color: var(--color-white);}
 .Responsive-svg:active {transform: var(--transform-scale-down);}
 
@@ -344,7 +345,7 @@ BUG: El header no se adapta bien, como no tengo
 .Intro {
     /* background-color: lightgrey; */
     max-width: var(--width-1150);
-    padding: 5rem 0 6rem;
+    padding: 5rem 0 10rem;
     margin: auto;
 
     display: flex;
@@ -368,7 +369,11 @@ BUG: El header no se adapta bien, como no tengo
     font-variant: var(--font-smallcaps);
     line-height: 1;
 }
-.Intro-h3, .Intro-p {max-width: var(--width-750);}
+.Intro-h3, .Intro-p {
+    max-width: var(--width-570);
+    padding: 0 1rem 0;
+
+    border-left: .5rem solid var(--color-grey);}
 
 .Intro-img {
     background-color: orange;
@@ -379,6 +384,11 @@ BUG: El header no se adapta bien, como no tengo
     right: 0;
     top: 0;
     z-index: -1;
+    animation: introImg 1.2s ease-in-out infinite alternate;
+}
+@keyframes introImg {
+    from{transform: translateY(1rem);}
+    to{transform: translateY(0);}
 }
 
 /*-Lightbox-*/
@@ -394,10 +404,14 @@ BUG: El header no se adapta bien, como no tengo
     gap: 1rem;
 }
 .Gallery-h2 {
+    text-align: center;
+
     font-family: var(--font-family-ezcar);
     font-size: var(--font-h2-size);
     font-weight: var(--font-bold);
     font-variant: var(--font-smallcaps);
+    line-height: 1;
+
 }
 .Gallery-h4 {
     font-size: var(--font-h4-size);
@@ -415,10 +429,11 @@ BUG: El header no se adapta bien, como no tengo
     gap: 2rem;
 }
 .Gallery-li {}
-.Gallery-img {background-color: var(--color-background-white);
-    height: 15.625rem;
+.Gallery-img {
+    background-color: var(--color-background-white);
+    width: 100%;
 
-    box-shadow: .5rem .4rem .5rem 0rem var(--color-black-opacity);
+    box-shadow: var(--box-shadow-gen);
     border-radius: 1rem;
 
     cursor: pointer;
@@ -438,7 +453,6 @@ BUG: El header no se adapta bien, como no tengo
     left: 0;
     z-index: 5;
 
-
     opacity: 0;
     pointer-events: none;
     backdrop-filter: blur(.2rem);
@@ -446,19 +460,35 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Lightbox.isActive {opacity: 1; pointer-events: initial;}
 
+/*-Wrapper que recoge imágenes + texto de la galería-*/
+.Lightbox-wrapper{
+    max-width: var(--width-750);
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: calc(50% - (31.25rem / 2));
+    left: calc(50% - (var(--width-750) / 2));
+}
+
 /*-Botones lightbox-*/
 .Lightbox-next, .Lightbox-prev {
     position: absolute;
     top: calc(50% - (5% / 2));
     z-index: 1;
 }
-.Lightbox-next {right: calc( 50% - (55% / 2));}
-.Lightbox-prev {left: calc( 50% - (55% / 2));}
+.Lightbox-next {right: 2%}
+.Lightbox-prev {left: 2%}
 .Lightbox-close {
     position: absolute;
-    top: 20%;
-    left: calc( 50% - (55% / 2));
-    z-index: 1;}
+    top: 2%;
+    left: 2%;
+    z-index: 1;
+}
 .Lightbox-svg {
     color: white;
     background-color: var(--color-black-opacity);
@@ -475,37 +505,34 @@ BUG: El header no se adapta bien, como no tengo
 .Lightbox-svg:hover{transform: var(--transform-scale-up);}
 .Lightbox-svg:active{transform: var(--transform-scale-down);}
 
-/*
-ToDo: Poner todo el container junto de manera que no se fastidie la posición
-*/
-.Lightbox-img {
-    background-color: gold;
-    max-width: calc(15.625rem * 3) ;
-    width: 100%;
-    height: 31.25rem;
-    
-    position: absolute;
-    top: calc(50% - (31.25rem / 2));
-    left: calc(50% - ((15.625rem * 3) / 2));
 
+.Lightbox-img {
+    background-color: var(--color-background-white);
+    max-width: var(--width-750);
+
+
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-gen);
 }
 
 .Lightbox-p {
     background-color: var(--color-background-white);
-    width: 40%;
+    width: 90%;
     min-height: 10%;
-    padding:2rem 1rem;
+    padding:1rem;
 
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     
     position:absolute;
-    left: calc(50% - (40% / 2));
-    bottom: 15%;
+    left: calc(50% - (90% / 2));
+    bottom: 0;
 
     opacity: 0;
     transition: opacity .3s ease-in-out;
 }
 .Lightbox-p.isActive{ opacity: 1;}
+
+
 
 /*-Personajes-*/
 .Personajes {
@@ -521,7 +548,7 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
     line-height: 1;
 }
 .Personajes-h4 {
-    max-width: var(--width-750);
+    max-width: var(--width-570);
 
     font-size: var(--font-h4-size);
     font-weight: var(--font-medium);
@@ -533,7 +560,7 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
     margin:-10rem 0 0;
 
     display: flex;
-    flex-flow: row-reverse nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items:center;
 }
@@ -571,7 +598,6 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 
     opacity: 0;}
 .Personajes-img.Static{position:static;}
@@ -581,7 +607,7 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
 .Personajes-info {position: relative;}
 .Personajes-desc {
     background-color: var(--color-background-white);
-    width: var(--width-750);
+    width: var(--width-570);
     padding: 1rem 1rem 2rem;
     margin-top: -2rem;
 
@@ -592,7 +618,7 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
     border-left: 1rem solid transparent;
     opacity: 0;
 
-    box-shadow: .5rem .4rem .5rem 0rem var(--color-black-opacity);
+    box-shadow: var(--box-shadow-gen);
     transition: opacity .3s ease-in-out;
 }
 .Personajes-desc.isActive{opacity: 1;}
@@ -612,6 +638,22 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
 .Personajes-desc.Elmo    {color: var(--color-elmo); border-color: var(--color-elmo);}
 
 .Personajes-p {color: var(--color-grey);}
+
+
+/*--Animaciones--*/
+
+/*-vvv Clase para el js vvv-*/
+.Animation {opacity: 0;}
+
+.Fade-in{animation: fadein 1s ease-in-out 1 forwards;}
+@keyframes fadein {
+    from{ opacity: 0; transform: translateY(-50%);
+    }
+    to{opacity:1; transform: translateX(initial);}
+}
+
+
+
 
 /*-------------- [MAIN] --------------*/
 
@@ -779,7 +821,10 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
 @media (max-width:1220px) {
 
     .Gallery-ul {padding: 0 2rem}
-    .Personajes {padding-left: 1rem; padding-right: 1rem;}
+
+    
+
+    .Intro, .Personajes {padding-left: 1rem; padding-right: 1rem;}
 
     .Footer {padding: 3rem; gap:2.5rem;}
     .Footer-rrss {margin-bottom: 4rem;}
@@ -789,7 +834,39 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
         padding:0 1rem 0;
         justify-content: space-between;}
     .Header-nav {display: none;}
-    .Responsive {display:inline}       
+    .Responsive {display:inline}   
+    
+    .Intro{
+        justify-content: center;
+        align-items: center;
+
+        position:initial
+    }
+    .Intro-h2 {text-align: center;}
+    .Intro-h3, .Intro-p{ border: initial}
+    .Intro-img{position: initial;}
+
+
+    .Personajes {
+        padding: .5rem 1rem ;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;}
+
+    .Personajes-article{text-align: center;}
+
+    .Personajes-wrapper {margin-top: -1rem; }
+    .Personajes-info {position: initial; z-index: 1;}
+    .Personajes-desc {
+        width: 100%;
+        margin-top: 1.5rem;
+
+        border-right:1rem solid transparent;
+        border-radius: initial;}
+    .Personajes-slider{right: 0;}
+
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
@@ -800,30 +877,12 @@ ToDo: Poner todo el container junto de manera que no se fastidie la posición
     .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
 
     .Gallery-ul { grid-template-columns: repeat(2, 1fr);}
+}
 
-
-    .Personajes {
-        padding: .5rem 1rem ;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;}
-
-    .Personajes-article{text-align: center;}
-
-    .Personajes-wrapper {
-        margin-top: -1.5rem;
-        flex-flow: column;
-    }
-    .Personajes-info {position: initial; z-index: 1;}
-    .Personajes-desc {
-        width: 100%;
-        margin-top: -15rem;
-
-        border-right:1rem solid transparent;
-        border-radius: initial;}
+@media (max-width: 760px) {
+    .Lightbox-wrapper {left: 0;}
+    .Lightbox-img {border-radius: initial;}
+    
 }
 
 @media (max-width:595px) {

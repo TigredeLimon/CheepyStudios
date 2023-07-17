@@ -68,23 +68,87 @@ htmlMain.addEventListener(`click`, ()=>{
 /* -- PSEUDOCÓDIGO -- 
 Cuando hago CLICK en galleryImg, hace una FUNCTION
     —> A lightbox se le ADD la clase isActive
+    —> La SRC de lightboxImg es IGUAL = a la SRC de galleryImg
 
 Cuando hago CLICK en galleryClose, hace una FUNCTION    
     —> A lightbox se le DELETE la clase isActive
+------------
+
+Cuando hago CLICK en lightboxPrev, hace una FUNCTION
+    —> lightboxActive--
+    —> Si... lightboxActive <= -1
+       —> lightboxActive = 5
+    —> A TODAS las lightboxP se le REMOVE la clase isActive
+    —> A lightboxP posición Index se le ADD la clase isActive
 
 */
 
-const galleryImg   = document.querySelectorAll(`.Gallery-img`)
-const galleryClose = document.querySelector(`.Lightbox-close`)
+//Imágenes de la galería
+const galleryImg    = document.querySelectorAll(`.Gallery-img`)
+//Botones
+const lightboxPrev  = document.querySelector (`.Lightbox-prev`)
+const lightboxNext  = document.querySelector (`.Lightbox-next`)
+const galleryClose  = document.querySelector(`.Lightbox-close`)
+//Contenido del lightbox
 const lightbox     = document.querySelector(`.Lightbox`)
+const lightboxImg  = document.querySelector(`.Lightbox-img`)
+const lightboxP    = document.querySelectorAll(`.Lightbox-p`)
 
+let lightboxActive = 0
+
+/*
+    BUG: El orden de las imágenes + texto cambia, no sigue el orden 0 a 5,,, revisarlo
+*/
+//Funcion para activar las flechas
+let activateGallery = ()=>{
+    lightboxP.forEach((eachText, index)=>{
+        lightboxP[index].classList.remove(`isActive`)
+        lightboxP[lightboxActive].classList.add(`isActive`)
+    })
+    lightboxImg.src = galleryImg[lightboxActive].src
+    
+}
+
+// Abrir el lightbox
 galleryImg.forEach((eachImg, index)=>{
     galleryImg[index].addEventListener(`click`, ()=>{
+        
         lightbox.classList.add(`isActive`)
-    })
+        lightboxImg.src = galleryImg[index].src
+        
+        //Seleccionar texto según imagen
+        lightboxP.forEach((eachtext, i)=>{
+            lightboxP[i].classList.remove(`isActive`)
+            lightboxP[index].classList.add(`isActive`)
+        })
+    })   
 })
+
+// Click hacia atrás
+lightboxPrev.addEventListener(`click`, ()=>{
+    lightboxActive--
+    if(lightboxActive <= -1){
+        lightboxActive = 5}
+
+    activateGallery()
+    console.log(lightboxActive)
+})
+
+// Click hacia delante
+lightboxNext.addEventListener(`click`, ()=>{
+    lightboxActive++
+    if(lightboxActive >= 6){
+        lightboxActive = 0}
+
+    activateGallery()
+    console.log(lightboxActive)
+    
+})
+
+// Cerrar lighthbox
 galleryClose.addEventListener(`click`, ()=>{
     lightbox.classList.remove(`isActive`)
+
 })
 
 
@@ -149,3 +213,41 @@ buttonNext.addEventListener(`click`, ()=>{
         itemActive  = 0}
     activateClass()
 })
+
+
+
+/* -- PSEUDOCÓDIGO -- 
+Cuando hago SCROLL hasta cierto punto, animation hace una FUNCTION
+    —> A TODAS las animation se le añade la clase Fade-in
+*/
+
+/*
+——> Función que añade los elementos que tienen la clase Animation
+——> See: Clase, día 44
+——> See: https://dev.to/ljcdev/introduction-to-scroll-animations-with-intersection-observer-d05
+*/
+
+
+const animation = document.querySelectorAll(`.Animation`)
+
+let options = {
+    root       : null,
+    rootMargin : '0px 0px',
+    threshold  : [0, 1]
+}
+
+let observer = new IntersectionObserver( (changes)=>{
+    changes.forEach((eachAnimation)=>{
+        
+        const indexAnimation = Array.from(animation).indexOf(eachAnimation.target)
+
+        let {isIntersecting} = eachAnimation
+       
+        if (isIntersecting){
+        animation[indexAnimation].classList.add(`Fade-in`)
+        }
+    })
+}, options)
+animation.forEach(wrapper => {
+    observer.observe(wrapper)
+  })

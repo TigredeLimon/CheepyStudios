@@ -68,6 +68,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-green: #95D950;
     --color-white: #FFFFFF;
     --color-white-opacity: #FFFFFF45;
+    --color-background-white:#ffffffc2;
 
     /*-Medidas estándar-*/
     --width-1150: 71.875rem;
@@ -82,7 +83,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
     --font-h2-size: 3rem;
-    --font-h3-size: 1.7rem;
+    --font-h3-size: 2.5rem;
     --font-h4-size: 1.5rem;
     --font-h5-size: 1.25rem;
     --font-h6-size: 1rem;
@@ -104,17 +105,19 @@ form, input, textarea, label, button, fieldset, legend, select{
     
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
+
+    /*-Otros-*/
+    --text-shadow-gen: .4rem .2rem .5rem rgba(0, 0, 0, 0.267);
+    --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
 }
 
 html{ scroll-behavior: smooth;}
 
 body {
-    background: rgb(255,185,79);
-    background: linear-gradient(180deg, rgba(255, 185, 79, 0.233) 0%, rgba(255,255,255,0) 100%);
-    background-attachment: fixed;
+    background: url(../assets/fondo_textura.jpg) no-repeat fixed;
+    background-size: cover;
     
-    font-size: 100%;
-    position: relative;}
+    font-size: 100%;}
 /*-------------- RESET END --------------*/
 
 
@@ -235,7 +238,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Menú responsive-*/
 .Responsive {display: none;}
 
-.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen);}
+.Responsive-svg {width: 2rem; color: var(--color-yellow); transition: var(--transition-gen); cursor: pointer;}
 .Responsive-svg:hover {color: var(--color-white);}
 .Responsive-svg:active {transform: var(--transform-scale-down);}
 
@@ -326,10 +329,10 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-------------- [MAIN] --------------*/
 .Main {
-    margin-top: 4.375rem;
+    margin: 4.375rem 0;
     min-height: 80vh;}
 
-.About{
+.About, .Devs{
     max-width: var(--width-1150);
     
     padding: 2rem 0;
@@ -343,6 +346,9 @@ BUG: El header no se adapta bien, como no tengo
 }
 
 .About-title {
+    color: var(--color-white);
+    text-shadow: var(--text-shadow-gen);
+
     font-family: var(--font-family-ezcar);
     font-size: var(--font-h2-size);
     font-weight: var(--font-bold);
@@ -351,10 +357,14 @@ BUG: El header no se adapta bien, como no tengo
 }
 .About-subtitle {
     max-width: var(--width-750);
+    background-color: var(--color-background-white);
     color: var(--color-grey);
 
-    padding: 1rem;
-    
+    padding: 2rem 1rem;
+
+    border-radius: 1rem;
+
+    box-shadow: var(--box-shadow-gen);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -395,7 +405,10 @@ BUG: El header no se adapta bien, como no tengo
 .About-contacto {color: var(--color-blue); border-color: var(--color-blue);}
 
 /*-Hover + active de los botones-*/
-.About-juegos:hover, .About-contacto:hover {color: var(--color-white); transform: var(--transform-scale-up);}
+.About-juegos:hover, .About-contacto:hover {
+    color: var(--color-white);
+    box-shadow: var(--box-shadow-gen);
+    transform: var(--transform-scale-up);}
 .About-juegos:hover {background-color: var(--color-red);}
 .About-contacto:hover {background-color: var(--color-blue);}
 .About-juegos:active, .About-contacto:active {transform: var(--transform-scale-down);}
@@ -410,7 +423,9 @@ BUG: El header no se adapta bien, como no tengo
     align-items: self-start;
     gap: 2rem;
     
-    transition: var(--transition-gen);}
+    box-shadow: var(--box-shadow-gen);
+    transition: var(--transition-gen);
+}
 
 /*-Colores del wrapper para cada dev-*/
 .About-wrapper.Brais {background-color: var(--color-yellow); margin-left: -20%;}
@@ -460,21 +475,21 @@ BUG: El header no se adapta bien, como no tengo
 }
 .About-li {}
 .About-rrss {
-    background-color: var(--color-black);
-    width: 2.5rem;
-    padding: 0.5rem;
+    background-color: var(--color-black-opacity);
+    color: var(--color-white);
+    width: 3rem;
+    padding: 0.6rem;
     margin-top: 1.5rem;
 
     border-radius: 1.5rem;
 
     transition: var(--transition-gen);
 }
-.Brais .About-rrss {color:var(--color-yellow);}
-.Bruno .About-rrss{color: #ffcd80;;}
-.Gabi .About-rrss{color:var(--color-red);}
-.Tobi .About-rrss{color:var(--color-green);}
-
-.About-rrss:hover {color: white; transform: var(--transform-scale-up);}
+.Brais .About-rrss:hover {color:var(--color-yellow);}
+.Bruno .About-rrss:hover {color: #ffcd80;;}
+.Gabi  .About-rrss:hover {color:var(--color-red);}
+.Tobi  .About-rrss:hover {color:var(--color-green);}
+.About-rrss:hover { background-color: var(--color-black); transform: var(--transform-scale-up);}
 .About-rrss:active {transform: var(--transform-scale-down);}
 
 
@@ -673,11 +688,15 @@ BUG: El header no se adapta bien, como no tengo
     .Header-nav {display: none;}
     .Responsive {display:inline}    
     
-    .About .About-title, .About .About-subtitle {padding: 0 2rem;}
+    .About-subtitle {padding: 2rem;}
     .About-wrapper.Brais, .About-wrapper.Bruno, .About-wrapper.Gabi, .About-wrapper.Tobi  {margin: initial;}
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
+}
+
+@media (max-width: 760px) {
+    .About-subtitle {border-radius: initial;}
 }
 
 
