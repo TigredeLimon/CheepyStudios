@@ -68,6 +68,17 @@ form, input, textarea, label, button, fieldset, legend, select{
     --color-green: #95D950;
     --color-white: #FFFFFF;
     --color-white-opacity: #FFFFFF45;
+    
+    /*-Colores específicos sección-*/
+    --color-nina:#ff698f;
+    --color-lewis:#892234;
+    --color-orestes:#2B4894;
+    --color-fede:#4BA72A;
+    --color-arame:#FB6600;
+    --color-toshe:#445DFB;
+    --color-elmo:#CD1C2C;
+
+    --color-background-white:#ffffffc2;
 
     /*-Medidas estándar-*/
     --width-1150: 71.875rem;
@@ -78,10 +89,13 @@ form, input, textarea, label, button, fieldset, legend, select{
     --font-family-roboto: 'Roboto', sans-serif;
     --font-family-ezcar: 'Eczar', serif;
 
+    /*
+    ToDO: 
+    */
     /*-Tamaños Fonts-*/
     --font-h1-size: 3.375rem;
     --font-h2-size: 3rem;
-    --font-h3-size: 1.7rem;
+    --font-h3-size: 2.5rem;
     --font-h4-size: 1.5rem;
     --font-h5-size: 1.25rem;
     --font-h6-size: 1rem;
@@ -108,7 +122,8 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
-    background-color: var(--color-white);
+    background: url(/assets/fondo_cuadros.png);
+    background-repeat: repeat;
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/
@@ -322,57 +337,72 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-------------- [MAIN] --------------*/
 .Main {
-    margin-top: 4.375rem;
+    margin-top: 6rem;
     min-height: 80vh;}
 
 /*-Introducción-*/    
 .Intro {
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
     max-width: var(--width-1150);
-    padding: 2rem 0;
+    padding: 5rem 0 6rem;
     margin: auto;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: .5rem;
+    gap: 1rem;
 
     position: relative;
 }
 .Intro-h2 {
     font-family: var(--font-family-ezcar);
-    font-size: var(--font-h2-size);
+    font-size: var(--font-h1-size);
     font-weight: var(--font-bold);
     font-variant: var(--font-smallcaps);
-    text-decoration: underline;
     line-height: 1;
 }
 .Intro-h3 {
-    font-size: var(--font-h3-size);
+    font-size: var(--font-h4-size);
     font-weight: var(--font-medium);
     font-variant: var(--font-smallcaps);
+    line-height: 1;
 }
-.Intro-p {}
-.Intro-h2, .Intro-h3, .Intro-p {max-width: var(--width-750);}
+.Intro-h3, .Intro-p {max-width: var(--width-750);}
 
 .Intro-img {
     background-color: orange;
-    width: calc(100% / 2.5);
+    width: calc(100% / 2.5); /*Delete later, es solo para ver composición*/
     height: 100%;
 
     position: absolute;
     right: 0;
     top: 0;
+    z-index: -1;
 }
 
 /*-Lightbox-*/
 .Gallery {
-    background-color: var(--color-grey);
-    padding: 1rem 0;
+    background-color: rgba(128, 128, 128, 0.37);
+    padding: 1.5rem 0 5rem;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-.Gallery-h2 {}
-.Gallery-h4 {}
+.Gallery-h2 {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+}
+.Gallery-h4 {
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-medium);
+}
 .Gallery-ul {
     width: 100%;
     max-width: var(--width-1150);
@@ -384,11 +414,18 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 2rem;
 }
-.Gallery-li {
-    background-color: lightgoldenrodyellow;
+.Gallery-li {}
+.Gallery-img {background-color: var(--color-background-white);
     height: 15.625rem;
-}
-.Gallery-img {}
+
+    box-shadow: .5rem .4rem .5rem 0rem var(--color-black-opacity);
+    border-radius: 1rem;
+
+    cursor: pointer;
+    transition: var(--transition-gen);}
+.Gallery-img:hover{ transform: rotate(1deg) var(--transform-scale-up);}
+.Gallery-img:active{ transform: rotate(-1deg) var(--transform-scale-down);}
+
 
 /*-Slider dentro de lightbox-*/
 .Lightbox {
@@ -405,11 +442,42 @@ BUG: El header no se adapta bien, como no tengo
     opacity: 0;
     pointer-events: none;
     backdrop-filter: blur(.2rem);
+    transition: var(--transition-gen);
 }
 .Lightbox.isActive {opacity: 1; pointer-events: initial;}
-.Lightbox-next {}
-.Lightbox-prev {}
-.Lightbox-close {}
+
+/*-Botones lightbox-*/
+.Lightbox-next, .Lightbox-prev {
+    position: absolute;
+    top: calc(50% - (5% / 2));
+    z-index: 1;
+}
+.Lightbox-next {right: calc( 50% - (55% / 2));}
+.Lightbox-prev {left: calc( 50% - (55% / 2));}
+.Lightbox-close {
+    position: absolute;
+    top: 20%;
+    left: calc( 50% - (55% / 2));
+    z-index: 1;}
+.Lightbox-svg {
+    color: white;
+    background-color: var(--color-black-opacity);
+    width: 2.5rem;
+    padding: 0.4rem;
+    
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: var(--transition-gen);
+}
+
+.Lightbox-svg:hover{transform: var(--transform-scale-up);}
+.Lightbox-svg:active{transform: var(--transform-scale-down);}
+
+/*
+ToDo: Poner todo el container junto de manera que no se fastidie la posición
+*/
 .Lightbox-img {
     background-color: gold;
     max-width: calc(15.625rem * 3) ;
@@ -421,24 +489,129 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - ((15.625rem * 3) / 2));
 
 }
-.Lightbox-p {}
+
+.Lightbox-p {
+    background-color: var(--color-background-white);
+    width: 40%;
+    min-height: 10%;
+    padding:2rem 1rem;
+
+    border-radius: 1rem;
+    
+    position:absolute;
+    left: calc(50% - (40% / 2));
+    bottom: 15%;
+
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.Lightbox-p.isActive{ opacity: 1;}
 
 /*-Personajes-*/
 .Personajes {
-    background-color: grey;
-}
+    max-width: var(--width-1150);
+    margin: 4rem auto;
+    }
 .Personajes-article {}
-.Personajes-h2 {}
-.Personajes-h4 {}
+.Personajes-h2 {
+    font-family:  var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+    line-height: 1;
+}
+.Personajes-h4 {
+    max-width: var(--width-750);
 
-.Personajes-wrapper {}
-.Personajes-next {}
-.Personajes-prev {}
-.Personajes-info {}
-.Personajes-info.isActive {}
-.Personajes-img {}
-.Personajes-p {}
+    font-size: var(--font-h4-size);
+    font-weight: var(--font-medium);
+    line-height: 1;
+}
 
+/*-Slider-*/
+.Personajes-wrapper {
+    margin:-10rem 0 0;
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items:center;
+}
+.Personajes-slider{
+    margin-top: -1rem;
+
+    position: relative;
+    right: 5%;
+    bottom: 0;
+}
+/*-Botones slider-*/
+.Personajes-next, .Personajes-prev {
+    position: absolute;
+    top: calc(50% - (20% / 2));
+    z-index: 2;
+
+    transition: var(--transition-gen);
+}
+.Personajes-next {right: 0;}
+.Personajes-prev {left: 0;}
+.Personajes-svg{
+    color: white;
+    background-color: var(--color-black-opacity);
+    width: 2.5rem;
+    padding: 0.4rem;
+    
+    cursor: pointer;
+
+    border-radius: 50%;}
+
+.Personajes-next:hover, .Personajes-prev:hover{transform: var(--transform-scale-up);} 
+.Personajes-next:active, .Personajes-prev:active{transform: var(--transform-scale-down);} 
+
+.Personajes-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    opacity: 0;}
+.Personajes-img.Static{position:static;}
+.Personajes-img.isActive{opacity: 1;}
+
+/*-Información personajes-*/
+.Personajes-info {position: relative;}
+.Personajes-desc {
+    background-color: var(--color-background-white);
+    width: var(--width-750);
+    padding: 1rem 1rem 2rem;
+    margin-top: -2rem;
+
+    position: absolute;
+    left: 0;
+
+    border-radius: 0 1rem 1rem 0;
+    border-left: 1rem solid transparent;
+    opacity: 0;
+
+    box-shadow: .5rem .4rem .5rem 0rem var(--color-black-opacity);
+    transition: opacity .3s ease-in-out;
+}
+.Personajes-desc.isActive{opacity: 1;}
+.Personajes-name {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h3-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);}
+
+/*-Colores para cada personaje-*/
+.Personajes-desc.Nina    {color: var(--color-nina); border-color: var(--color-nina);}
+.Personajes-desc.Lewis   {color: var(--color-lewis); border-color: var(--color-lewis) ;}
+.Personajes-desc.Orestes {color: var(--color-orestes); border-color: var(--color-orestes);}
+.Personajes-desc.Fede    {color: var(--color-fede); border-color: var(--color-fede);}
+.Personajes-desc.Arame   {color: var(--color-arame); border-color: var(--color-arame);}
+.Personajes-desc.Toshe   {color: var(--color-toshe); border-color: var(--color-toshe);}
+.Personajes-desc.Elmo    {color: var(--color-elmo); border-color: var(--color-elmo);}
+
+.Personajes-p {color: var(--color-grey);}
 
 /*-------------- [MAIN] --------------*/
 
@@ -604,6 +777,10 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-- [RESPONSIVE] --*/
 @media (max-width:1220px) {
+
+    .Gallery-ul {padding: 0 2rem}
+    .Personajes {padding-left: 1rem; padding-right: 1rem;}
+
     .Footer {padding: 3rem; gap:2.5rem;}
     .Footer-rrss {margin-bottom: 4rem;}
 }
@@ -621,9 +798,37 @@ BUG: El header no se adapta bien, como no tengo
 
 @media (max-width:870px) {
     .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
+
+    .Gallery-ul { grid-template-columns: repeat(2, 1fr);}
+
+
+    .Personajes {
+        padding: .5rem 1rem ;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;}
+
+    .Personajes-article{text-align: center;}
+
+    .Personajes-wrapper {
+        margin-top: -1.5rem;
+        flex-flow: column;
+    }
+    .Personajes-info {position: initial; z-index: 1;}
+    .Personajes-desc {
+        width: 100%;
+        margin-top: -15rem;
+
+        border-right:1rem solid transparent;
+        border-radius: initial;}
 }
 
 @media (max-width:595px) {
+
+    .Gallery-ul { grid-template-columns: repeat(1, 1fr);}
 
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}

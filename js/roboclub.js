@@ -66,32 +66,86 @@ htmlMain.addEventListener(`click`, ()=>{
 
 
 /* -- PSEUDOCÓDIGO -- 
-Cuando transcurrren 8 segundos, HeroGallery hace una FUNCTION
-    —> A galleryActive ++
-    —> Si... galleryActive es MAYOR O IGUAL (>=) a 3
-        —>galleryActive es IGUAL = 0
+Cuando hago CLICK en galleryImg, hace una FUNCTION
+    —> A lightbox se le ADD la clase isActive
 
-    —>A TODAS las galleryImg se les REMOVE la clase isActive
-    —>A la galleryImg posicion galleryActive se le ADD la clase
-      isActive
+Cuando hago CLICK en galleryClose, hace una FUNCTION    
+    —> A lightbox se le DELETE la clase isActive
+
 */
-/*
-    ——> Función que activa un intervalo de 8 segundos, en el
-    cual se añade y/o se quita la clase isActive
-*/
-const galleryImg = document.querySelectorAll(`.Hero-img`)
 
-let galleryActive = 0
+const galleryImg   = document.querySelectorAll(`.Gallery-img`)
+const galleryClose = document.querySelector(`.Lightbox-close`)
+const lightbox     = document.querySelector(`.Lightbox`)
 
-setInterval(()=>{
-    galleryActive++
-    if(galleryActive >= 3){
-        galleryActive = 0}
-
-    galleryImg.forEach((eachImg, index)=>{
-        galleryImg[index].classList.remove(`isActive`)
-        galleryImg[galleryActive].classList.add(`isActive`)
+galleryImg.forEach((eachImg, index)=>{
+    galleryImg[index].addEventListener(`click`, ()=>{
+        lightbox.classList.add(`isActive`)
     })
-}, 8000)
+})
+galleryClose.addEventListener(`click`, ()=>{
+    lightbox.classList.remove(`isActive`)
+})
 
 
+
+/* -- PSEUDOCÓDIGO -- 
+Cuando hago CLICK en buttonPrev, hace una FUNCTION
+    —> A itemActive--
+
+    —> Si... itemActive <= -1
+       —> itemActive = 6
+    
+    —> A TODAS las imgList se le REMOVE la clase isActive
+    —> A imgList posición Index se le TOGGLE la clase isActive
+    —> A TODAS las descList se le REMOVE la clase isActive
+    —> A descList se le ADD la clase isActive
+
+Cuando hago CLICK en buttonNext, hace una FUNCTION
+    —> A itemActive++
+
+    —> Si... itemActive >= 7
+       —> itemActive = 0
+     
+    —> A TODAS las imgList se le REMOVE la clase isActive
+    —> A imgList posición Index se le TOGGLE la clase isActive
+    —> A TODAS las descList se le REMOVE la clase isActive
+    —> A descList se le ADD la clase isActive   
+*/
+
+const buttonPrev = document.querySelector(`.Personajes-prev`)
+const buttonNext = document.querySelector(`.Personajes-next`)
+
+const imgList  = document.querySelectorAll(`.Personajes-img`)
+const descList = document.querySelectorAll(`.Personajes-desc`)
+
+let itemActive  = 0
+
+//Función para activar el pase de diapositivas
+let activateClass = ()=>{
+    imgList.forEach((eachImg, index)=>{
+        imgList[index].classList.remove(`isActive`)
+        imgList[itemActive].classList.add(`isActive`)
+    })
+    descList.forEach((eachDesc, index)=>{
+        descList[index].classList.remove(`isActive`)
+        descList[itemActive].classList.add(`isActive`)
+    })
+}
+
+
+buttonPrev.addEventListener(`click`, ()=>{
+    itemActive--
+
+    if(itemActive <= -1){
+        itemActive  = 6}
+    activateClass()
+})
+
+buttonNext.addEventListener(`click`, ()=>{
+    itemActive++
+
+    if(itemActive >= 7){
+        itemActive  = 0}
+    activateClass()
+})

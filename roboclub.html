@@ -96,8 +96,8 @@ se estructura de la siguiente manera:
         <section class="Main-section Intro">
 
             <h2 class="Intro-h2">¡Bienvenido al club de robótica!</h2>
-            <h3 class="Intro-h3">¿a qué esperas para unirte?</h3>
-            <p class="Intro-p">Nina, Lewis, Elmo, Arame, Toshe, Fede y Orestes, chicos de un instituto con personalidades muy distintas entre sí, encuentran un vínculo inquebrantable en su pasión compartida: la robótica. Sin embargo, sus vidas dan un giro de 180º cuando el enigmático profesor de su club se desvanece sin dejar rastro. El grupo deberá salvar sus diferencias y combinar sus habilidades para revelar los secretos que entrañan la misteriosa desaparición, ¿podrán estos jóvenes resolver el enigma y salvar el roboclub?</p>
+            <h3 class="Intro-h3">¿te interesan los robots, la tecnología, programar y trabajar en equipo? ¡pues este es tu sitio! ¿a qué esperas para apuntarte?</h3>
+            <p class="Intro-p">Nina, Lewis, Elmo, Arame, Toshe, Fede y Orestes, chicos de un instituto con personalidades muy distintas entre sí encuentran un vínculo inquebrantable en su pasión compartida: la robótica. Sin embargo, sus vidas dan un giro de 180º cuando el enigmático profesor de su club se desvanece sin dejar rastro. El grupo deberá salvar sus diferencias y combinar sus habilidades para revelar los secretos que entrañan la misteriosa desaparición, ¿podrán estos jóvenes resolver el enigma y salvar el roboclub?</p>
 
             <img src="#" alt="Imagen de introducción al Club de Robótica" loading="lazy" class="Intro-img">
 
@@ -106,7 +106,7 @@ se estructura de la siguiente manera:
         <!--Galería (en grid) de imágenes-->
         <div class="Gallery">
             <h2 class="Gallery-h2">Gameplay y características</h2>
-            <h2 class="Gallery-h4">Gameplay y características</h2>
+            <h4 class="Gallery-h4">Info snippet</h4>
             <ul class="Gallery-ul">
                 <li class="Gallery-li"><img src="#" alt="Gameplay" loading="lazy" class="Gallery-img"></li>
                 <li class="Gallery-li"><img src="#" alt="Gameplay" loading="lazy" class="Gallery-img"></li>
@@ -118,13 +118,25 @@ se estructura de la siguiente manera:
 
             <!--Lighbox + Slider-->
             <div class="Gallery-Wrapper Lightbox">
-                <button class="Lightbox-next">TEST</button>
-                <button class="Lightbox-prev">TEST</button>
-                <button class="Lightbox-close"></button>
+                <button class="Lightbox-next">
+                    <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                      </svg>
+                </button>
+                <button class="Lightbox-prev">
+                    <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                      </svg>
+                </button>
+                <button class="Lightbox-close">
+                    <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                </button>
                 
                 <img src="" alt="Gameplay en lightbox" class="Lightbox-img">
 
-                <p class="Lightbox-p">Texto</p>
+                <p class="Lightbox-p isActive">lorem</p>
                 <p class="Lightbox-p">Texto</p>
                 <p class="Lightbox-p">Texto</p>
                 <p class="Lightbox-p">Texto</p>
@@ -144,51 +156,76 @@ se estructura de la siguiente manera:
 
             <!--Slider de personajes-->
             <div class="Personajes-wrapper">
-                <button class="Personajes-next"></button>
-                <button class="Personajes-prev"></button>
 
-                <!--Personaje 1-->
-                <div class="Personajes-info isActive">
-                    <img src="#" alt="Nina" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
-                </div>
-                
-                <!--Personaje 2-->
-                <div class="Personajes-info">
-                    <img src="#" alt="Lewis" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
-                </div>
-                
-                <!--Personaje 3-->
-                <div class="Personajes-info">
-                    <img src="#" alt="Arame" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
-                </div>
-                
-                <!--Personaje 4-->
-                <div class="Personajes-info">
-                    <img src="#" alt="Toshe" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
-                </div>
-                
-                <!--Personaje 5-->
-                <div class="Personajes-info">
-                    <img src="#" alt="Orestes" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
-                </div>
-                
-                <!--Personaje 6-->
-                <div class="Personajes-info">
-                    <img src="#" alt="Fede" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
+                <div class="Personajes-slider">
+                <!--Botones del slider-->
+                <button class="Personajes-next">
+                    <svg class="Personajes-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                      </svg>
+                </button>
+                <button class="Personajes-prev">
+                    <svg class="Personajes-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                  </svg></button>
+                <!--Imágenes de los personajes-->
+                <img src="assets/personajes_nina.png" alt="Nina" loading="lazy" class="Personajes-img Static isActive">
+                <img src="assets/personajes_lewis.png" alt="Lewis" loading="lazy" class="Personajes-img">
+                <img src="assets/personajes_orestes.png" alt="Orestes" loading="lazy" class="Personajes-img">
+                <img src="assets/personajes_fede.png" alt="Fede" loading="lazy" class="Personajes-img">
+                <img src="assets/personajes_arame.png" alt="Arame" loading="lazy" class="Personajes-img">
+                <img src="assets/personajes_toshe.png" alt="Toshe" loading="lazy" class="Personajes-img">
+                <img src="assets/personajes_elmo.png" alt="Elmo" loading="lazy" class="Personajes-img">
                 </div>
 
-                 <!--Personaje 7-->
-                 <div class="Personajes-info">
-                    <img src="#" alt="Elmo" loading="lazy" class="Personajes-img">
-                    <p class="Personajes-p">Info personaje</p>
+                <div class="Personajes-info">
+                    <!--Personaje 1-->
+                    <article class="Personajes-desc Nina isActive">
+                        <h5 class="Personajes-name">Nina</h5>
+                        <p class="Personajes-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quisquam fugit corrupti tempore molestiae explicabo harum reiciendis eum? In nostrum nemo minima, ad voluptate iurrem?</p>
+                    </article>
+
+                    <!--Personaje 2-->
+                    <article class="Personajes-desc Lewis">
+                        <h5 class="Personajes-name">Lewis</h5>
+                        <p class="Personajes-p">Lorem ipsum dolor sit amet consectetur olestiae explicabo harum reiciendis eum? In nostrum nemo minima, ad voluptate iure suscipit labore harum sapiente rem?</p>
+                    </article>
+
+                    <!--Personaje 3-->
+                    <article class="Personajes-desc Orestes">
+                        <h5 class="Personajes-name">Orestes</h5>
+                        <p class="Personajes-p">Lorem ipsum dolo labore harum sapiente rem?</p>
+                    </article>
+
+                    <!--Personaje 4-->
+                    <article class="Personajes-desc Fede">
+                        <h5 class="Personajes-name">Fede</h5>
+                        <p class="Personajes-p">Lorem ipsum dosuscipit labore harum sapiente rem?</p>
+                    </article>
+
+                    <!--Personaje 5-->
+                    <article class="Personajes-desc Arame">
+                        <h5 class="Personajes-name">Arame</h5>
+                        <p class="Personajes-p">Lorem ipsum dolompore molestiae explicabo harum reiciendis eum? In nostrum nemo minima, ad voluptate iure suscipit labore harum sapiente rem?</p>
+                    </article>
+
+                    <!--Personaje 6-->
+                    <article class="Personajes-desc Toshe">
+                        <h5 class="Personajes-name">Toshe</h5>
+                        <p class="Personajes-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quisquam fugit corrupti tempore moexplicabo harum reiciendis eum? In nostrum nemo minima, ad voluptate iure suscipit labore harum sapiente rem?</p>
+                    </article>
+
+                    <!--Personaje 7-->
+                    <article class="Personajes-desc Elmo">
+                        <h5 class="Personajes-name">Elmo</h5>
+                        <p class="Personajes-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quisquam fugit corrupti tempore lestt labore harum sapiente rem?</p>
+                    </article>
+                    
                 </div>
+
             </div>
+
+        
         </div>
 
 
