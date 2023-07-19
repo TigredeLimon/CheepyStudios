@@ -117,6 +117,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     --transition-gen: all .2s ease-in-out;
 
     /*-Otros-*/
+    --text-shadow-gen: .4rem .2rem .5rem rgba(0, 0, 0, 0.267);
     --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
 }
 
@@ -397,7 +398,7 @@ BUG: El header no se adapta bien, como no tengo
 /*-Lightbox-*/
 .Gallery {
     background: url(../assets/fondo_textura.jpg);
-    padding: 1.5rem 0 5rem;
+    padding: 4rem 0 5rem;
     margin: auto;
 
     display: flex;
@@ -414,15 +415,24 @@ BUG: El header no se adapta bien, como no tengo
     font-weight: var(--font-bold);
     font-variant: var(--font-smallcaps);
     line-height: 1;
-
 }
 .Gallery-h4 {
+    max-width: var(--width-570);
+    padding: 0 .5rem;
+
     font-size: var(--font-h4-size);
     font-weight: var(--font-medium);
+
+    border-left: 1rem solid white;    
+    border-right: 1rem solid white;    
 }
+    
+.Gallery-h2, .Gallery-h4 {color: var(--color-white); text-shadow: var(--text-shadow-gen);}
+
 .Gallery-ul {
     width: 100%;
     max-width: var(--width-1150);
+    padding: 1rem 0;
     margin: auto;
 
     display: grid;
@@ -522,10 +532,11 @@ BUG: El header no se adapta bien, como no tengo
     background-color: var(--color-background-white);
     width: 90%;
     min-height: 10%;
-    padding:1rem;
+    padding: 1.5rem 1rem;
 
     border-radius: 1rem 1rem 0 0;
     
+    backdrop-filter: blur(.1rem);
     position:absolute;
     left: calc(50% - (90% / 2));
     bottom: 0;

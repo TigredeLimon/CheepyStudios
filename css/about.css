@@ -380,8 +380,8 @@ BUG: El header no se adapta bien, como no tengo
     margin: auto;
     padding: .5rem;
 }
-.About-subtitle::before{ border-left: .3rem solid var(--color-yellow);}
-.About-subtitle::after{ border-right: .3rem solid var(--color-yellow);}
+.About-subtitle::before{ border-left: .5rem solid var(--color-yellow);}
+.About-subtitle::after{ border-right: .5rem solid var(--color-yellow);}
 
 .About-h3 { color: var(--color-grey); font-size: var(--font-h5-size);}
 .About-highlight {font-weight: var(--font-bold);}
