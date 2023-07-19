@@ -2,7 +2,7 @@
 ![Imagen del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/assets/meta_tag.png?raw=true)
 
 ## Ejemplo en vivo
-- [Enlace al proyecto]([URL-de-github-pages-de-este-proyecto](https://tigredelimon.github.io/CheepyStudios/))
+- [Enlace al proyecto](https://tigredelimon.github.io/CheepyStudios/)
 
 ## 🌻 Sobre el proyecto
 Esta web es mi TFM para el módulo de HTML, CSS & Js en el máster de diseño web. Consiste en una página sobre un estudio de videojuegos ficticio, cuenta con un index, pág. de about y también uno de los (supuestos) juegos. Para el resto de enlaces se muestra un "coming soon".
