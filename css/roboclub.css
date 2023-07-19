@@ -908,6 +908,7 @@ BUG: El header no se adapta bien, como no tengo
     .Responsive-juegos {gap: .2rem;}
 
     .Gallery-ul { grid-template-columns: repeat(1, 1fr);}
+    .Lightbox-p { padding-top: 5rem; border-radius: 0 0 1rem 1rem; bottom: -30%; z-index: -1;}
 
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}
