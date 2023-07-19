@@ -418,7 +418,7 @@ BUG: El header no se adapta bien, como no tengo
 
 
 .About-wrapper{
-    padding: 2rem 3rem;
+    padding: 2rem 1.5rem;
     border-radius: 1rem;
     
     display: grid;
@@ -467,7 +467,6 @@ BUG: El header no se adapta bien, como no tengo
     border-radius: 1rem;
 
     font-weight: var(--font-medium);
-    text-align: justify; /*-No se puede per se, pero es que sino queda mu' feo-*/
 }
 .About-ul {
     display: flex;
@@ -713,14 +712,19 @@ BUG: El header no se adapta bien, como no tengo
         width: 90%;
         grid-template-columns: initial;
         justify-content: center;
+        align-items: center;
+        gap: .5rem;
     }
+    .About-img {margin: auto; max-width: 15rem;}
     .About-desc.Reverse {grid-row: initial;}
+    .About-desc{max-width: var(--width-750); padding: 0 .5rem;}
     
     .Footer-form{ flex-direction: column; align-items: center;}
 }
 
 @media (max-width: 760px) {
     .About-subtitle {border-radius: initial;}
+    .About-wrapper {padding: 1.5rem 1rem;}
 }
 @media (max-width:595px) {
     .Responsive-juegos {grid-template-columns: 1fr; gap: .2rem;}
