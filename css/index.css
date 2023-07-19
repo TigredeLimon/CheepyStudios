@@ -874,7 +874,7 @@ BUG: El header no se adapta bien, como no tengo
 @media (max-width:595px) {
     .Responsive-ul {gap: 0.5rem;}
     .Responsive-juegos {gap: .2rem;}
-
+    
     .Responsive-a {padding: .5rem}
 
     .Wrapper-main{ height: 100vh;}

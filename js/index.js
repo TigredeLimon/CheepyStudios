@@ -82,7 +82,7 @@ let galleryActive = 0
 
 setInterval(()=>{
     galleryActive++
-    if(galleryActive >= 3){
+    if(galleryActive >= 4){
         galleryActive = 0}
 
     galleryImg.forEach((eachImg, index)=>{
