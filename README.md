@@ -33,8 +33,7 @@ Si quieres hechas un vistazo al proyecto, te recomiendo:
 * [Porfolio](https://www.tigredelimon.com/)
 
 ## Instalación 
-Este proyecto no necesita de instalación. Simplemente abre la carpeta o haz doble click en el .html
-¡No necesita instalación! Con abrir la carpeta, hacer click en un de los .html o acceder mediante el
+¡No necesita instalación! Con abrir la carpeta, hacer click en un de los .html o acceder mediante el enlace más arriba 🐯
   
 ## Licencia 📄
 MIT Public License v3.0
