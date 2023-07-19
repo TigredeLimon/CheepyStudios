@@ -707,7 +707,7 @@ BUG: El header no se adapta bien, como no tengo
     .About-subtitle {flex-direction: column-reverse;}
     .About-subtitle::before, .About-subtitle::after{display: none;}
 
-    .About-ul {flex-direction: column; align-items: center; gap: 1rem;}
+    .About-ul.Enlaces {flex-direction: column; align-items: center; gap: 1rem;}
 
     .About-wrapper{
         width: 90%;
