@@ -174,10 +174,14 @@ se estructura de la siguiente manera:
             <article class="About-article">
             <h2 class="About-h2 Animation">Sobre nosotros</h2>
             <h3 class="About-h3 Animation">¡Somos un estudio de <span class="About-highlight">juegos indie</span> compuesto por cuatro amigos a los que les apasiona crear <span class="About-highlight">historias</span> y <span class="About-highlight">personajes</span>! Haz click abajo para saber más acerca del equipo ✨</h3>
-            <a href="about.html" title="Conócenos mejor" class="About-a">¡Conócenos mejor!</a>
+            <a href="about.html" title="Conócenos mejor" class="About-a Animation">¡Conócenos mejor!</a>
             </article>
 
-            <img src="assets/index_about.gif" alt="Ilustración representativa de los miembros del estudio" loading="lazy" class="About-img">
+
+            <picture class="Animation">
+                <source srcset="assets/index_about.gif" type="image/jpg">                
+                <img src="assets/index_about.webp" alt="Ilustración representativa de los miembros del estudio" loading="lazy" class="About-img" type="image/webp">
+            </picture>
         </div>
 
 
@@ -211,7 +215,10 @@ se estructura de la siguiente manera:
             -->
 
             <div class="Contacto">
-                <img src="assets/index_contact.gif" alt="Imagen de contacto" loading="lazy" class="Contacto-img">
+                <picture class="Animation">
+                    <source srcset="assets/index_contact.gif" type="image/jpg">                
+                    <img src="assets/index_contact.webp" alt="Ilustración representativa de los miembros del estudio" loading="lazy" class="Contacto-img" type="image/webp">
+                </picture>
                 <div class="Contacto-wrapper">
                 <h2 class="Contacto-h4 Animation">¿Tienes dudas o alguna consulta? Mándanos un mensaje a través de nuestras redes o mediante nuestro correo</h2>
                 <ul class="Contacto-ul Animation">
