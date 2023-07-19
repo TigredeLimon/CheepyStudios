@@ -568,6 +568,8 @@ BUG: El header no se adapta bien, como no tengo
     font-weight: var(--font-medium);
     line-height: 1;
 }
+.Personajes-highlight {font-weight: var(--font-bold);}
+
 
 /*-Slider-*/
 .Personajes-wrapper {
