@@ -61,6 +61,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Colores principales-*/
     --color-black: #1C1C1C;
     --color-black-opacity: #1c1c1c45;
+    --color-black-names: #101010a8;
     --color-grey: #3e3e3e;
     --color-yellow: #FFB94F;
     --color-red: #DF4949;
@@ -436,6 +437,11 @@ BUG: El header no se adapta bien, como no tengo
 .About-wrapper.Gabi {background-color: var(--color-red); margin-left: -20%;}
 .About-wrapper.Tobi {background-color: var(--color-green); margin-left: 20%;}
 
+/*-Sección Kikuo-*/
+.Kikuo .About-nombre {color: var(--color-white);}
+.Kikuo .About-desc {color: var(--color-white);}
+
+.About-wrapper.Kikuo {background-color: var(--color-black); margin-left: -20%;}
 
 .About-img {
     max-width: var(--width-350);
@@ -455,6 +461,8 @@ BUG: El header no se adapta bien, como no tengo
 }
 .About-desc.Reverse {grid-row: 2/1;}
 .About-nombre {
+    color: var(--color-black-names);
+
     font-family: var(--font-family-ezcar);
     font-size: var(--font-h3-size);
     font-weight: var(--font-bold);
@@ -488,7 +496,7 @@ BUG: El header no se adapta bien, como no tengo
     transition: var(--transition-gen);
 }
 .Brais .About-rrss:hover {color:var(--color-yellow);}
-.Bruno .About-rrss:hover {color: #ffcd80;;}
+.Bruno .About-rrss:hover {color: #ffcd80;}
 .Gabi  .About-rrss:hover {color:var(--color-red);}
 .Tobi  .About-rrss:hover {color:var(--color-green);}
 .About-rrss:hover { background-color: var(--color-black); transform: var(--transform-scale-up);}
@@ -691,7 +699,7 @@ BUG: El header no se adapta bien, como no tengo
     .Responsive {display:inline}    
     
     .About-subtitle {padding: 2rem;}
-    .About-wrapper.Brais, .About-wrapper.Bruno, .About-wrapper.Gabi, .About-wrapper.Tobi  {margin: initial;}
+    .About-wrapper.Brais, .About-wrapper.Bruno, .About-wrapper.Gabi, .About-wrapper.Tobi, .About-wrapper.Kikuo  {margin: initial;}
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
