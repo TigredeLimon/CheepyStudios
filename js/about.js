@@ -20,7 +20,7 @@ Cuando hago CLICK en headerButton hace una FUNCTION
 Cuando hago CLICK en responsiveSvg hace una FUNCTION
     —> A responsiveMenu se le TOGGLE la clase isActive
 
-Cuando hago CLICK en htmlBody hace una FUNCTION 
+Cuando hago CLICK en htmlMain hace una FUNCTION 
     —> A headerDropdown se le REMOVE la clase isActive
     —> A headerArrow se le REMOVE la clase isActive 
     —> A responsiveMenu se le REMOVE la clase isActive
@@ -38,32 +38,35 @@ const headerArrow    = document.querySelector(`.Header-svg`)
 const responsiveSvg  = document.querySelector(`.Responsive-svg`)
 const responsiveMenu = document.querySelector(`.Responsive-menu`)
 
-const htmlBody = document.querySelector(`body`)
 const htmlMain = document.querySelector(`.Main`)
+// const htmlBody = document.querySelector(`body`)
 
-headerButton.addEventListener(`click`, (e)=>{
+headerButton.addEventListener(`click`, ()=>{
     headerDropdown.classList.toggle(`isActive`)
     headerArrow.classList.toggle(`isActive`)
-    e.stopPropagation()
 })
 
-htmlBody.addEventListener(`click`, ()=>{
-    if(headerDropdown.classList.contains(`isActive`) && headerArrow.classList.contains(`isActive`))
-    {headerDropdown.classList.remove(`isActive`)
-    headerArrow.classList.remove(`isActive`)}
-})
-
-responsiveSvg.addEventListener(`click`, (e)=>{
+responsiveSvg.addEventListener(`click`, ()=>{
     responsiveMenu.classList.toggle(`isActive`)
-    e.stopPropagation()
 })
 
 htmlMain.addEventListener(`click`, ()=>{
-    if(responsiveMenu.classList.contains(`isActive`)){
+    if(headerDropdown.classList.contains(`isActive`) ||
+       headerArrow.classList.contains(`isActive`) ||
+       responsiveMenu.classList.contains(`isActive`)){
+        
+        headerDropdown.classList.remove(`isActive`)
+        headerArrow.classList.remove(`isActive`)
         responsiveMenu.classList.remove(`isActive`)
     }
 })
 
+
+// htmlBody.addEventListener(`click`, ()=>{
+//     if(headerDropdown.classList.contains(`isActive`) && headerArrow.classList.contains(`isActive`))
+//     {headerDropdown.classList.remove(`isActive`)
+//     headerArrow.classList.remove(`isActive`)}
+// })
 
 
 

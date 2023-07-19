@@ -20,7 +20,7 @@ Cuando hago CLICK en headerButton hace una FUNCTION
 Cuando hago CLICK en responsiveSvg hace una FUNCTION
     —> A responsiveMenu se le TOGGLE la clase isActive
 
-Cuando hago CLICK en htmlBody hace una FUNCTION 
+Cuando hago CLICK en htmlMain hace una FUNCTION 
     —> A headerDropdown se le REMOVE la clase isActive
     —> A headerArrow se le REMOVE la clase isActive 
     —> A responsiveMenu se le REMOVE la clase isActive
@@ -38,60 +38,27 @@ const headerArrow    = document.querySelector(`.Header-svg`)
 const responsiveSvg  = document.querySelector(`.Responsive-svg`)
 const responsiveMenu = document.querySelector(`.Responsive-menu`)
 
-const htmlBody = document.querySelector(`body`)
 const htmlMain = document.querySelector(`.Main`)
+// const htmlBody = document.querySelector(`body`)
 
-headerButton.addEventListener(`click`, (e)=>{
+headerButton.addEventListener(`click`, ()=>{
     headerDropdown.classList.toggle(`isActive`)
     headerArrow.classList.toggle(`isActive`)
-    e.stopPropagation()
 })
 
-htmlBody.addEventListener(`click`, ()=>{
-    if(headerDropdown.classList.contains(`isActive`) && headerArrow.classList.contains(`isActive`))
-    {headerDropdown.classList.remove(`isActive`)
-    headerArrow.classList.remove(`isActive`)}
-})
-
-responsiveSvg.addEventListener(`click`, (e)=>{
+responsiveSvg.addEventListener(`click`, ()=>{
     responsiveMenu.classList.toggle(`isActive`)
-    e.stopPropagation()
 })
 
 htmlMain.addEventListener(`click`, ()=>{
-    if(responsiveMenu.classList.contains(`isActive`)){
+    if(headerDropdown.classList.contains(`isActive`) ||
+       headerArrow.classList.contains(`isActive`) ||
+       responsiveMenu.classList.contains(`isActive`)){
+        
+        headerDropdown.classList.remove(`isActive`)
+        headerArrow.classList.remove(`isActive`)
         responsiveMenu.classList.remove(`isActive`)
     }
 })
-
-
-/* -- PSEUDOCÓDIGO -- 
-Cuando transcurrren 8 segundos, HeroGallery hace una FUNCTION
-    —> A galleryActive ++
-    —> Si... galleryActive es MAYOR O IGUAL (>=) a 3
-        —>galleryActive es IGUAL = 0
-
-    —>A TODAS las galleryImg se les REMOVE la clase isActive
-    —>A la galleryImg posicion galleryActive se le ADD la clase
-      isActive
-*/
-/*
-    ——> Función que activa un intervalo de 8 segundos, en el
-    cual se añade y/o se quita la clase isActive
-*/
-const galleryImg = document.querySelectorAll(`.Hero-img`)
-
-let galleryActive = 0
-
-setInterval(()=>{
-    galleryActive++
-    if(galleryActive >= 3){
-        galleryActive = 0}
-
-    galleryImg.forEach((eachImg, index)=>{
-        galleryImg[index].classList.remove(`isActive`)
-        galleryImg[galleryActive].classList.add(`isActive`)
-    })
-}, 8000)
 
 

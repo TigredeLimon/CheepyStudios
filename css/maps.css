@@ -103,6 +103,10 @@ form, input, textarea, label, button, fieldset, legend, select{
     
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
+
+    /*-Otros-*/
+    --text-shadow-gen: .4rem .2rem .5rem rgba(0, 0, 0, 0.267);
+    --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
 }
 
 html{ scroll-behavior: smooth;}
@@ -250,6 +254,8 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - (85% / 2));
     top: 4.375rem;
 
+    backdrop-filter: blur(.2rem);
+    box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
 .Responsive-menu.isActive {

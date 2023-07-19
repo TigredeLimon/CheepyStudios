@@ -250,6 +250,8 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - (85% / 2));
     top: 4.375rem;
 
+    backdrop-filter: blur(.2rem);
+    box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
 .Responsive-menu.isActive {

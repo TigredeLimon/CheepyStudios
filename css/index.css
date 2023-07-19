@@ -256,6 +256,8 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - (85% / 2));
     top: 4.375rem;
 
+    backdrop-filter: blur(.2rem);
+    box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
 .Responsive-menu.isActive {
@@ -330,7 +332,7 @@ BUG: El header no se adapta bien, como no tengo
 
 .Main {
     min-height: 30vh;
-    margin: 4.375rem 0;}
+    margin: 4.2rem 0 0;}
 .Wrapper-main{
     width: 100%;
     max-height: 45rem;
@@ -376,6 +378,7 @@ BUG: El header no se adapta bien, como no tengo
     gap: 1rem;
 
     text-shadow: var(--text-shadow-gen);
+    backdrop-filter: blur(.2rem);
 
     position: absolute;
     top: calc( 50% - (25rem / 2));
@@ -493,9 +496,7 @@ BUG: El header no se adapta bien, como no tengo
 .About-highlight {font-weight: var(--font-bolder); color: var(--color-black);}
 
 .About-img {
-    width: 31.25rem;
-    max-width: 100%;
-    background-color: var(--color-black-opacity);
+    max-width: 31.25rem;
     animation: aboutImg 1.2s ease-in-out infinite alternate;
 }
 @keyframes aboutImg {
@@ -581,16 +582,12 @@ BUG: El header no se adapta bien, como no tengo
 .Contacto {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 1rem;
-
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 .Contacto-wrapper {
-    max-width: var(--width-1150);
-    margin: 3rem 11rem;
-
+    max-width: var(--width-570);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -636,13 +633,7 @@ BUG: El header no se adapta bien, como no tengo
     transform: var(--transform-scale-up);
 }
 .Contacto-svg:active{transform: var(--transform-scale-down);} 
-.Contacto-img{
-    width: 37.5rem;
-    max-width: 100%;
-    background-color: lightgray;
-
-
-}
+.Contacto-img{ max-width: 31.25rem;}
 /*--  CONTACT  --*/
 
 
@@ -830,7 +821,8 @@ BUG: El header no se adapta bien, como no tengo
     .Newsletter {flex-direction: column;}
     .Newsletter-h2 {text-align: center;}
 
-    .Contacto-wrapper { margin: 3rem}
+    .Contacto-wrapper {margin: 3rem}
+    .Contacto-img {margin-bottom: -5rem;}
 
     .Footer {padding: 3rem; gap:2.5rem;}
     .Footer-rrss {margin-bottom: 4rem;}

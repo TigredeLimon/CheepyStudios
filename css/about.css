@@ -257,6 +257,8 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - (85% / 2));
     top: 4.375rem;
 
+    backdrop-filter: blur(.2rem);
+    box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
 .Responsive-menu.isActive {
@@ -330,7 +332,8 @@ BUG: El header no se adapta bien, como no tengo
 /*-------------- [MAIN] --------------*/
 .Main {
     margin: 4.375rem 0;
-    min-height: 80vh;}
+    min-height: 80vh;
+    overflow-x: hidden;}
 
 .About, .Devs{
     max-width: var(--width-1150);
@@ -357,7 +360,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .About-subtitle {
     max-width: var(--width-750);
-    background-color: var(--color-background-white);
+    background: url(../assets/fondo_cuadros.png);
     color: var(--color-grey);
 
     padding: 2rem 1rem;

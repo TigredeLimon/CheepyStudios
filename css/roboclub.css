@@ -266,6 +266,8 @@ BUG: El header no se adapta bien, como no tengo
     left: calc(50% - (85% / 2));
     top: 4.375rem;
 
+    backdrop-filter: blur(.2rem);
+    box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
 .Responsive-menu.isActive {
@@ -355,6 +357,7 @@ BUG: El header no se adapta bien, como no tengo
     gap: 1rem;
 
     position: relative;
+    z-index: 1;
 }
 .Intro-h2 {
     font-family: var(--font-family-ezcar);
@@ -376,8 +379,8 @@ BUG: El header no se adapta bien, como no tengo
     border-left: .5rem solid var(--color-grey);}
 
 .Intro-img {
-    background-color: orange;
-    width: calc(100% / 2.5); /*Delete later, es solo para ver composición*/
+    /* background-color: orange; */
+    max-width: 28.75rem;
     height: 100%;
 
     position: absolute;
@@ -393,7 +396,7 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-Lightbox-*/
 .Gallery {
-    background-color: rgba(128, 128, 128, 0.37);
+    background: url(../assets/fondo_textura.jpg);
     padding: 1.5rem 0 5rem;
     margin: auto;
 
@@ -649,7 +652,7 @@ BUG: El header no se adapta bien, como no tengo
 @keyframes fadein {
     from{ opacity: 0; transform: translateY(-50%);
     }
-    to{opacity:1; transform: translateX(initial);}
+    to{opacity:1; transform: translateY(initial);}
 }
 
 
@@ -837,6 +840,7 @@ BUG: El header no se adapta bien, como no tengo
     .Responsive {display:inline}   
     
     .Intro{
+        padding-bottom: 2rem;
         justify-content: center;
         align-items: center;
 
@@ -844,7 +848,7 @@ BUG: El header no se adapta bien, como no tengo
     }
     .Intro-h2 {text-align: center;}
     .Intro-h3, .Intro-p{ border: initial}
-    .Intro-img{position: initial;}
+    .Intro-img{position: initial; max-width: calc(460px / 1.5);}
 
 
     .Personajes {
