@@ -707,6 +707,8 @@ BUG: El header no se adapta bien, como no tengo
     .About-subtitle {flex-direction: column-reverse;}
     .About-subtitle::before, .About-subtitle::after{display: none;}
 
+    .About-ul {flex-direction: column; align-items: center; gap: 1rem;}
+
     .About-wrapper{
         width: 90%;
         grid-template-columns: initial;
@@ -722,8 +724,6 @@ BUG: El header no se adapta bien, como no tengo
 }
 @media (max-width:595px) {
     .Responsive-juegos {grid-template-columns: 1fr; gap: .2rem;}
-
-    .About-ul {flex-direction: column; align-items: center; gap: 1rem;}
 
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}
