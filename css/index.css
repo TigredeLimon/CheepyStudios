@@ -822,7 +822,6 @@ BUG: El header no se adapta bien, como no tengo
     .Newsletter-h2 {text-align: center;}
 
     .Contacto-wrapper {margin: 3rem}
-    .Contacto-img {margin-bottom: -5rem;}
 
     .Footer {padding: 3rem; gap:2.5rem;}
     .Footer-rrss {margin-bottom: 4rem;}
@@ -859,7 +858,8 @@ BUG: El header no se adapta bien, como no tengo
     .Newsletter-label {text-align: center;}
 
     .Contacto {flex-direction: column; align-items: center;}
-    .Contacto-wrapper {align-items: center;}        
+    .Contacto-wrapper {align-items: center;}
+    .Contacto-img {margin-bottom: -5rem;}       
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}
