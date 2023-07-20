@@ -121,15 +121,14 @@ de la siguiente manera:
             <!-- Texto explicativo sobre el juego -->
             <p class="Intro-p Fade-in">Nina, Lewis, Elmo, Arame, Toshe, Fede y Orestes, chicos de un instituto con personalidades muy distintas entre sí encuentran un vínculo inquebrantable en su pasión compartida: la robótica. Sin embargo, sus vidas dan un giro de 180º cuando el enigmático profesor de su club se desvanece sin dejar rastro. El grupo deberá salvar sus diferencias y combinar sus habilidades para revelar los secretos que entrañan la misteriosa desaparición, ¿podrán estos jóvenes resolver el enigma y salvar el roboclub?</p>
 
-            
+            <!-- Ilustración representativa de la sección -->
             <picture>
                 <source srcset="assets/personajes_conjunto.png" type="image/png">                
-                <img src="assets/personajes_conjunto.png.webp" alt="Gatito currante" loading="lazy" class="Intro-img">
+                <img src="assets/personajes_conjunto.png.webp" alt="Ilustración en conjunto del club de Robótica" loading="lazy" class="Intro-img">
             </picture>
-
         </section>
 
-        <!--Galería (en grid) de imágenes-->
+        <!--Galería de imágenes con lightbox al hacer click-->
         <div class="Gallery">
             <h2 class="Gallery-h2 Animation">Gameplay y características</h2>
             <h4 class="Gallery-h4 Animation">A medida que vayamos completando el juego iremos actualizando las mecánicas y detalles del mismo en esta sección, ¡échale un vistazo!</h4>
@@ -142,28 +141,35 @@ de la siguiente manera:
                 <li class="Gallery-li"><img src="assets/galeria_comingsoon.png" title="Ejemplo de gameplay" alt="Gameplay" loading="lazy" class="Gallery-img"></li>
             </ul>
 
-            <!--Lighbox + Slider-->
+            <!--Lighbox con slider-->
             <div class="Gallery-Wrapper Lightbox">
 
+                <!-- Botón hacia delante-->
                 <div class="Lightbox-wrapper">
                 <button title="Siguiente" class="Lightbox-next">
                     <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                      </svg>
+                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
                 </button>
+
+                <!-- Botón hacia atrás -->
                 <button title="Anterior" class="Lightbox-prev">
                     <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                      </svg>
+                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
                 </button>
+
+                <!-- Botón de cerrar -->
                 <button title="Cerrar lightbox" class="Lightbox-close">
                     <svg class="Lightbox-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                      </svg>
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
                 </button>
                 
+                <!-- Imagen sin src, para reemplazar mediante Js -->
                 <img src="#" alt="Gameplay en lightbox" class="Lightbox-img">
 
+                <!-- Texto para cada imagen, mediante Js -->
                 <p class="Lightbox-p isActive">Controlarás a todos los miembros del club y, en función de cómo te relaciones con el resto, afectará de manera positiva o negativa a la solidez del grupo</p>
                 <p class="Lightbox-p">Las elecciones que hagas durante el juego repercutirán al final, ¡ten cuidado!</p>
                 <p class="Lightbox-p">Si haces combinaciones específicas en tu equipo puede que algunos stats suban, ¡pero también es posible que bajen otros!</p>
@@ -174,73 +180,82 @@ de la siguiente manera:
             </div>
         </div>
 
-        <!--Personajes-->
+        <!-- Información con slider presentando a los personajes-->
         <div class="Personajes">
 
+            <!-- Artículo contenedor del título y el subtítulo -->
             <article class="Personajes-article">
                 <h2 class="Personajes-h2 Animation">Conoce a los miembros del club</h2>
                 <h4 class="Personajes-h4 Animation">Durante el transcurso del juego te pondrás en la piel de cada uno de los integrantes del club de robótica, ¡aquí podrás encontrar información sobre cada uno de ellos!</h4>
             </article>
 
-            <!--Slider de personajes-->
+            <!-- Contenedora con información e ilustraciones 
+                 para cada personaje, actúa como un slider -->
             <div class="Personajes-wrapper">
 
+                <!-- Textos informativos -->
                 <div class="Personajes-info">
-                    <!--Personaje 1-->
+                    <!-- Personaje - Nina -->
                     <article class="Personajes-desc Nina isActive">
                         <h5 class="Personajes-name">Nina, 14</h5>
                         <p class="Personajes-p">Una chica muy enérgica y extrovertida, tiene buen corazón. A veces puede ser algo pesada porque se obsesiona con las cosas fácilmente. Amiga de la infancia de Lewis. Se le da bien <span class="Personajes-highlight">hardware</span> y <span class="Personajes-highlight">animar a la gente</span>.</p>
                     </article>
 
-                    <!--Personaje 2-->
+                    <!-- Personaje - Lewis -->
                     <article class="Personajes-desc Lewis">
                         <h5 class="Personajes-name">Lewis, 15</h5>
                         <p class="Personajes-p">Es el presidente del club de robótica, su actitud es algo repelente y antisocial. Tiene una mente privilegiada a la hora de programar, pero suele emplearlo para cosas un tanto...raritas. Amigo de la infancia de Nina. Su especialidad es <span class="Personajes-highlight">ciberseguridad</span> y sus <span class="Personajes-highlight">métodos poco ortodoxos</span>.</p>
                     </article>
 
-                    <!--Personaje 3-->
+                    <!-- Personaje - Orestes -->
                     <article class="Personajes-desc Orestes">
                         <h5 class="Personajes-name">Orestes, 17</h5>
                         <p class="Personajes-p">Un chaval callado y taciturno pero amigable. Tiene un aura misteriosa alrededor, no suele hablar mucho sobre sí mismo. Se lleva bastante bien con Elmo y con Fede, y se especializa en <span class="Personajes-highlight">inteligencia artificial</span> y también <span class="Personajes-highlight">escuchar</span> a los demás.</p>
                     </article>
 
-                    <!--Personaje 4-->
+                    <!-- Personaje - Fede -->
                     <article class="Personajes-desc Fede">
                         <h5 class="Personajes-name">Fede, 16</h5>
                         <p class="Personajes-p">Es un chico muy efusivo y cercano, no tiene pelos en la lengua y es, sorprendentemente, bastante contestón. Tiende a relacionarse con Orestes y Elmo sobre todo. Lo que mejor se le da es el <span class="Personajes-highlight">software</span> y <span class="Personajes-highlight">cocinar</span>.</p>
                     </article>
 
-                    <!--Personaje 5-->
+                    <!-- Personaje - Arame -->
                     <article class="Personajes-desc Arame">
                         <h5 class="Personajes-name">Arame, 15</h5>
                         <p class="Personajes-p">La hermana de Toshe, una muchacha llena de vitalidad y super habladora, al contrario de su hermano. Es muy cercana al resto de miembros (quieran o no). Es muy rápida <span class="Personajes-highlight">proponiendo soluciones creativas</span>, y es bastante <span class="Personajes-highlight">persuasiva</span>.</p>
                     </article>
 
-                    <!--Personaje 6-->
+                    <!-- Personaje - Toshe -->
                     <article class="Personajes-desc Toshe">
                         <h5 class="Personajes-name">Toshe, 15</h5>
                         <p class="Personajes-p">El hermano de Arame, es callado, seco y bastante evasivo con el resto, al contrario de su hermana. Desconfía mucho de la gente, aunque poco a poco se está abriendo con el resto de miembros. Se le da bien <span class="Personajes-highlight">aprender cosas rápido</span> y es muy <span class="Personajes-highlight">perceptivo</span>.</p>
                     </article>
 
-                    <!--Personaje 7-->
+                    <!-- Personaje - Elmo -->
                     <article class="Personajes-desc Elmo">
                         <h5 class="Personajes-name">Elmo, 19</h5>
                         <p class="Personajes-p">Es un chaval serio y que tiende a aislarse del resto por decisión propia, es alguien bastante solitario. No le gusta tener que relacionarse con la gente, aunque con Orestes parece haber hecho una excepción. Se le da bien <span class="Personajes-highlight">desmontar cosas y soldar</span>, y destaca por ser relativamente <span class="Personajes-highlight">fuerte</span>.</p>
                     </article>
                 </div>
 
+                <!-- Ilustraciones de los personajes + los botones
+                     que controlan el slider -->
                 <div class="Personajes-slider">
-                    <!--Botones del slider-->
+                    
+                    <!-- Botón hacia delante -->
                     <button title="Siguiente" class="Personajes-next">
                         <svg class="Personajes-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                          </svg>
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                        </svg>
                     </button>
+
+                    <!-- Botón hacia atrás  -->
                     <button title="Anterior" class="Personajes-prev">
                         <svg class="Personajes-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
                         <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
                       </svg></button>
-                    <!--Imágenes de los personajes-->
+
+                    <!--Ilustraciones de los personajes-->
                     <img src="assets/personajes_nina.png" alt="Nina" loading="lazy" class="Personajes-img Static isActive">
                     <img src="assets/personajes_lewis.png" alt="Lewis" loading="lazy" class="Personajes-img">
                     <img src="assets/personajes_orestes.png" alt="Orestes" loading="lazy" class="Personajes-img">
@@ -248,14 +263,9 @@ de la siguiente manera:
                     <img src="assets/personajes_arame.png" alt="Arame" loading="lazy" class="Personajes-img">
                     <img src="assets/personajes_toshe.png" alt="Toshe" loading="lazy" class="Personajes-img">
                     <img src="assets/personajes_elmo.png" alt="Elmo" loading="lazy" class="Personajes-img">
-                    </div>
-
+                </div>
             </div>
-
-        
         </div>
-
-
     </main>
 
     <!--[MAIN] - END -->

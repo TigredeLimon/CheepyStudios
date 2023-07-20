@@ -106,6 +106,7 @@ form, input, textarea, label, button, fieldset, legend, select{
     /*-Transitions-*/
     --transition-gen: all .2s ease-in-out;
 
+
     /*-Otros-*/
     --text-shadow-gen: .4rem .2rem .5rem rgba(0, 0, 0, 0.267);
     --box-shadow-gen: .5rem .4rem .5rem 0rem var(--color-black-opacity);
@@ -144,9 +145,7 @@ BUG: El header no se adapta bien, como no tengo
                    al header, de manera que no se superpongan
                    otros elementos-*/
 }
-.Header-logo {}
 .Header-img{max-height: 4.375rem;}
-.Header-nav {}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;
@@ -154,7 +153,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 4.6875rem;
 }
-.Header-li {}
 .Header-link, .Header-button {
     color: var(--color-yellow);
     font-size: var(--font-h4-size);

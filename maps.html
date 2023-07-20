@@ -40,7 +40,7 @@
 <body>
 
 <!---------------------------------------
-¡Hola! Este archivo .html contiene el --- del sitio web, 
+¡Hola! Este archivo .html contiene los mapas del sitio web, 
 se estructura de la siguiente manera:
 
 ——> Header/Encabezado (con barra de navegación)
@@ -108,48 +108,52 @@ se estructura de la siguiente manera:
     <!--[HEADER] - END -->
 
     <!--[MAIN] - START -->
-    
     <main class="Main">
         
-
+        <!-- Sección que incluye un título & subtítulo, así
+             como una contenedoratres mapas interactuables -->
         <section class="Main-section Map">
+
+            <!-- Título y subtítulo -->
             <h2 class="Map-h2 Animation">Mapas</h2>
             <h5 class="Map-h5 Animation">¿No sabes por dónde seguir, o te preguntas si visitaste algún sitio en concreto? ¡Prueba a utilizar los siguientes mapas interactivos como guía!</h5>
 
+        <!-- Lista con botones para activar las pestañas de los mapas, via Js -->
         <div class="Map-wrapper Animation">
             <ul class="Map-ul">
-                <li class="Map-li"><button class="Map-button Button-red isActive">Cruxside</button></li>
-                <li class="Map-li"><button class="Map-button Button-blue">Instituto</button></li>
-                <li class="Map-li"><button class="Map-button Button-green">Otros</button></li>
+                <li class="Map-li"><button class="Map-button Button-red isActive" title="Mapa de Cruxside">Cruxside</button></li>
+                <li class="Map-li"><button class="Map-button Button-blue" title="Mapa del Instituto">Instituto</button></li>
+                <li class="Map-li"><button class="Map-button Button-green" title="Mapa de los alredededores">Alrededores</button></li>
             </ul>
-            </div>
+        </div>
 
-            <div class="Map-container Animation">
+        <!-- Contenedoras de los mapas -->
+        <div class="Map-container Animation">
+            
+            <!--Mapa de Cruxside-->
+            <div class="Map-content isActive Static">
                 
-                <!--Mapa Cruxside-->
-                <div class="Map-content isActive Static">
-                    
-                <!-- No me dio tiempo a preparar esta sección, por ello está comentada-->
-                <!-- <div class="Map-gps Gps">
-                    <img src="#" alt="Casa-1" class="Gps-pointer">
-                    <img src="#" alt="Casa-2" class="Gps-pointer">
-                    <img src="#" alt="Casa-3" class="Gps-pointer">
-                    </div>-->
-                <img src="assets/mapa_cruxside.png" alt="Mapa de Cruxside" loading="lazy" class="Map-img">
-                </div>
-
-                <!--Mapa Instituto-->
-                <div class="Map-content">
-                <img src="assets/mapa_comingsoon_first.png" alt="Mapa del instituto" loading="lazy" class="Map-img">
-                </div>
-
-                <!--Mapa Alrededores-->
-                <div class="Map-content">
-                <img src="assets/mapa_comingsoon_second.png" alt="Mapa de los alrededores" loading="lazy" class="Map-img">
-                </div>
+            <!-- No me dio tiempo a preparar esta sección, por ello está comentada. La intención era colocar unos marcadores
+                 de gps que al hacer mouseover activasen unas pestañas con información-->
+            <!-- <div class="Map-gps Gps">
+                <img src="#" alt="Casa-1" class="Gps-pointer">
+                <img src="#" alt="Casa-2" class="Gps-pointer">
+                <img src="#" alt="Casa-3" class="Gps-pointer">
+                </div>-->
+            <img src="assets/mapa_cruxside.png" alt="Mapa de Cruxside" loading="lazy" class="Map-img">
             </div>
-    </section>
 
+            <!--Mapa Instituto-->
+            <div class="Map-content">
+            <img src="assets/mapa_comingsoon_first.png" alt="Mapa del instituto" loading="lazy" class="Map-img">
+            </div>
+
+            <!--Mapa Alrededores-->
+            <div class="Map-content">
+            <img src="assets/mapa_comingsoon_second.png" alt="Mapa de los alrededores" loading="lazy" class="Map-img">
+            </div>
+        </div>
+        </section>
     </main>
     <!--[MAIN] - END -->
 
