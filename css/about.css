@@ -388,7 +388,10 @@ BUG: El header no se adapta bien, como no tengo
 .About-h3 { color: var(--color-grey); font-size: var(--font-h5-size);}
 .About-highlight {font-weight: var(--font-bold);}
 
-.About-gif {max-width: 10rem;}
+.About-gif {
+    width: 10rem;
+    max-width: initial;
+}
 
 .About-juegos, .About-contacto {
     background-color: var(--color-white);
@@ -715,7 +718,7 @@ BUG: El header no se adapta bien, como no tengo
         justify-content: center;
         align-items: center;}
     .About-subtitle::before, .About-subtitle::after{display: none;}
-    .About-gif {max-width: 15rem;}
+    .About-gif {width: 15rem;}
 
     .About-ul.Enlaces {flex-direction: column; align-items: center; gap: 1rem;}
 

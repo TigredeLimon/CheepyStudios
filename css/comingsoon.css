@@ -71,7 +71,8 @@ form, input, textarea, label, button, fieldset, legend, select{
 
     /*-Medidas estándar-*/
     --width-1150: 71.875rem;
-    --width-750: 35.625rem;
+    --width-750: 46.875rem;
+    --width-570: 35.625rem;
     --width-350: 21.875rem;
 
     /*-Font families-*/
@@ -108,7 +109,7 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
-    background-color: var(--color-white);
+    background: url(../assets/fondo_cuadros.png);
     font-size: 100%;
     position: relative;}
 /*-------------- RESET END --------------*/
@@ -329,6 +330,53 @@ BUG: El header no se adapta bien, como no tengo
     margin: 4rem 0;
     min-height: 80vh;
 }
+
+.Container {
+    max-width: var(--width-1150);
+    padding: 2rem 0;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Container-h2 {
+    font-family: var(--font-family-ezcar);
+    font-size: var(--font-h2-size);
+    font-weight: var(--font-bold);
+    font-variant: var(--font-smallcaps);
+    text-decoration: underline; 
+}
+.Container-p {
+    max-width: var(--width-570);
+    font-size: var(--font-h5-size);
+    font-weight: var(--font-medium);
+}
+.Container-img {
+    max-width: var(--width-350);
+    animation: containerImg 1.2s ease-in-out infinite alternate;}
+
+    
+@keyframes containerImg {
+    from{transform: translateY(1rem);}
+    to{transform: translateY(0);}    
+}
+
+
+/*--Animaciones--*/
+
+/*-vvv Clase para el js vvv-*/
+.Animation {opacity: 0;}
+
+.Fade-in{animation: fadein 1s ease-in-out 1 forwards;}
+@keyframes fadein {
+    from{ opacity: 0; transform: translateY(-50%);
+    }
+    to{opacity:1; transform: translateY(initial);}
+}
+
+
 /*-------------- [MAIN] --------------*/
 
 
@@ -499,7 +547,10 @@ BUG: El header no se adapta bien, como no tengo
         padding:0 1rem 0 0;
         justify-content: space-between;}
     .Header-nav {display: none;}
-    .Responsive {display:inline}       
+    .Responsive {display:inline}  
+    
+    
+    .Container {padding: 4rem 2rem}
     
     .Footer{ grid-template-columns: repeat(2, 1fr);}
     .Footer-rrss {margin-bottom:2rem;}

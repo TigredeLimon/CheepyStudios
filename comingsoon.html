@@ -9,22 +9,21 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 
     <!-- Primary Meta Tags -->
-    <title>CheepyStudios</title>
-    <meta name="title" content="CheepyStudios" />
-    <meta name="description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta name="title" content="CheepyStudios - Próximamente" />
+    <meta name="description" content="Aún estamos trabajando en este juego, ¡pásate más tarde!" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Cheepystudios.com" />
-    <meta property="og:title" content="CheepyStudios" />
-    <meta property="og:description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta property="og:title" content="CheepyStudios - Próximamente" />
+    <meta property="og:description" content="Aún estamos trabajando en este juego, ¡pásate más tarde!" />
     <meta property="og:image" content="https://raw.githubusercontent.com/TigredeLimon/CheepyStudios/main/assets/meta_tag.png?token=GHSAT0AAAAAACECFGS577AARKOX3MJOJU4AZFX5T3Q" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="Cheepystudios.com" />
-    <meta property="twitter:title" content="CheepyStudios" />
-    <meta property="twitter:description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta property="twitter:title" content="CheepyStudios - Próximamente" />
+    <meta property="twitter:description" content="Aún estamos trabajando en este juego, ¡pásate más tarde!" />
     <meta property="twitter:image" content="https://raw.githubusercontent.com/TigredeLimon/CheepyStudios/main/assets/meta_tag.png?token=GHSAT0AAAAAACECFGS577AARKOX3MJOJU4AZFX5T3Q" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
@@ -41,19 +40,18 @@
 <body>
 
 <!---------------------------------------
-¡Hola! Este archivo .html contiene el --- del sitio web, 
+¡Hola! Este archivo .html contiene el "próximamente" del sitio web, 
 se estructura de la siguiente manera:
 
 ——> Header/Encabezado (con barra de navegación)
-——> Contenido principal (Hero, enlace a About/Sobre nosotros, Contacto)
+——> Contenido principal (Encabezado, subtítulo e imagen)
 ——> Footer/Pie de página
 --------------------------------------->
 
 
     <!--[HEADER] - START 
-      Aquí se encuentra el header del
-      index, contiene un nav con un
-      menú desplegable al hacer click
+      Aquí se encuentra el header, contiene un
+      nav con un menú desplegable al hacer click
     -->
     <header class="Header">
         <h1 class="Header-logo"><a href="index.html" title="Home" class="Header-a"><img class="Header-img" src="assets/logotipo_white.svg" alt="CheepyStudios logotipo" loading="lazy"></a></h1>
@@ -103,22 +101,32 @@ se estructura de la siguiente manera:
                 </ul>
               </div>
         </div>
-        <!--Menú para dispositivos móviles-->
+        
     </header>
     <!--[HEADER] - END -->
 
-    <!--[MAIN] - START -->
+
+
+
+    <!--[MAIN] - START 
+      Aquí se encuentra el MAIN del "próximamente", contiene una
+      section con un encabezado, un pequeño texto informativo y
+      una imagen para acompañar
+    -->
     <main class="Main">
 
+        <!-- Contenedora -->
         <section class="Main-section Container">
-            <h2 class="Container-h2">¡Próximamente!</h2>
-            <p class="Container-p">Nuestro equipo de gatitos pluriempleados está trabajo duro para que los próximos juegos salgan bien, ¡vuelve pronto, tendremos noticias nuevas en muy poco!</p>
-            <img src="#" alt="Gatito currante" loading="lazy" class="Container-img">
-
-
-
+            <!-- Encabezado -->
+            <h2 class="Container-h2 Animation">¡Próximamente!</h2>
+            <!-- Párrafo -->
+            <p class="Container-p Animation">Nuestro equipo de gatitos pluriempleados está trabajando duro para que los próximos juegos salgan bien, ¡vuelve pronto, tendremos noticias nuevas en muy poquito!</p>
+            <!-- Imagen -->
+            <picture class="Animation">
+                <source srcset="assets/comingsoon_kikuo.gif" type="image/gif">                
+                <img src="assets/comingsoon_kikuo.webp" alt="Gatito currante" loading="lazy" class="Container-img">
+            </picture>
         </section>
-
 
     </main>
     <!--[MAIN] - END -->

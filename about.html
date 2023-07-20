@@ -9,22 +9,21 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
 
     <!-- Primary Meta Tags -->
-    <title>CheepyStudios</title>
-    <meta name="title" content="CheepyStudios" />
-    <meta name="description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta name="title" content="CheepyStudios - Sobre Nosotros" />
+    <meta name="description" content="Información sobre el equipo de CheepyStudios, ¡pasa y conócenos!" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="Cheepystudios.com" />
-    <meta property="og:title" content="CheepyStudios" />
-    <meta property="og:description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta property="og:title" content="CheepyStudios - Sobre Nosotros" />
+    <meta property="og:description" content="Información sobre el equipo de CheepyStudios, ¡pasa y conócenos!" />
     <meta property="og:image" content="https://raw.githubusercontent.com/TigredeLimon/CheepyStudios/main/assets/meta_tag.png?token=GHSAT0AAAAAACECFGS577AARKOX3MJOJU4AZFX5T3Q" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="Cheepystudios.com" />
-    <meta property="twitter:title" content="CheepyStudios" />
-    <meta property="twitter:description" content="Somos un estudio de videojuegos español centrado en visual novels y rpg, ¡entra y conócenos!" />
+    <meta property="twitter:title" content="CheepyStudios - Sobre Nosotros" />
+    <meta property="twitter:description" content="Información sobre el equipo de CheepyStudios, ¡pasa y conócenos!" />
     <meta property="twitter:image" content="https://raw.githubusercontent.com/TigredeLimon/CheepyStudios/main/assets/meta_tag.png?token=GHSAT0AAAAAACECFGS577AARKOX3MJOJU4AZFX5T3Q" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
@@ -52,7 +51,7 @@ del sitio web, se estructura de la siguiente manera:
 
     <!--[HEADER] - START 
       Aquí se encuentra el header del
-      index, contiene un nav con un
+      about, contiene un nav con un
       menú desplegable al hacer click
     -->
     <header class="Header">
@@ -109,17 +108,26 @@ del sitio web, se estructura de la siguiente manera:
 
 
 
-    <!--[MAIN] - START -->
+    <!--[MAIN] - START 
+      Aquí se encuentra el MAIN del about, contiene una section
+      a modo de introducción, así como una lista con información
+      sobre los devs del estudio
+    -->
     <main class="Main">
         
+        <!-- Introducción -->
         <section class="Main-section About">
             <h2 class="About-title Fade-in">Sobre el estudio</h2>
             <div class="About-subtitle Fade-in">
                 <h3 class="About-h3">¡Hola, bienvenido a nuestra web! Somos un <span class="About-highlight">estudio de videojuegos indie</span> basado en España, compuesto por cuatro amigos a los que les encanta dibujar, crear personajes y relatos. Inspirados por juegos de RPGMaker y visual novels como <span class="About-highlight">Yume Nikki, Hello Charlotte, OFF, END ROLL, Hylics, Hatoful Boyfriend o Disco Elysium</span>, nuestro objetivo no es otro que compartir <span class="About-highlight">nuestras ideas e historias</span> con el resto del mundo, ¡gracias por pasarte! </h3>
-                <img loading="lazy" src="assets/about_main_img.gif" alt="Ilustracion de gato Kikuo" class="About-gif">
+                
+            <picture>
+                <source srcset="assets/about_main_img.gif" type="image/gif">                
+                <img loading="lazy" src="assets/about_main_img.webp" alt="Ilustracion de gato Kikuo" class="About-gif">
+            </picture>
             </div>
             
-
+            <!-- Enlaces a otras secciones de la web -->
             <ul class="About-ul Enlaces Fade-in">
                 <li class="About-li"><a class="About-juegos" title="Nuestro último juego" href="roboclub.html">Nuestro último juego</a></li>
                 <li class="About-li"><a href="index.html#Newsletter" title="Dónde encontrarnos" class="About-contacto">Dónde encontrarnos</a></li>
@@ -127,10 +135,10 @@ del sitio web, se estructura de la siguiente manera:
         </section>
             
 
-            <section class="Main-section Devs">
+        <!-- Sección de miembros -->
+        <section class="Main-section Devs">
             <h2 class="About-title Fade-in">¡Conócenos!</h2>
             
-
             <!--Miembro 1-->
             <div class="About-wrapper Brais About-left">
                 <!--Imagen dev-->
@@ -139,6 +147,7 @@ del sitio web, se estructura de la siguiente manera:
                 <article class="About-desc">
                     <h3 class="About-nombre">Brais</h3>
                     <h4 class="About-datos"><span class="About-highlight">Traducción/Localización y diseño de personajes 🐈</span> RPGMaker connoisseur, hace merchandising de todo tipo, formas y colores, no soporta la comida picante 🔥</h4>
+                    <!-- RRSS -->
                     <ul class="About-ul">
                         <li class="About-li"><a href="https://twitter.com/tokkori" title="Twitter" rel="nofollow noreferrer" target="_blank" class="About-rrss">
                             <svg class="About-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -162,6 +171,7 @@ del sitio web, se estructura de la siguiente manera:
                 <article class="About-desc Reverse">
                     <h3 class="About-nombre">Bruno</h3>
                     <h4 class="About-datos"><span class="About-highlight">Programación, dev principal 🐀</span> Le gustan los juegos 2D, cocinar comida riquísima y la playa, actualmente vive en casa de Kikuo</h4>
+                    <!-- RRSS -->
                     <ul class="About-ul">
                         <li class="About-li"><a href="https://twitter.com/choroidplexus11" title="Twitter" rel="nofollow noreferrer" target="_blank" class="About-rrss">
                             <svg class="About-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -180,6 +190,7 @@ del sitio web, se estructura de la siguiente manera:
                 <article class="About-desc">
                     <h3 class="About-nombre">Gabriel</h3>
                     <h4 class="About-datos"><span class="About-highlight">Animación y diseño de personajes 🐱</span> Amante del ramen picante coreano a tiempo completo 🍜 Storyboardista y animador a tiempo parcial. Le gustan los jueguitos de la computadora</h4>
+                    <!-- RRSS -->
                     <ul class="About-ul">
                         <li class="About-li"><a href="https://twitter.com/tenshidotexe" title="Twitter" rel="nofollow noreferrer" target="_blank" class="About-rrss">
                             <svg class="About-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -198,6 +209,7 @@ del sitio web, se estructura de la siguiente manera:
                 <article class="About-desc Reverse">
                     <h3 class="About-nombre">Tobi</h3>
                     <h4 class="About-datos"><span class="About-highlight">Diseño gráfico e ilustración 🐯</span> Se encarga de hacer logotipos, cartelería y layouts entre otras cosas. También hace las veces de diseñador web. Le gusta cuidar plantitas y dibujar bichos 🌱</h4>
+                    <!-- RRSS -->
                     <ul class="About-ul">
                         <li class="About-li"><a href="https://twitter.com/MelonTobi" title="Twitter" rel="nofollow noreferrer" target="_blank" class="About-rrss">
                             <svg class="About-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">

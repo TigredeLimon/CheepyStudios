@@ -399,7 +399,7 @@ BUG: El header no se adapta bien, como no tengo
 
 /*-Lightbox-*/
 .Gallery {
-    background: url(../assets/fondo_textura.jpg);
+    background: url(../assets/fondo_seccion_roboclub.jpg);
     background-size: cover;
     background-attachment: fixed;
     padding: 4rem 0 5rem;
@@ -426,6 +426,7 @@ BUG: El header no se adapta bien, como no tengo
 
     font-size: var(--font-h4-size);
     font-weight: var(--font-medium);
+    text-align: justify; /*Solo para desktop, se cambia en responsive*/
 
     border-left: 1rem solid white;    
     border-right: 1rem solid white;    
@@ -854,7 +855,7 @@ BUG: El header no se adapta bien, como no tengo
     .Responsive {display:inline}   
     
     .Intro{
-        padding-bottom: 2rem;
+        padding: 2rem;
         justify-content: center;
         align-items: center;
 
@@ -895,6 +896,7 @@ BUG: El header no se adapta bien, como no tengo
 @media (max-width:870px) {
     .Responsive-juegos {grid-template-columns: repeat(2, 1fr);}
 
+    .Gallery-h4 {text-align: initial;}
     .Gallery-ul { grid-template-columns: repeat(2, 1fr);}
     .Footer-form{ flex-direction: column; align-items: center;}
 }
