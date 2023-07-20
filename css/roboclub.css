@@ -823,7 +823,7 @@ BUG: El header no se adapta bien, como no tengo
     ——> Scrollbar
     ——> Tooltips
 */
-::-webkit-scrollbar {width: .7rem;}
+::-webkit-scrollbar {width: .7rem; height: .7rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
 ::-webkit-scrollbar-thumb {background: var(--color-red);}
 
@@ -848,7 +848,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 @media (max-width:990px) {
     .Header {
-        padding:0 1rem 0;
+        padding:0 1rem 0 0;
         justify-content: space-between;}
     .Header-nav {display: none;}
     .Responsive {display:inline}   

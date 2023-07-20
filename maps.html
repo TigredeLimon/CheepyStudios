@@ -113,10 +113,10 @@ se estructura de la siguiente manera:
         
 
         <section class="Main-section Map">
-            <h2 class="Map-h2">Mapas</h2>
-            <h5 class="Map-h5">Aquí encontrarás información sobre los lugares en que se desarrollan nuestros juegos, ¡haz click en los iconos!</h5>
+            <h2 class="Map-h2 Animation">Mapas</h2>
+            <h5 class="Map-h5 Animation">¿No sabes por dónde seguir, o te preguntas si visitaste algún sitio en concreto? ¡Prueba a utilizar los siguientes mapas interactivos como guía!</h5>
 
-        <div class="Map-wrapper">
+        <div class="Map-wrapper Animation">
             <ul class="Map-ul">
                 <li class="Map-li"><button class="Map-button Button-red isActive">Cruxside</button></li>
                 <li class="Map-li"><button class="Map-button Button-blue">Instituto</button></li>
@@ -124,31 +124,30 @@ se estructura de la siguiente manera:
             </ul>
             </div>
 
-            <div class="Map-container">
+            <div class="Map-container Animation">
                 
                 <!--Mapa Cruxside-->
-                <div class="Map-content isActive">
-                <div class="Map-gps Gps">
+                <div class="Map-content isActive Static">
+                    
+                <!-- No me dio tiempo a preparar esta sección, por ello está comentada-->
+                <!-- <div class="Map-gps Gps">
                     <img src="#" alt="Casa-1" class="Gps-pointer">
                     <img src="#" alt="Casa-2" class="Gps-pointer">
                     <img src="#" alt="Casa-3" class="Gps-pointer">
-                </div>
-                <!--
-                   ToDO: Cambiar la src, es solo una prueba ! 
-                -->
-                <img src="https://cdn.discordapp.com/attachments/1048992381946572810/1086829166760038400/image.png" alt="Mapa de Cruxside" class="Map-img">
+                    </div>-->
+                <img src="assets/mapa_cruxside.png" alt="Mapa de Cruxside" loading="lazy" class="Map-img">
                 </div>
 
-                <!--Mapa Mansion Maid-->
+                <!--Mapa Instituto-->
                 <div class="Map-content">
                 <h5 class="Map-wip">Coming soon!</h5>
-                <img src="#" alt="Mapa del instituto" class="Map-img">
+                <img src="#" alt="Mapa del instituto" loading="lazy" class="Map-img">
                 </div>
 
-                <!--Mapa Zombies-->
+                <!--Mapa Alrededores-->
                 <div class="Map-content">
                 <h5 class="Map-wip">Coming soon!</h5>
-                <img src="#" alt="Mapa de los alrededores" class="Map-img">
+                <img src="#" alt="Mapa de los alrededores" loading="lazy" class="Map-img">
                 </div>
             </div>
     </section>
