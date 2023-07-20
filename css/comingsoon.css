@@ -127,7 +127,7 @@ BUG: El header no se adapta bien, como no tengo
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 5rem;
 
@@ -139,6 +139,7 @@ BUG: El header no se adapta bien, como no tengo
                    otros elementos-*/
 }
 .Header-logo {}
+.Header-img{max-height: 4.375rem;}
 .Header-nav {}
 .Header-ul {
     display: flex;
@@ -348,9 +349,7 @@ BUG: El header no se adapta bien, como no tengo
 
     position: relative;
 }
-.Footer-img {
-    background-color: white;
-}
+.Footer-img {max-width: 12.5rem;}
 .Footer-ul {
     display: flex;
     flex-flow: column nowrap;
