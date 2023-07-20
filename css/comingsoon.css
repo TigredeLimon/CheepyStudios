@@ -139,9 +139,7 @@ BUG: El header no se adapta bien, como no tengo
                    al header, de manera que no se superpongan
                    otros elementos-*/
 }
-.Header-logo {}
 .Header-img{max-height: 4.375rem;}
-.Header-nav {}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;
@@ -149,7 +147,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 4.6875rem;
 }
-.Header-li {}
 .Header-link, .Header-button {
     color: var(--color-yellow);
     font-size: var(--font-h4-size);
@@ -321,8 +318,7 @@ BUG: El header no se adapta bien, como no tengo
     color: var(--color-black);
     transform: var(--transform-scale-up);}
 .Responsive-a:active, .Responsive-link:active {transform: var(--transform-scale-down);}
-/*-Menú responsive-*/
-
+/*-------------- [HEADER] --------------*/
 
 
 /*-------------- [MAIN] --------------*/
@@ -331,6 +327,7 @@ BUG: El header no se adapta bien, como no tengo
     min-height: 80vh;
 }
 
+/* -Contenedora de la sección- */
 .Container {
     max-width: var(--width-1150);
     padding: 2rem 0;
@@ -353,6 +350,7 @@ BUG: El header no se adapta bien, como no tengo
     font-size: var(--font-h5-size);
     font-weight: var(--font-medium);
 }
+
 .Container-img {
     max-width: var(--width-350);
     animation: containerImg 1.2s ease-in-out infinite alternate;}
@@ -376,13 +374,12 @@ BUG: El header no se adapta bien, como no tengo
     to{opacity:1; transform: translateY(initial);}
 }
 
-
 /*-------------- [MAIN] --------------*/
 
 
 
 
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 .Footer {
     width: 100%;
     min-height: 30vh;
@@ -517,7 +514,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Credits-link:hover{color: var(--color-white); transform: var(--transform-scale-up);}
 .Credits-link:active{transform: var(--transform-scale-down);}
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 
 
 

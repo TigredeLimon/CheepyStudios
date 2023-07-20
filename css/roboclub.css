@@ -155,9 +155,7 @@ BUG: El header no se adapta bien, como no tengo
                    al header, de manera que no se superpongan
                    otros elementos-*/
 }
-.Header-logo {}
 .Header-img{max-height: 4.375rem;}
-.Header-nav {}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;
@@ -165,7 +163,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 4.6875rem;
 }
-.Header-li {}
 .Header-link, .Header-button {
     color: var(--color-white);
     font-size: var(--font-h4-size);
@@ -190,11 +187,9 @@ BUG: El header no se adapta bien, como no tengo
    ——>El svg girará cuando salga el dropdown menu-*/
 .Header-svg.isActive{transform: rotate(180deg);}
 
-    
 .Header-link:active, .Header-button:active { color: var(--color-black-opacity)}
 .Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-white)}
 
- 
 .Header-menu{ position: relative; }
 .Header-dropdown {
     background-color: var(--color-black);
@@ -217,7 +212,6 @@ BUG: El header no se adapta bien, como no tengo
     top: 120%;
 
     transition: var(--transition-gen);
-    
 }
 .Dropdown-link {
     width: 100%;
@@ -244,7 +238,6 @@ BUG: El header no se adapta bien, como no tengo
     opacity: 1;
     pointer-events: initial;
 }
-
 
 /*-Menú responsive-*/
 .Responsive {display: none;}
@@ -382,7 +375,6 @@ BUG: El header no se adapta bien, como no tengo
     border-left: .5rem solid var(--color-grey);}
 
 .Intro-img {
-    /* background-color: orange; */
     max-width: 28.75rem;
     height: 100%;
 
@@ -437,8 +429,8 @@ BUG: El header no se adapta bien, como no tengo
 .Gallery-ul {
     width: 100%;
     max-width: var(--width-1150);
-    padding: 1rem 0;
-    margin: auto;
+    padding: 2.5rem 0;
+    margin: 1.5rem auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -446,7 +438,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 2rem;
 }
-.Gallery-li {}
 .Gallery-img {
     background-color: var(--color-background-white);
     width: 100%;
@@ -476,6 +467,7 @@ BUG: El header no se adapta bien, como no tengo
     backdrop-filter: blur(.2rem);
     transition: var(--transition-gen);
 }
+/*-Preparación para Js-*/
 .Lightbox.isActive {opacity: 1; pointer-events: initial;}
 
 /*-Wrapper que recoge imágenes + texto de la galería-*/
@@ -514,15 +506,12 @@ BUG: El header no se adapta bien, como no tengo
     padding: 0.4rem;
     
     cursor: pointer;
-
     border-radius: 50%;
-
     transition: var(--transition-gen);
 }
 
 .Lightbox-svg:hover{transform: var(--transform-scale-up);}
 .Lightbox-svg:active{transform: var(--transform-scale-down);}
-
 
 .Lightbox-img {
     background-color: var(--color-background-white);
@@ -549,8 +538,8 @@ BUG: El header no se adapta bien, como no tengo
     opacity: 0;
     transition: opacity .3s ease-in-out;
 }
+/*-Preparación para JS-*/
 .Lightbox-p.isActive{ opacity: 1;}
-
 
 
 /*-Personajes-*/
@@ -558,7 +547,6 @@ BUG: El header no se adapta bien, como no tengo
     max-width: var(--width-1150);
     margin: 4rem auto;
     }
-.Personajes-article {}
 .Personajes-h2 {
     font-family:  var(--font-family-ezcar);
     font-size: var(--font-h2-size);
@@ -609,8 +597,8 @@ BUG: El header no se adapta bien, como no tengo
     padding: 0.4rem;
     
     cursor: pointer;
-
-    border-radius: 50%;}
+    border-radius: 50%;
+}
 
 .Personajes-next:hover, .Personajes-prev:hover{transform: var(--transform-scale-up);} 
 .Personajes-next:active, .Personajes-prev:active{transform: var(--transform-scale-down);} 
@@ -620,7 +608,8 @@ BUG: El header no se adapta bien, como no tengo
     top: 0;
     left: 0;
 
-    opacity: 0;}
+    opacity: 0;
+}
 .Personajes-img.Static{position:static;}
 .Personajes-img.isActive{opacity: 1;}
 
@@ -672,16 +661,10 @@ BUG: El header no se adapta bien, como no tengo
     }
     to{opacity:1; transform: translateY(initial);}
 }
-
-
-
-
 /*-------------- [MAIN] --------------*/
 
 
-
-
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 .Footer {
     width: 100%;
     min-height: 30vh;
@@ -815,7 +798,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Credits-link:hover{color: var(--color-white); transform: var(--transform-scale-up);}
 .Credits-link:active{transform: var(--transform-scale-down);}
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 
 
 

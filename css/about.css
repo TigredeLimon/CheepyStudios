@@ -146,9 +146,7 @@ BUG: El header no se adapta bien, como no tengo
                    al header, de manera que no se superpongan
                    otros elementos-*/
 }
-.Header-logo {}
 .Header-img{max-height: 4.375rem;}
-.Header-nav {}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;
@@ -156,7 +154,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 4.6875rem;
 }
-.Header-li {}
 .Header-link, .Header-button {
     color: var(--color-yellow);
     font-size: var(--font-h4-size);
@@ -181,11 +178,9 @@ BUG: El header no se adapta bien, como no tengo
    ——>El svg girará cuando salga el dropdown menu-*/
 .Header-svg.isActive{transform: rotate(180deg);}
 
-    
 .Header-link:active, .Header-button:active { color: var(--color-white)}
 .Header-link:hover, .Header-button:hover { border-bottom: 5px solid var(--color-yellow)}
 
- 
 .Header-menu{ position: relative; }
 .Header-dropdown {
     background-color: var(--color-black);
@@ -208,7 +203,6 @@ BUG: El header no se adapta bien, como no tengo
     top: 120%;
 
     transition: var(--transition-gen);
-    
 }
 .Dropdown-link {
     width: 100%;
@@ -328,7 +322,7 @@ BUG: El header no se adapta bien, como no tengo
     color: var(--color-black);
     transform: var(--transform-scale-up);}
 .Responsive-a:active, .Responsive-link:active {transform: var(--transform-scale-down);}
-/*-Menú responsive-*/
+/*-------------- [HEADER] --------------*/
 
 
 /*-------------- [MAIN] --------------*/
@@ -337,6 +331,7 @@ BUG: El header no se adapta bien, como no tengo
     min-height: 80vh;
     overflow-x: hidden;}
 
+/*- Introducción de sección  -*/
 .About, .Devs{
     max-width: var(--width-1150);
     
@@ -422,6 +417,7 @@ BUG: El header no se adapta bien, como no tengo
 .About-juegos:active, .About-contacto:active {transform: var(--transform-scale-down);}
 
 
+/*- Contenedoras de info para cada dev -*/
 .About-wrapper{
     padding: 2rem 1.5rem;
     border-radius: 1rem;
@@ -454,7 +450,6 @@ BUG: El header no se adapta bien, como no tengo
     border-radius: 1rem;
 }
 .About-desc {
-    /* background-color: orange;    */
     max-width: var(--width-350);
 
     display: flex;
@@ -463,6 +458,7 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: .5rem;
 }
+/* -Rows inversas para dar dinamismo a la sección- */
 .About-desc.Reverse {grid-row: 2/1;}
 .About-nombre {
     color: var(--color-black-names);
@@ -487,7 +483,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 2rem;
 }
-.About-li {}
 .About-rrss {
     background-color: var(--color-black-opacity);
     color: var(--color-white);
@@ -528,13 +523,10 @@ BUG: El header no se adapta bien, como no tengo
     from{ opacity: 0; transform: translateX(50%);
     }
     to{opacity:1; transform: translateX(initial);}}
-
 /*-------------- [MAIN] --------------*/
 
 
-
-
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 .Footer {
     width: 100%;
     min-height: 30vh;
@@ -669,7 +661,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Credits-link:hover{color: var(--color-white); transform: var(--transform-scale-up);}
 .Credits-link:active{transform: var(--transform-scale-down);}
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 
 
 

@@ -142,9 +142,7 @@ BUG: El header no se adapta bien, como no tengo
                    al header, de manera que no se superpongan
                    otros elementos-*/
 }
-.Header-logo {}
 .Header-img{max-height: 4.375rem;}
-.Header-nav {}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;
@@ -152,7 +150,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 4.6875rem;
 }
-.Header-li {}
 .Header-link, .Header-button {
     color: var(--color-yellow);
     font-size: var(--font-h4-size);
@@ -367,7 +364,6 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 2rem;
 }
-.Map-li {}
 .Map-button {
     background-color: var(--color-white);
     padding: .5rem 1rem;
@@ -396,7 +392,11 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*
-    ToDO: No me da tiempo de generar los assets que hacen falta, pero quería hacer un efecto de mouseove/mouseout en el que por un lado saliese información sobre cada lugar concreto del mapa (como si fuese una tooltip personalizada), y por otro que al clicar se abriese un lightbox con información más detallada.
+    ToDO: No me da tiempo de generar los assets que hacen falta,
+    pero quería hacer un efecto de mouseove/mouseout en el que 
+    por un lado saliese información sobre cada lugar concreto del mapa
+    (como si fuese una tooltip personalizada), y por otro que al clicar
+    se abriese un lightbox con información más detallada.
 */
 
 
@@ -428,19 +428,18 @@ BUG: El header no se adapta bien, como no tengo
     box-shadow: var(--box-shadow-gen);
 
 }
+/*-Preparación para el Js-*/
 .Map-content.isActive {opacity: 1; pointer-events: initial;}
-.Map-content.Static{ position: static;}
+.Map-content.Static {position: static;}
 
-.Map-img{
-
-    max-width: var(--width-1150);
-    height: auto;    
-}
+.Map-img{max-width: var(--width-1150); height: auto;}
 
 
-/*-Scrollbar para el container del mapa-*/
-.Map-content::-webkit-scrollbar-track {background: var(--color-black-opacity); }
-.Map-content::-webkit-scrollbar-thumb {background: var(--color-red);}
+/*-Scrollbar para el container del mapa,
+   comentado por no darme tiempo a hacer
+   la interacción mencionada arriba-*/
+/* .Map-content::-webkit-scrollbar-track {background: var(--color-black-opacity); }
+.Map-content::-webkit-scrollbar-thumb {background: var(--color-red);} */
 
 
 
@@ -455,14 +454,13 @@ BUG: El header no se adapta bien, como no tengo
     }
     to{opacity:1; transform: translateY(initial);}
 }
-
 /*-------------- [MAIN] --------------*/
 
 
 
 
 
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 .Footer {
     width: 100%;
     min-height: 30vh;
@@ -597,7 +595,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Credits-link:hover{color: var(--color-white); transform: var(--transform-scale-up);}
 .Credits-link:active{transform: var(--transform-scale-down);}
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 
 
 

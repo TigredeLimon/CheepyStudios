@@ -259,6 +259,8 @@ BUG: El header no se adapta bien, como no tengo
     box-shadow: var(--box-shadow-gen);
     transition: var(--transition-gen);
 }
+/*-Preparación para Js
+   ——>El menú aparecerá al hacer click-*/
 .Responsive-menu.isActive {
     opacity: 1;
     pointer-events: initial;}
@@ -324,11 +326,10 @@ BUG: El header no se adapta bien, como no tengo
     color: var(--color-black);
     transform: var(--transform-scale-up);}
 .Responsive-a:active, .Responsive-link:active {transform: var(--transform-scale-down);}
-/*-Menú responsive-*/
+/*-------------- [HEADER] --------------*/
 
 
 /*-------------- [MAIN] --------------*/
-
 .Main {
     margin: 4rem 0 0;
     min-height: 80vh;
@@ -336,7 +337,6 @@ BUG: El header no se adapta bien, como no tengo
 .Wrapper-main{
     width: 100%;
     height: 95vh;
-    /* background-color: lightgray; */
     
     position: relative;
     overflow:hidden;
@@ -363,7 +363,6 @@ BUG: El header no se adapta bien, como no tengo
 .Hero-img.isActive{ opacity: 1;}
 .Hero-static {position: static;}
 
-
 .Hero {
     background-color: var(--color-black-opacity);
     color: var(--color-white);
@@ -385,7 +384,6 @@ BUG: El header no se adapta bien, como no tengo
     top: calc( 50% - (25rem / 2));
     left: calc( 50% - (var(--width-1150) / 2));
 }
-.Hero-logo { background-color: lightgray;}
 .Hero-h3 {font-size: var(--font-h3-size);}
 .Hero-highlight {font-weight: var(--font-bold);}
 
@@ -579,7 +577,6 @@ BUG: El header no se adapta bien, como no tengo
 /*--Fin del form.--*/
 
 
-
 .Contacto {
     display: flex;
     flex-flow: row nowrap;
@@ -598,7 +595,6 @@ BUG: El header no se adapta bien, como no tengo
 .Contacto-h4 {
     max-width: var(--width-750);
 
-    
     font-size: var(--font-h4-size);
     font-weight: var(--font-bold);
 }
@@ -609,7 +605,7 @@ BUG: El header no se adapta bien, como no tengo
     align-items: center;
     gap: 1.875rem;
 }
-.Contacto-li {}
+
 .Contacto-a {
     color: var(--color-yellow);
 
@@ -639,7 +635,6 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*--Animaciones--*/
-
 /*-vvv Clase para el js vvv-*/
 .Animation {opacity: 0;}
 
@@ -649,10 +644,10 @@ BUG: El header no se adapta bien, como no tengo
     }
     to{opacity:1; transform: translateY(initial);}
 }
+/*-------------- [MAIN] --------------*/
 
 
-
-/*--  FOOTER  --*/
+/*-------------- [FOOTER] --------------*/
 .Footer {
     width: 100%;
     min-height: 30vh;
@@ -786,14 +781,14 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Credits-link:hover{color: var(--color-white); transform: var(--transform-scale-up);}
 .Credits-link:active{transform: var(--transform-scale-down);}
-/*--  FOOTER  --*/
+/*-------------- [FOOTTER] --------------*/
 
 
 
 /*-------------- [OTROS ELEMENTOS] --------------
     En este apartado aparecen:
     ——> Scrollbar
-    ——> Tooltips
+    ——> ...
 */
 ::-webkit-scrollbar {width: .7rem; height: .7rem;}
 ::-webkit-scrollbar-track {background: var(--color-black-opacity); }
@@ -883,5 +878,4 @@ BUG: El header no se adapta bien, como no tengo
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}
     .Footer-ul, .Footer-wrapper{ align-items: center;}
-
 }
