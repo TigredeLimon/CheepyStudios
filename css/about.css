@@ -373,7 +373,7 @@ BUG: El header no se adapta bien, como no tengo
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 1.5rem;
 }
 .About-subtitle::before, .About-subtitle::after{
