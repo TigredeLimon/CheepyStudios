@@ -645,6 +645,13 @@ BUG: El header no se adapta bien, como no tengo
 @media (max-width:595px) {
     .Responsive-ul {gap: 0.5rem;}
     .Responsive-juegos {gap: .2rem;}
+    
+    .Map-ul{ 
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 1rem;}
+    .Map-li{width: 90%;}
+    .Map-button{width: 100%;}
 
     .Footer{ grid-template-columns: 1fr;}
     .Footer-img {margin: auto;}
