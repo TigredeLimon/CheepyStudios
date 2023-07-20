@@ -881,6 +881,7 @@ BUG: El header no se adapta bien, como no tengo
         width: 100%;
         margin-top: 1.5rem;
 
+        backdrop-filter: blur(.1rem);
         border-right:1rem solid transparent;
         border-radius: initial;}
     .Personajes-slider{right: 0;}

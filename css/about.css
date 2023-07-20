@@ -388,7 +388,7 @@ BUG: El header no se adapta bien, como no tengo
 .About-h3 { color: var(--color-grey); font-size: var(--font-h5-size);}
 .About-highlight {font-weight: var(--font-bold);}
 
-.About-pixel {background-color: lightgray; min-width: 100px; height: 100px;}
+.About-gif {max-width: 10rem;}
 
 .About-juegos, .About-contacto {
     background-color: var(--color-white);
@@ -710,8 +710,12 @@ BUG: El header no se adapta bien, como no tengo
     .Responsive-juegos {
         grid-template-columns: repeat(2, 1fr);}
     
-    .About-subtitle {flex-direction: column-reverse;}
+    .About-subtitle {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;}
     .About-subtitle::before, .About-subtitle::after{display: none;}
+    .About-gif {max-width: 15rem;}
 
     .About-ul.Enlaces {flex-direction: column; align-items: center; gap: 1rem;}
 

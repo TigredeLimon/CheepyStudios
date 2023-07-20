@@ -337,7 +337,7 @@ BUG: El header no se adapta bien, como no tengo
 }
 .Wrapper-main{
     width: 100%;
-    max-height: 45rem;
+    height: 95vh;
     /* background-color: lightgray; */
     
     position: relative;
@@ -348,6 +348,7 @@ BUG: El header no se adapta bien, como no tengo
 /*--Pase de diapositivas del hero--*/
 .Hero-img {
     width: 100%;
+    height: 100%; /*-Añadida altura para que cubra todo el container en el modo responsive-*/
     object-fit: cover;
 
     position: absolute;
@@ -809,12 +810,14 @@ BUG: El header no se adapta bien, como no tengo
 
 
 /*-- [RESPONSIVE] --*/
+
 @media (max-width:1220px) {
     .Hero{
         max-width: 80%;
         padding: 2rem;
         margin: -2rem auto;
-        left: calc(50% - (80% / 2));}
+        left: calc(50% - (80% / 2));}       
+    
     .About{ padding: 6rem 2rem;}
 
     .Newsletter {flex-direction: column;}
@@ -832,7 +835,7 @@ BUG: El header no se adapta bien, como no tengo
     .Header-nav {display: none;}
     .Responsive {display:inline}
     
-    .Wrapper-main{ height: 100vh;}
+    
     .Hero-img{ height: 100%;}
     .Hero-h3 {font-size: var(--font-h4-size);}
 
