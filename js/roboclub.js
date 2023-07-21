@@ -26,30 +26,39 @@ Cuando hago CLICK en htmlMain hace una FUNCTION
     —> A responsiveMenu se le REMOVE la clase isActive
 */
 
+
 /*
 ——> Función que añade y quita la clase isActive al menú desplegable
 del header
 ——> Función que quita la clase isActive al clickar en el Body
 ——> See: https://stackoverflow.com/questions/26672241/remove-class-after-click-outside-the-div
 */
+
+// Constantes que llaman a los botones del header
 const headerButton   = document.querySelector(`.Header-button`)
 const headerDropdown = document.querySelector(`.Header-dropdown`)
+// Constante que llama al svg del header
 const headerArrow    = document.querySelector(`.Header-svg`)
+// Constantes que llaman a los elementos responsive del header
 const responsiveSvg  = document.querySelector(`.Responsive-svg`)
 const responsiveMenu = document.querySelector(`.Responsive-menu`)
-
+// Constante que llama a toda la sección Main de la página
 const htmlMain = document.querySelector(`.Main`)
 // const htmlBody = document.querySelector(`body`)
 
+// Función que activa/desactiva la clase isActive al menú del header
 headerButton.addEventListener(`click`, ()=>{
     headerDropdown.classList.toggle(`isActive`)
     headerArrow.classList.toggle(`isActive`)
 })
 
+// Función que activa/desactiva la clase isActive al menú responsive del header
 responsiveSvg.addEventListener(`click`, ()=>{
     responsiveMenu.classList.toggle(`isActive`)
 })
 
+// Función que quita la clase isActive al menú (tanto responsive como no)
+// al hacer click fuera de ellos
 htmlMain.addEventListener(`click`, ()=>{
     if(headerDropdown.classList.contains(`isActive`) ||
        headerArrow.classList.contains(`isActive`) ||
@@ -60,6 +69,8 @@ htmlMain.addEventListener(`click`, ()=>{
         responsiveMenu.classList.remove(`isActive`)
     }
 })
+
+
 
 
 /* -- PSEUDOCÓDIGO -- 
@@ -78,20 +89,27 @@ Cuando hago CLICK en lightboxPrev, hace una FUNCTION
     —> A lightboxP posición Index se le ADD la clase isActive
 */
 
-//Imágenes de la galería
+// Constante que llama a todos los elementos con clase .Gallery-img
 const galleryImg    = document.querySelectorAll(`.Gallery-img`)
-//Botones
+// Constantes que llama a los elementos con clase .Lightbox-prev, 
+// -next y -close respectivamente
 const lightboxPrev  = document.querySelector (`.Lightbox-prev`)
 const lightboxNext  = document.querySelector (`.Lightbox-next`)
 const galleryClose  = document.querySelector(`.Lightbox-close`)
-//Contenido del lightbox
+// Constantes que llaman a los elementos con clase .Lightbox y 
+// .Lightbox-img respectivamente
 const lightbox     = document.querySelector(`.Lightbox`)
 const lightboxImg  = document.querySelector(`.Lightbox-img`)
+// Constante que llama a todos los elementos con clase .Lightbox-p
 const lightboxP    = document.querySelectorAll(`.Lightbox-p`)
 
+// Variable que establece el valor 0 a lightboxActive
 let lightboxActive = 0
 
-//Funcion para activar las flechas
+// Variable que recoge la función activateGallery para
+// optimizar el código. Quita y luego añade la clase isActive
+// a los elementos .Lightbox-p, y a su vez cambia la src
+// del elemento .Lightbox-img por el de .Gallery-img
 let activateGallery = ()=>{
     lightboxP.forEach((eachText, index)=>{
         
@@ -99,11 +117,12 @@ let activateGallery = ()=>{
         lightboxP[lightboxActive].classList.add(`isActive`)
     })
     
-    lightboxImg.src = galleryImg[lightboxActive].src
-    
+    lightboxImg.src = galleryImg[lightboxActive].src 
 }
 
-// Abrir el lightbox
+// forEach de galleryImg que añade la clase isActive al elemento
+// con clase .Lightbox. También quita y añade la clase isActive a lo
+// elementos .Lightbox-p.
 galleryImg.forEach((eachImg, index)=>{
     galleryImg[index].addEventListener(`click`, ()=>{
         
@@ -119,7 +138,8 @@ galleryImg.forEach((eachImg, index)=>{
     })   
 })
 
-// Click hacia atrás
+// Función que cambia el valor de lightboxActive al hacer click
+// y activa, a su vez, la función ActivateGallery
 lightboxPrev.addEventListener(`click`, ()=>{
     lightboxActive--
     if(lightboxActive <= -1){
@@ -129,7 +149,8 @@ lightboxPrev.addEventListener(`click`, ()=>{
     console.log(lightboxActive)
 })
 
-// Click hacia delante
+// Función que cambia el valor de lightboxActive al hacer click
+// y activa, a su vez, la función ActivateGallery
 lightboxNext.addEventListener(`click`, ()=>{
     lightboxActive++
     if(lightboxActive >= 6){
@@ -140,7 +161,7 @@ lightboxNext.addEventListener(`click`, ()=>{
     
 })
 
-// Cerrar lighthbox
+// Función que elimina la clase isActive al hacer click
 galleryClose.addEventListener(`click`, ()=>{
     lightbox.classList.remove(`isActive`)
 
@@ -172,15 +193,22 @@ Cuando hago CLICK en buttonNext, hace una FUNCTION
     —> A descList se le ADD la clase isActive   
 */
 
+// Constantes que llaman a los elementos con clase .Personajes-prev
+// y .Personajes-next respectivamente
 const buttonPrev = document.querySelector(`.Personajes-prev`)
 const buttonNext = document.querySelector(`.Personajes-next`)
 
+// Constantes que llaman a todos los elementos con clase
+// .Personajes-img y .Personajes-desc respectivamente
 const imgList  = document.querySelectorAll(`.Personajes-img`)
 const descList = document.querySelectorAll(`.Personajes-desc`)
 
+// Variable que asigna un valor 0 a itemActive
 let itemActive  = 0
 
-//Función para activar el pase de diapositivas
+// Variable que recoge la función activateClass para
+// optimizar el código. Quita y luego añade la clase isActive
+// a los elementos imgList y descList
 let activateClass = ()=>{
     imgList.forEach((eachImg, index)=>{
         imgList[index].classList.remove(`isActive`)
@@ -191,6 +219,8 @@ let activateClass = ()=>{
         descList[itemActive].classList.add(`isActive`)
     })}
 
+// Función que cambia el valor de itemActive al hacer click
+// y activa, a su vez, la función activateClass
 buttonPrev.addEventListener(`click`, ()=>{
     itemActive--
 
@@ -199,6 +229,8 @@ buttonPrev.addEventListener(`click`, ()=>{
     activateClass()
 })
 
+// Función que cambia el valor de itemActive al hacer click
+// y activa, a su vez, la función activateClass
 buttonNext.addEventListener(`click`, ()=>{
     itemActive++
 
@@ -213,22 +245,24 @@ buttonNext.addEventListener(`click`, ()=>{
 Cuando hago SCROLL hasta cierto punto, animation hace una FUNCTION
     —> A TODAS las animation se le añade la clase Fade-in
 */
-
 /*
 ——> Función que añade los elementos que tienen la clase Animation
 ——> See: Clase, día 44
 ——> See: https://dev.to/ljcdev/introduction-to-scroll-animations-with-intersection-observer-d05
 */
 
-
+// Constante que llama a todas las clases .Animation
 const animation = document.querySelectorAll(`.Animation`)
 
+// Variable que establece los valores/opciones del observer
 let options = {
     root       : null,
     rootMargin : '0px 0px',
     threshold  : [0, 1]
 }
 
+// Variable con intersectionObserver que añade la
+// clase .Fade-in a los elementos que posean la clase .Animation
 let observer = new IntersectionObserver( (changes)=>{
     changes.forEach((eachAnimation)=>{
         

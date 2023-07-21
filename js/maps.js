@@ -32,24 +32,32 @@ del header
 ——> Función que quita la clase isActive al clickar en el Body
 ——> See: https://stackoverflow.com/questions/26672241/remove-class-after-click-outside-the-div
 */
+
+// Constantes que llaman a los botones del header
 const headerButton   = document.querySelector(`.Header-button`)
 const headerDropdown = document.querySelector(`.Header-dropdown`)
+// Constante que llama al svg del header
 const headerArrow    = document.querySelector(`.Header-svg`)
+// Constantes que llaman a los elementos responsive del header
 const responsiveSvg  = document.querySelector(`.Responsive-svg`)
 const responsiveMenu = document.querySelector(`.Responsive-menu`)
-
+// Constante que llama a toda la sección Main de la página
 const htmlMain = document.querySelector(`.Main`)
 // const htmlBody = document.querySelector(`body`)
 
+// Función que activa/desactiva la clase isActive al menú del header
 headerButton.addEventListener(`click`, ()=>{
     headerDropdown.classList.toggle(`isActive`)
     headerArrow.classList.toggle(`isActive`)
 })
 
+// Función que activa/desactiva la clase isActive al menú responsive del header
 responsiveSvg.addEventListener(`click`, ()=>{
     responsiveMenu.classList.toggle(`isActive`)
 })
 
+// Función que quita la clase isActive al menú (tanto responsive como no)
+// al hacer click fuera de ellos
 htmlMain.addEventListener(`click`, ()=>{
     if(headerDropdown.classList.contains(`isActive`) ||
        headerArrow.classList.contains(`isActive`) ||
@@ -60,6 +68,8 @@ htmlMain.addEventListener(`click`, ()=>{
         responsiveMenu.classList.remove(`isActive`)
     }
 })
+
+
 
 
 /* -- PSEUDOCÓDIGO -- 
@@ -74,9 +84,14 @@ Cuando hago CLICK en mapButton hace una FUNCTION
       isActive
 */
 
+// Constante que llama a todos los elementos con clase .Map-Button
 const mapButton  = document.querySelectorAll(`.Map-button`)
+// Constante que llama a todos los elementos con clase .Map-content
 const mapContent = document.querySelectorAll(`.Map-content`)
 
+// forEach de los mapButton con una función dentro
+// que elimina la clase isActive y luego la añade al
+// hacer click, teniendo como referencia el valor index
 mapButton.forEach((eachTab, index)=>{
     mapButton[index].addEventListener(`click`, ()=>{
         
@@ -98,22 +113,24 @@ mapButton.forEach((eachTab, index)=>{
 Cuando hago SCROLL hasta cierto punto, animation hace una FUNCTION
     —> A TODAS las animation se le añade la clase Fade-in
 */
-
 /*
 ——> Función que añade los elementos que tienen la clase Animation
 ——> See: Clase, día 44
 ——> See: https://dev.to/ljcdev/introduction-to-scroll-animations-with-intersection-observer-d05
 */
 
-
+// Constante que llama a todas las clases .Animation
 const animation = document.querySelectorAll(`.Animation`)
 
+// Variable que establece los valores/opciones del observer
 let options = {
     root       : null,
     rootMargin : '0px 0px',
     threshold  : [0, 1]
 }
 
+// Variable con intersectionObserver que añade la
+// clase .Fade-in a los elementos que posean la clase .Animation
 let observer = new IntersectionObserver( (changes)=>{
     changes.forEach((eachAnimation)=>{
         
