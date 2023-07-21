@@ -339,8 +339,15 @@ BUG: El header no se adapta bien, como no tengo
     height: 95vh;
     
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
+
+    animation: heroAnimation 1s ease-in-out 1;
 } 
+@keyframes heroAnimation {
+    from {opacity: 0;}
+    to{opacity: 1;} 
+
+}
 
 /*--  HERO  --*/
 /*--Pase de diapositivas del hero--*/
