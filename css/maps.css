@@ -557,7 +557,7 @@ BUG: El header no se adapta bien, como no tengo
     cursor: pointer;
 
     background-color: white;
-    color: var(--color-yellow);
+    color: var(--color-black);
     padding: .5rem 1rem;
 
     border-radius: 1rem;
