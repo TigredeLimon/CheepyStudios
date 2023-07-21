@@ -124,7 +124,8 @@ form, input, textarea, label, button, fieldset, legend, select{
 html{ scroll-behavior: smooth;}
 
 body {
-    background: url(../assets/fondo_cuadros.png);
+    background: url(../assets/fondo_cuadros.
+    );
     background-repeat: repeat;
     font-size: 100%;
     position: relative;}
