@@ -353,7 +353,7 @@ BUG: El header no se adapta bien, como no tengo
 /*--Pase de diapositivas del hero--*/
 .Hero-img {
     width: 100%;
-    height: 45rem; 
+    min-height: 45rem; /*Altura puesta para que la imagen no se haga pequeña en pantallas grandes*/
     object-fit: cover;
 
     position: absolute;
