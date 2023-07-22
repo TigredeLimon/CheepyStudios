@@ -1,5 +1,5 @@
 # 🌱 Cheepy Studios
-![Imagen del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/assets/meta_tag.png?raw=true)
+![Imagen del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/assets/meta_tag.jpg)
 
 ## Ejemplo en vivo
 - [Enlace al proyecto](https://tigredelimon.github.io/CheepyStudios/)
@@ -18,10 +18,13 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum et esse, 
 [![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://es.wikipedia.org/wiki/CSS)
 [![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://es.wikipedia.org/wiki/JavaScript)
 
-<!-- ## Vista previa
-Si quieres hechas un vistazo al proyecto, te recomiendo:
+## ✨ Vista previa
 
-![Captura del proyecto]() -->
+![Captura del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/screenshots/screenshot1.png)
+![Captura del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/screenshots/screenshot2.png)
+![Captura del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/screenshots/screenshot3.png)
+![Captura del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/screenshots/screenshot4.png)
+![Captura del proyecto](https://github.com/TigredeLimon/CheepyStudios/blob/main/screenshots/screenshot5.png)
 
 
 ## 🍃 Dónde encontrarme
@@ -34,6 +37,6 @@ Si quieres hechas un vistazo al proyecto, te recomiendo:
 ## Instalación 
 ¡No necesita instalación! Con abrir la carpeta, hacer click en un de los .html o acceder mediante el enlace más arriba podrás verlo de forma íntegra 🐯
   
-## Licencia 📄
+## 📄 Licencia
 MIT Public License v3.0
 No puede usarse comencialmente.
