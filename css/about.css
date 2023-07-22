@@ -508,7 +508,7 @@ BUG: El header no se adapta bien, como no tengo
 @keyframes fadein {
     from{ opacity: 0; transform: translateY(-50%);
     }
-    to{opacity:1; transform: translateX(initial);}
+    to{opacity:1; transform: translateY(0);}
 }
 
 .Fade-left{ animation: fadeleft 1.2s ease-in-out 1;}
@@ -517,12 +517,12 @@ BUG: El header no se adapta bien, como no tengo
 @keyframes fadeleft {
     from{ opacity: 0; transform: translateX(-50%);
     }
-    to{opacity:1; transform: translateX(initial);}}
+    to{opacity:1; transform: translateX(0);}}
 
 @keyframes faderight {
     from{ opacity: 0; transform: translateX(50%);
     }
-    to{opacity:1; transform: translateX(initial);}}
+    to{opacity:1; transform: translateX(0);}}
 /*-------------- [MAIN] --------------*/
 
 

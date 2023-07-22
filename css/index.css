@@ -495,9 +495,9 @@ BUG: El header no se adapta bien, como no tengo
 
     transition: var(--transition-gen);
 }
-.About-a:hover{
+.About-a:hover {
     transform: var(--transform-scale-up);
-    box-shadow: var(--box-shadow-gen)}
+    box-shadow: var(--box-shadow-gen);}
 .About-a:active {transform: var(--transform-scale-down);}
 .About-highlight {font-weight: var(--font-bolder); color: var(--color-black);}
 
@@ -649,7 +649,7 @@ BUG: El header no se adapta bien, como no tengo
 @keyframes fadein {
     from{ opacity: 0; transform: translateY(-50%);
     }
-    to{opacity:1; transform: translateY(initial);}
+    to{opacity:1; transform: translateY(0);}
 }
 /*-------------- [MAIN] --------------*/
 

@@ -371,7 +371,7 @@ BUG: El header no se adapta bien, como no tengo
 @keyframes fadein {
     from{ opacity: 0; transform: translateY(-50%);
     }
-    to{opacity:1; transform: translateY(initial);}
+    to{opacity:1; transform: translateY(0);}
 }
 
 /*-------------- [MAIN] --------------*/
